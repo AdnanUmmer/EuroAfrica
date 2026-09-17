@@ -1,0 +1,26 @@
+import base64
+import secrets
+from urllib.parse import urlsplit
+from django.conf import settings
+from django.http import HttpResponse, HttpResponsePermanentRedirect
+
+class SiteMiddleware:
+    def __init__(self, get_response): self.get_response = get_response
+    def __call__(self, request):
+        if settings.STAGING:
+            expected = 'Basic ' + base64.b64encode(f'{settings.STAGING_USER}:{settings.STAGING_PASSWORD}'.encode()).decode()
+            if not secrets.compare_digest(request.headers.get('Authorization', ''), expected):
+                response = HttpResponse('Authentication required', status=401)
+                response['WWW-Authenticate'] = 'Basic realm="EuroAfrica staging"'
+                response['X-Robots-Tag'] = 'noindex, nofollow'
+                return response
+        if not settings.DEBUG and request.get_host() != urlsplit(settings.SITE_URL).netloc:
+            return HttpResponsePermanentRedirect(settings.SITE_URL + request.get_full_path())
+        response = self.get_response(request)
+        if not settings.INDEXABLE or settings.STAGING or request.path.startswith(('/admin/', '/preview/', '/contact/thanks/')) or response.status_code >= 400:
+            response['X-Robots-Tag'] = 'noindex, nofollow'
+        if request.path.startswith(('/admin/', '/preview/', '/contact/')):
+            response['Cache-Control'] = 'private, no-store'
+        response['Referrer-Policy'] = 'strict-origin-when-cross-origin'
+        response['Content-Security-Policy'] = "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; font-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'"
+        return response

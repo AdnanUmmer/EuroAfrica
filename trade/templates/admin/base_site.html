@@ -1,0 +1,8 @@
+{% extends 'admin/base.html' %}{% load static %}
+{% block title %}{{ title }} | EuroAfrica studio{% endblock %}
+{% block dark-mode-vars %}{% endblock %}
+{% block responsive %}{{ block.super }}<link rel="stylesheet" href="{% static 'trade/admin.css' %}">{% endblock %}
+{% block branding %}<a class="studio-brand" href="{% url 'admin:index' %}"><span class="studio-logo"><img src="{% static 'trade/logo.png' %}" width="82" height="52" alt="EuroAfrica"></span><span>EuroAfrica<small>CONTENT STUDIO</small></span></a>{% endblock %}
+{% block userlinks %}<a href="/">View website ↗</a><a href="{% url 'admin:password_change' %}">Account</a><form id="logout-form" method="post" action="{% url 'admin:logout' %}">{% csrf_token %}<button type="submit">Log out</button></form>{% endblock %}
+{% block footer %}<span>EuroAfrica · Content studio</span><span>Bridging Markets • Creating Opportunities</span>{% endblock %}
+{% block nav-global %}{% if has_permission %}<details class="studio-mobile-menu"><summary>Workspace menu</summary><nav aria-label="Mobile studio navigation">{% for task in studio_tasks %}<a href="{{ task.url }}">{{ task.label }}</a>{% endfor %}{% if perms.auth.view_user %}<a href="{% url 'admin:auth_user_changelist' %}">Staff accounts</a>{% endif %}</nav></details>{% endif %}{% endblock %}

@@ -1,0 +1,1 @@
+<nav class="breadcrumbs wrap" aria-label="Breadcrumb"><ol>{% for label,path in breadcrumbs %}<li>{% if not forloop.last %}<a href="{{ path }}">{{ label }}</a>{% else %}<span aria-current="page">{{ label }}</span>{% endif %}</li>{% endfor %}</ol></nav>
