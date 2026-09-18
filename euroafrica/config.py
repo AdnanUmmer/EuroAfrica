@@ -5,6 +5,13 @@ from django.core.exceptions import ImproperlyConfigured, ValidationError
 from django.core.validators import URLValidator
 
 
+def normalized_authority(authority, scheme='https'):
+    """Compare already validated Host headers by DNS name and effective port."""
+    parsed = urlsplit(f'{scheme}://{authority}')
+    return ((parsed.hostname or '').lower().rstrip('.'),
+            parsed.port or (443 if scheme == 'https' else 80))
+
+
 def canonical_origin(value, production=False):
     value = value.strip()
     try:

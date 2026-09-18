@@ -3,6 +3,7 @@ import secrets
 from urllib.parse import urlsplit
 from django.conf import settings
 from django.http import HttpResponse, HttpResponsePermanentRedirect
+from euroafrica.config import canonical_origin, normalized_authority
 
 class SiteMiddleware:
     def __init__(self, get_response): self.get_response = get_response
@@ -14,8 +15,14 @@ class SiteMiddleware:
                 response['WWW-Authenticate'] = 'Basic realm="EuroAfrica staging"'
                 response['X-Robots-Tag'] = 'noindex, nofollow'
                 return response
-        if not settings.DEBUG and request.get_host() != urlsplit(settings.SITE_URL).netloc:
-            return HttpResponsePermanentRedirect(settings.SITE_URL + request.get_full_path())
+        if not settings.DEBUG:
+            # get_host() validates ALLOWED_HOSTS before normalization. Never use
+            # X-Forwarded-Host or an unvalidated incoming host as a destination.
+            request_host = request.get_host()
+            origin = canonical_origin(settings.SITE_URL, production=True)
+            canonical = urlsplit(origin)
+            if normalized_authority(request_host, request.scheme) != normalized_authority(canonical.netloc, canonical.scheme):
+                return HttpResponsePermanentRedirect(origin + request.get_full_path())
         response = self.get_response(request)
         if not settings.INDEXABLE or settings.STAGING or request.path.startswith(('/admin/', '/preview/', '/contact/thanks/')) or response.status_code >= 400:
             response['X-Robots-Tag'] = 'noindex, nofollow'

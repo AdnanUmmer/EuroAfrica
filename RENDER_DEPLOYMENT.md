@@ -32,7 +32,7 @@ Set **Start Command** to:
 bash start.sh
 ```
 
-This installs starter photos into empty image fields only when MEDIA_ROOT is configured, then starts:
+Startup performs no image installation, database changes or media-directory creation. It only starts:
 
 ```bash
 gunicorn euroafrica.wsgi:application --bind "0.0.0.0:${PORT:-10000}"
@@ -71,7 +71,7 @@ MEDIA_ROOT=/var/data/media
 
 The disk requires a paid Render service. A free service's writable filesystem is ephemeral; setting MEDIA_ROOT alone does not make it persistent. Without persistent storage, do not rely on saved admin uploads surviving deploys. Existing local media files are not in Git: copy owner uploads into the matching paths on the persistent disk if migrating an existing content database. Never clear image fields just to hide missing files.
 
-Render disks are unavailable during build and pre-deploy, so starter-image installation is in `start.sh`, after the disk is mounted. Existing image references and files are not replaced. If a paid disk is unavailable, external object storage is a separate infrastructure requirement; it has not been silently substituted.
+No persistent disk is required to start the application. Remove MEDIA_ROOT=/var/data/media when no disk is mounted. Stock-image installation is a manual optional command (`python manage.py install_stock_images`), to run only after writable durable storage is configured. It is never run by start.sh. Existing image references and files are not replaced. Uploads on the free filesystem remain ephemeral.
 
 ## Verification performed
 
@@ -107,3 +107,15 @@ python manage.py check --deploy
 Do not run seed commands against a different database URL or publish the placeholder privacy notice. Configure the public contact email and complete the launch checks before enabling search indexing.
 
 References: https://render.com/docs/deploy-django ; https://render.com/docs/disks ; https://render.com/docs/deploys .
+
+## Startup and trailing-dot follow-up (18 September 2026)
+
+The startup failure was caused by the old start.sh running install_stock_images whenever MEDIA_ROOT was set, then exiting on PermissionError because of set -e. A configured path is not proof that a disk exists. That command has been removed entirely from startup, including when MEDIA_ROOT is mistakenly still set.
+
+The old SiteMiddleware compared raw request.get_host() against a configured netloc and built its Location directly from SITE_URL. A dotted, unnormalized SITE_URL in the older code could therefore produce the malformed permanent redirect; Django considers a trailing-dot Host valid for ALLOWED_HOSTS. The current settings normalization already strips a configured dot. This follow-up also normalizes both sides of middleware comparison (case, DNS trailing dot, default port) and revalidates the canonical redirect destination, with USE_X_FORWARDED_HOST=False explicitly set. SecurityMiddleware continues using SECURE_SSL_HOST derived from normalized SITE_URL and Render's forwarded HTTPS protocol. HTTPS protections remain enabled.
+
+Live header inspection during this repair found HTTPS returning 200 without Location and HTTP returning one 301 to the correct HTTPS URL followed by 200. Directly requesting the dotted hostname returned a Render-edge 404 with x-render-routing: no-server; that request never reached Django. No live response adding a dot was observed. The exact historical deployed revision/environment or cached redirect responsible cannot be established from those current responses; a stale browser 301 is a possibility, not a verified cause. After redeployment, test with curl or a fresh browser session instead of assuming an old browser redirect is a new server response.
+
+Keep SITE_URL=https://euroafrica-1u37.onrender.com, ALLOWED_HOSTS=euroafrica-1u37.onrender.com and CSRF_TRUSTED_ORIGINS=https://euroafrica-1u37.onrender.com, with no trailing hostname dot. Remove MEDIA_ROOT while there is no mounted disk. Keep build command bash build.sh and start command bash start.sh. RENDER=true is supplied by Render; no forwarded-host environment setting is required.
+
+Verification: 33 Django tests pass, including HTTPS 200/no-self-redirect, dotted host/default port, dotted SITE_URL, one-hop HTTP redirect without .com./, ignored X-Forwarded-Host and invalid-host rejection. Fresh subprocesses load the production WSGI application with MEDIA_ROOT absent and with /var/data/media while directory creation is forced to fail; both succeed without startup management commands. start.sh is also checked to contain only the expected set/exec commands. This Windows environment has no Bash/Gunicorn runtime, so actual Linux Gunicorn process launch remains a Render deployment check. The existing verification script additionally checks the full Django redirect chain with an intentionally dotted SITE_URL.

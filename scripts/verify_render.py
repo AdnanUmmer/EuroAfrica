@@ -10,7 +10,7 @@ from io import StringIO
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 os.environ.update(DJANGO_SETTINGS_MODULE='euroafrica.settings', RENDER='true', DEBUG='False',
     SECRET_KEY=secrets.token_urlsafe(64), DATABASE_URL='postgresql://check:unused@127.0.0.1/check',
-    SITE_URL='https://euroafrica-1u37.onrender.com', ALLOWED_HOSTS='euroafrica-1u37.onrender.com',
+    SITE_URL='https://euroafrica-1u37.onrender.com./', ALLOWED_HOSTS='euroafrica-1u37.onrender.com',
     CSRF_TRUSTED_ORIGINS='https://euroafrica-1u37.onrender.com', STAGING='false', INDEXABLE='false')
 from django.conf import settings
 with tempfile.TemporaryDirectory() as directory:
@@ -60,7 +60,20 @@ with tempfile.TemporaryDirectory() as directory:
         assert 'max-age=' in https_response['Strict-Transport-Security']
         http_response=client.get('/', HTTP_X_FORWARDED_PROTO='http')
         assert http_response.status_code==301 and http_response['Location']=='https://euroafrica-1u37.onrender.com/'
+        for host in ('euroafrica-1u37.onrender.com.', 'EuroAfrica-1u37.onrender.com.:443'):
+            response=client.get('/', HTTP_HOST=host)
+            assert response.status_code==200 and 'Location' not in response
+            response=client.get('/', HTTP_HOST=host, HTTP_X_FORWARDED_PROTO='http')
+            assert response.status_code==301 and response['Location']=='https://euroafrica-1u37.onrender.com/'
+            assert '.com./' not in response['Location']
+            final=client.get(response['Location'])
+            assert final.status_code==200 and 'Location' not in final
+        assert settings.SITE_URL=='https://euroafrica-1u37.onrender.com'
+        assert settings.SECURE_SSL_HOST=='euroafrica-1u37.onrender.com'
+        response=client.get('/', HTTP_X_FORWARDED_HOST='euroafrica-1u37.onrender.com.')
+        assert response.status_code==200 and 'Location' not in response
         print('PASS: all categories/About, canonical, HSTS, unknown 404, HTTP -> correct HTTPS 301')
+        print('PASS: dotted SITE_URL/Host, default HTTPS port, ignored forwarded host, one-hop HTTP chain')
         for asset in ('trade/site.css','trade/admin.css','trade/logo.png'):
             response=client.get(staticfiles_storage.url(asset));assert response.status_code==200
             assert 'max-age=' in response['Cache-Control']

@@ -69,6 +69,7 @@ DEFAULT_FROM_EMAIL = os.getenv('DEFAULT_FROM_EMAIL', 'webmaster@localhost')
 ENQUIRY_EMAIL = os.getenv('ENQUIRY_EMAIL', '')
 SECURE_SSL_REDIRECT = not DEBUG
 SECURE_SSL_HOST = urlparse(SITE_URL).netloc if not DEBUG else None
+USE_X_FORWARDED_HOST = False
 PREPEND_WWW = False
 APPEND_SLASH = True
 SESSION_COOKIE_SECURE = not DEBUG

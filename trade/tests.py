@@ -260,3 +260,88 @@ class WebsiteTests(TestCase):
             response = self.client.get('/sitemap.xml')
         self.assertEqual(response.status_code, 200)
         self.assertLessEqual(len(queries), 7)
+
+@override_settings(DEBUG=False, SITE_URL='https://euroafrica-1u37.onrender.com',
+    ALLOWED_HOSTS=['euroafrica-1u37.onrender.com','alternate.example'],
+    SECURE_SSL_REDIRECT=True, SECURE_SSL_HOST='euroafrica-1u37.onrender.com',
+    SECURE_PROXY_SSL_HEADER=('HTTP_X_FORWARDED_PROTO','https'), USE_X_FORWARDED_HOST=False,
+    STAGING=False)
+class RenderRedirectTests(TestCase):
+    @classmethod
+    def setUpTestData(cls):
+        call_command('seed_content', stdout=StringIO())
+
+    def test_render_https_home_200_without_self_redirect(self):
+        response=self.client.get('/', HTTP_HOST='euroafrica-1u37.onrender.com', HTTP_X_FORWARDED_PROTO='https')
+        self.assertEqual(response.status_code,200)
+        self.assertNotIn('Location',response)
+
+    def test_trailing_dot_and_default_port_are_safe(self):
+        for host in ('euroafrica-1u37.onrender.com.', 'EuroAfrica-1u37.onrender.com.:443', 'euroafrica-1u37.onrender.com:443'):
+            with self.subTest(host=host):
+                response=self.client.get('/',HTTP_HOST=host,HTTP_X_FORWARDED_PROTO='https')
+                self.assertEqual(response.status_code,200)
+                self.assertNotIn('Location',response)
+
+    def test_http_redirects_once_to_canonical_https(self):
+        for host in ('euroafrica-1u37.onrender.com','euroafrica-1u37.onrender.com.','alternate.example'):
+            with self.subTest(host=host):
+                response=self.client.get('/',HTTP_HOST=host,HTTP_X_FORWARDED_PROTO='http')
+                self.assertEqual(response.status_code,301)
+                self.assertEqual(response['Location'],'https://euroafrica-1u37.onrender.com/')
+                self.assertNotIn('.com./',response['Location'])
+                final=self.client.get(response['Location'],HTTP_HOST='euroafrica-1u37.onrender.com',HTTP_X_FORWARDED_PROTO='https')
+                self.assertEqual(final.status_code,200)
+                self.assertNotIn('Location',final)
+
+    @override_settings(SITE_URL='https://euroafrica-1u37.onrender.com./')
+    def test_middleware_normalizes_destination_even_with_dotted_override(self):
+        response=self.client.get('/?source=test',HTTP_HOST='alternate.example',HTTP_X_FORWARDED_PROTO='https')
+        self.assertEqual(response.status_code,301)
+        self.assertEqual(response['Location'],'https://euroafrica-1u37.onrender.com/?source=test')
+        self.assertNotIn('.com./',response['Location'])
+
+    def test_forwarded_host_cannot_supply_redirect_destination(self):
+        response=self.client.get('/',HTTP_HOST='euroafrica-1u37.onrender.com',HTTP_X_FORWARDED_HOST='euroafrica-1u37.onrender.com.',HTTP_X_FORWARDED_PROTO='https')
+        self.assertEqual(response.status_code,200)
+        self.assertNotIn('Location',response)
+
+    def test_unapproved_host_is_rejected(self):
+        response=self.client.get('/',HTTP_HOST='unapproved.example',HTTP_X_FORWARDED_PROTO='https')
+        self.assertEqual(response.status_code,400)
+
+
+class RenderStartupTests(SimpleTestCase):
+    def test_wsgi_starts_without_media_directory_or_disk(self):
+        import os, secrets, subprocess, sys
+        from pathlib import Path
+        environment=os.environ.copy()
+        environment.update(DEBUG='False', RENDER='true', SECRET_KEY=secrets.token_urlsafe(64),
+            DATABASE_URL='postgresql://unused:unused@127.0.0.1/unused',
+            SITE_URL='https://euroafrica-1u37.onrender.com./',
+            ALLOWED_HOSTS='euroafrica-1u37.onrender.com',
+            CSRF_TRUSTED_ORIGINS='https://euroafrica-1u37.onrender.com',STAGING='false')
+        code='''
+from unittest.mock import patch
+with patch('dotenv.load_dotenv'), patch('pathlib.Path.mkdir', side_effect=PermissionError('No disk')), patch('os.makedirs', side_effect=PermissionError('No disk')), patch('django.core.management.call_command', side_effect=AssertionError('No startup commands')):
+    from euroafrica.wsgi import application
+    from django.conf import settings
+    assert callable(application)
+    assert settings.SITE_URL == 'https://euroafrica-1u37.onrender.com'
+    assert settings.SECURE_SSL_HOST == 'euroafrica-1u37.onrender.com'
+    assert settings.SECURE_PROXY_SSL_HEADER == ('HTTP_X_FORWARDED_PROTO', 'https')
+    assert settings.USE_X_FORWARDED_HOST is False
+    print('WSGI startup passed without filesystem writes')
+'''
+        for media_root in (None, '/var/data/media'):
+            with self.subTest(media_root=media_root):
+                if media_root is None: environment.pop('MEDIA_ROOT',None)
+                else: environment['MEDIA_ROOT']=media_root
+                result=subprocess.run([sys.executable,'-c',code],cwd=Path(__file__).resolve().parent.parent,env=environment,capture_output=True,text=True,timeout=30)
+                self.assertEqual(result.returncode,0,result.stdout+result.stderr)
+
+    def test_start_script_only_executes_gunicorn(self):
+        from pathlib import Path
+        source=(Path(__file__).resolve().parent.parent/'start.sh').read_text(encoding='utf-8')
+        commands=[line for line in source.splitlines() if line.strip() and not line.startswith('#')]
+        self.assertEqual(commands,['set -o errexit','exec gunicorn euroafrica.wsgi:application --bind "0.0.0.0:${PORT:-10000}"'])
