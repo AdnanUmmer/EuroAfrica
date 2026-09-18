@@ -3,7 +3,6 @@
 *.sqlite3
 __pycache__/
 *.pyc
-media/
 staticfiles/
 logo-review.png
 qa/
