@@ -172,3 +172,7 @@ Verify record counts, logins, representative images and enquiries before conside
 ## Verification limits
 
 Local `scripts/check_production.py` runs production-oriented security checks and static collection with throwaway settings. `scripts/smoke_production.py` checks DEBUG=false HTML and WhiteNoise using a disposable SQLite database. These scripts do not test a real PostgreSQL server, Linux process supervision, Nginx media delivery, DNS/TLS, SMTP delivery or backup recovery. Those remain required commissioning checks on the chosen server. Media is intentionally served by Nginx, not Django in production.
+
+## Render deployment
+
+For the existing Render service, use [RENDER_DEPLOYMENT.md](RENDER_DEPLOYMENT.md). It supersedes the Linux/Nginx examples above for that host and includes the homepage initialization repair, Render HTTPS proxy settings, build/start commands and persistent-media requirements.

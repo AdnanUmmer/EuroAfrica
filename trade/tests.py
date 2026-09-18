@@ -3,13 +3,30 @@ import re
 from io import StringIO, BytesIO
 from unittest.mock import patch
 from xml.etree import ElementTree
-from django.test import TestCase, Client, override_settings
+from django.test import TestCase, SimpleTestCase, Client, override_settings
 from django.core.management import call_command
 from django.contrib.auth.models import User, Group
 from django.core.files.uploadedfile import SimpleUploadedFile
 from django.core.exceptions import ValidationError
 from .models import *
 from .validators import validate_image
+
+
+class CanonicalConfigurationTests(SimpleTestCase):
+    def test_render_origin_normalized(self):
+        from euroafrica.config import canonical_origin
+        self.assertEqual(canonical_origin(' https://EuroAfrica-1u37.onrender.com.:443/ ', production=True), 'https://euroafrica-1u37.onrender.com')
+
+    def test_invalid_production_redirect_destinations_rejected(self):
+        from euroafrica.config import canonical_origin
+        from django.core.exceptions import ImproperlyConfigured
+        for origin in ('https://localhost', 'https://127.0.0.1', 'https://[::1]', 'http://example.com', 'https://example.com/missing/', 'https://user:password@example.com', 'https://example.com?next=bad', 'https://example.com#fragment', 'https://bad hostname', '[https://example.com](https://example.com)'):
+            with self.subTest(origin=origin), self.assertRaises(ImproperlyConfigured):
+                canonical_origin(origin, production=True)
+
+    def test_local_development_origin_remains_supported(self):
+        from euroafrica.config import canonical_origin
+        self.assertEqual(canonical_origin('http://127.0.0.1:8000/'), 'http://127.0.0.1:8000')
 
 @override_settings(DEBUG=True, INDEXABLE=True, SITE_URL='https://www.euroafrica.example')
 class WebsiteTests(TestCase):

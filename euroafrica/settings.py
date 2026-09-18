@@ -2,22 +2,26 @@ import os
 from pathlib import Path
 from urllib.parse import urlparse, unquote, parse_qs
 from dotenv import load_dotenv
+from .config import canonical_origin
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 load_dotenv(BASE_DIR / '.env')
-DEBUG = os.getenv('DEBUG', 'true').lower() == 'true'
+ON_RENDER = os.getenv('RENDER', '').strip().lower() == 'true'
+DEBUG = os.getenv('DEBUG', 'false' if ON_RENDER else 'true').strip().lower() == 'true'
 SECRET_KEY = os.getenv('SECRET_KEY', 'local-development-only-not-for-deployment')
-SITE_URL = os.getenv('SITE_URL', 'http://127.0.0.1:8000').rstrip('/')
+SITE_URL = canonical_origin(os.getenv('SITE_URL', 'http://127.0.0.1:8000'), production=not DEBUG)
 INDEXABLE = os.getenv('INDEXABLE', 'false').lower() == 'true'
 STAGING = os.getenv('STAGING', 'false').lower() == 'true'
 STAGING_USER = os.getenv('STAGING_USER', '')
 STAGING_PASSWORD = os.getenv('STAGING_PASSWORD', '')
 GSC_VERIFICATION = os.getenv('GSC_VERIFICATION', '')
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '127.0.0.1,localhost,testserver').split(',')
+ALLOWED_HOSTS = [host.strip().lower().rstrip('.') for host in os.getenv('ALLOWED_HOSTS', '127.0.0.1,localhost,testserver').split(',') if host.strip()]
 if not DEBUG and (len(SECRET_KEY) < 50 or len(set(SECRET_KEY)) < 5 or SECRET_KEY.startswith(('local-', 'replace-', 'django-insecure-')) or not os.getenv('DATABASE_URL')):
     raise ValueError('Production requires a unique random SECRET_KEY (50+ characters) and PostgreSQL DATABASE_URL')
 if not DEBUG and (urlparse(SITE_URL).scheme != 'https' or '*' in ALLOWED_HOSTS or 'testserver' in ALLOWED_HOSTS):
     raise ValueError('Production requires HTTPS SITE_URL and explicit ALLOWED_HOSTS without testserver')
+if not DEBUG and urlparse(SITE_URL).hostname not in ALLOWED_HOSTS:
+    raise ValueError('The canonical SITE_URL hostname must be included in ALLOWED_HOSTS')
 if STAGING and not (STAGING_USER and STAGING_PASSWORD):
     raise ValueError('Staging requires HTTP Basic authentication credentials')
 INSTALLED_APPS = ['trade.apps.EuroAfricaAdminConfig', 'django.contrib.auth', 'django.contrib.contenttypes', 'django.contrib.sessions', 'django.contrib.messages', 'django.contrib.staticfiles', 'trade.apps.TradeConfig']
@@ -64,6 +68,9 @@ EMAIL_TIMEOUT = 10
 DEFAULT_FROM_EMAIL = os.getenv('DEFAULT_FROM_EMAIL', 'webmaster@localhost')
 ENQUIRY_EMAIL = os.getenv('ENQUIRY_EMAIL', '')
 SECURE_SSL_REDIRECT = not DEBUG
+SECURE_SSL_HOST = urlparse(SITE_URL).netloc if not DEBUG else None
+PREPEND_WWW = False
+APPEND_SLASH = True
 SESSION_COOKIE_SECURE = not DEBUG
 CSRF_COOKIE_SECURE = not DEBUG
 SECURE_HSTS_SECONDS = 31536000 if not DEBUG else 0
@@ -71,10 +78,11 @@ SECURE_HSTS_INCLUDE_SUBDOMAINS = os.getenv('HSTS_INCLUDE_SUBDOMAINS', 'false').l
 SECURE_HSTS_PRELOAD = os.getenv('HSTS_PRELOAD', 'false').lower() == 'true'
 SECURE_CONTENT_TYPE_NOSNIFF = True
 TRUST_LOCAL_PROXY = os.getenv('TRUST_LOCAL_PROXY', 'false').lower() == 'true'
-if TRUST_LOCAL_PROXY:
+if ON_RENDER or TRUST_LOCAL_PROXY:
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 X_FRAME_OPTIONS = 'DENY'
-CSRF_TRUSTED_ORIGINS = [SITE_URL]
+CSRF_TRUSTED_ORIGINS = [canonical_origin(origin, production=not DEBUG) for origin in os.getenv('CSRF_TRUSTED_ORIGINS', SITE_URL).split(',') if origin.strip()]
+SERVE_MEDIA = ON_RENDER
 DATA_UPLOAD_MAX_MEMORY_SIZE = 8 * 1024 * 1024
 
 # No traceback email handler or request payload formatter: alerts contain event identifiers only.
