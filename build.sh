@@ -4,4 +4,5 @@ python -m pip install -r requirements.txt
 python manage.py collectstatic --noinput
 python manage.py migrate --noinput
 python manage.py seed_content
+python manage.py link_stock_images
 python manage.py check

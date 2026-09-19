@@ -192,3 +192,9 @@ class SubmissionWindow(models.Model):
     key = models.CharField(max_length=64, unique=True)
     attempts = models.PositiveIntegerField(default=0)
     created_at = models.DateTimeField(default=timezone.now)
+
+
+class StockImageInitialization(models.Model):
+    """Record first default-image setup so later deliberate clears stay cleared."""
+    key = models.CharField(max_length=150, primary_key=True)
+    created_at = models.DateTimeField(auto_now_add=True)

@@ -11,7 +11,7 @@ python -m venv .venv
 Copy-Item .env.example .env
 .\.venv\Scripts\python.exe manage.py migrate
 .\.venv\Scripts\python.exe manage.py seed_content
-.\.venv\Scripts\python.exe manage.py install_stock_images
+.\.venv\Scripts\python.exe manage.py link_stock_images
 .\.venv\Scripts\python.exe manage.py createsuperuser
 .\.venv\Scripts\python.exe manage.py runserver
 ```
@@ -48,7 +48,7 @@ No JavaScript is needed for public navigation, content or form submission. The m
 
 The logo was extracted from the **first page** of the supplied Euroafrica logo2.pdf, removing the presentation watermark form and cropping out the swatches. The original blue/gold gradients are preserved. `logo.png` is a transparent web asset, not a redrawn logo.
 
-The original local vector illustration is a schematic connection graphic, not a geographic reference map or a photograph of company operations. The schematic remains a fallback for optional empty image fields. Replace any installed photograph through its owning admin page. Fourteen individually reviewed photographs are now bundled locally under the Unsplash License; sources, authors and rights are recorded in `assets/stock/README.md` and `manifest.json`. The installer fills only empty image fields and preserves existing uploads. All stock images are illustrative, not company-operation claims. Privacy starts as an unpublished owner-review draft. Company identity, public contact details and actual supply/service capabilities require owner verification.
+The original local vector illustration is a schematic connection graphic, not a geographic reference map or a photograph of company operations. The schematic remains a fallback for optional empty image fields. Replace any installed photograph through its owning admin page. Fourteen individually reviewed photographs are now bundled locally under the Unsplash License; sources, authors and rights are recorded in `assets/stock/README.md` and `manifest.json`. The build links verified committed photos once, preserves existing uploads and respects later image removals. All stock images are illustrative, not company-operation claims. Privacy starts as an unpublished owner-review draft. Company identity, public contact details and actual supply/service capabilities require owner verification.
 
 Django 5.2 LTS was selected using the official support information: https://www.djangoproject.com/download/. Installed version during verification: 5.2.17. Dependency ranges allow patch updates; validate updates in staging and keep a deployment-specific lock with `pip freeze` after testing.
 

@@ -49,6 +49,21 @@ The navy workspace navigation provides direct editing links. On phones, open **W
 
 Every upload shows its current preview. To replace it, choose another file and save; the replacement receives a new URL to prevent a stale cached image. Existing files are retained. Choose Centre, Top, Bottom, Left or Right crop focus, add optional captions and check the public result. A category uses its card image as the detail hero when no separate hero is supplied. Gallery and product images can be edited in category inline rows or through Images/Products. Save before opening **Open private preview**.
 
-The bundled photographs are illustrative stock images. Their licence/source register is in `assets/stock/README.md`. The starter-image installer only fills blank image fields; it does not replace your saved uploads.
+The bundled photographs are illustrative stock images. Their licence/source register is in `assets/stock/README.md`. Deployment links starter photographs once, preserves existing uploads and respects later removals. Missing owner files display a fallback without changing their database path. New uploads on Render without durable storage are ephemeral: keep backups; they can disappear after restart or deploy.
 
 Footer links use local paths such as `/about/` or `/africa-to-europe/`. Links to drafts or missing destinations are automatically hidden. If you rename a page URL, update its custom footer destination too. Edit the footer description, tagline, legal line and contact details in **Brand, footer & SEO**. Social links appear only when supplied. Public privacy links appear only after the policy is published.
+
+## Password recovery and notifications
+
+Choose **Forgotten your password or username?** on the admin login screen. Use the email saved on your active staff account. The page gives the same confirmation for unknown addresses. Reset links expire after one hour and cannot be reused after a successful reset. SMTP must be configured before emails can arrive; existing passwords are never sent.
+
+An authorized operator can recover access in Render Shell:
+
+```bash
+python manage.py shell -c "from django.contrib.auth import get_user_model; print(list(get_user_model().objects.filter(is_superuser=True).values('username', 'email', 'is_active', 'is_staff')))"
+python manage.py changepassword <username>
+```
+
+The second command prompts securely without exposing the password in command history. Set a current email on the staff account in Users. Never print password hashes or create a shared hardcoded account.
+
+DEFAULT_FROM_EMAIL selects the verified sender; CONTACT_NOTIFICATION_EMAIL selects the owner inbox receiving enquiries. The public contact address is separate. Notification failure does not delete enquiries. Review Enquiries in admin even when delivery is unavailable. See [production configuration](PRODUCTION_READINESS.md).

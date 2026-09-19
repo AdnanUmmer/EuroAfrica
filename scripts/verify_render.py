@@ -19,7 +19,7 @@ with tempfile.TemporaryDirectory() as directory:
     import django
     django.setup()
     from django.core.management import call_command
-    from django.test import Client
+    from django.test import Client, override_settings
     from django.urls import resolve
     from django.contrib.staticfiles.storage import staticfiles_storage
     from django.db import connections
@@ -79,6 +79,29 @@ with tempfile.TemporaryDirectory() as directory:
             assert 'max-age=' in response['Cache-Control']
             response.close()
         print('PASS: WhiteNoise hashed CSS/logo with production storage and caching')
+        import json
+        with override_settings(MEDIA_ROOT=settings.BASE_DIR / 'media'):
+            call_command('link_stock_images', stdout=StringIO())
+            call_command('link_stock_images', stdout=StringIO())
+            output = StringIO()
+            call_command('audit_media', http=True, stdout=output)
+            report = json.loads(output.getvalue())
+            assert len(report['files']) == 18
+            for row in report['files']:
+                assert row['exists'] and row['status'] == 200 and row['content_type'] == 'image/webp', row
+                for variant in row['srcset'].split(', '):
+                    if variant:
+                        response = client.get(variant.split(' ')[0])
+                        assert response.status_code == 200
+                        response.close()
+            evidence = settings.BASE_DIR / 'qa'
+            evidence.mkdir(exist_ok=True)
+            (evidence / 'render-media-audit.json').write_text(output.getvalue(), encoding='utf-8')
+            assert b'/media/content/' in client.get('/').content
+        print('PASS: 18 database image references and every emitted srcset URL return 200; repeat linking is safe')
+        assert b'/admin/password_reset/' in client.get('/admin/login/').content
+        assert client.get('/admin/password_reset/').status_code == 200
+        print('PASS: production admin recovery routes and login link')
         from PIL import Image
         settings.MEDIA_ROOT.mkdir();Image.new('RGB',(2,2),'navy').save(settings.MEDIA_ROOT/'test.webp','WEBP')
         response=client.get('/media/test.webp');assert response.status_code==200 and response['Content-Type']=='image/webp';response.close()

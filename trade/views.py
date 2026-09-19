@@ -86,9 +86,15 @@ def contact(request):
             return response
         if form.is_valid():
             enquiry = form.save()
-            if settings.ENQUIRY_EMAIL:
+            if settings.CONTACT_NOTIFICATION_EMAIL:
                 try:
-                    send_mail('New EuroAfrica enquiry', f'Enquiry #{enquiry.pk} has been saved. Sign in to the admin to review it.', settings.DEFAULT_FROM_EMAIL, [settings.ENQUIRY_EMAIL])
+                    message = '\n'.join([
+                        f'Enquiry #{enquiry.pk}', f'Name: {enquiry.name}', f'Email: {enquiry.email}',
+                        f'Company: {enquiry.company}', f'Phone: {enquiry.phone}',
+                        f'Category: {enquiry.category or "General enquiry"}', f'Submitted: {enquiry.created_at.isoformat()}',
+                        '', enquiry.message, '', f'Review: {settings.SITE_URL}/admin/trade/enquiry/{enquiry.pk}/change/',
+                    ])
+                    send_mail('New EuroAfrica enquiry', message, settings.DEFAULT_FROM_EMAIL, [settings.CONTACT_NOTIFICATION_EMAIL])
                 except Exception:
                     logging.getLogger(__name__).warning('Notification failed for saved enquiry %s', enquiry.pk)
             return redirect('thanks')

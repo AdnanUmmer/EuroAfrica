@@ -1,5 +1,7 @@
 # Render deployment repair
 
+**Current consolidated instructions and measured results:** [PRODUCTION_READINESS.md](PRODUCTION_READINESS.md). Historical findings below remain for context.
+
 ## Root cause and evidence
 
 `euroafrica/urls.py` already maps the empty path `/` to `trade.views.home`, which renders `trade/home.html`. There is no `trade/urls.py`; the unused `accounts/urls.py` is not included in the root URLconf. The homepage uses `get_object_or_404(HomePage, pk=1)`. Migrations through 0005 created tables and footer links, **not the required HomePage, SiteSettings or ContactPage rows**. The old build command never ran `seed_content`. A new PostgreSQL database therefore had valid schema but no homepage record, producing the application-level 404.
@@ -23,6 +25,7 @@ python -m pip install -r requirements.txt
 python manage.py collectstatic --noinput
 python manage.py migrate --noinput
 python manage.py seed_content
+python manage.py link_stock_images
 python manage.py check
 ```
 
@@ -38,7 +41,7 @@ Startup performs no image installation, database changes or media-directory crea
 gunicorn euroafrica.wsgi:application --bind "0.0.0.0:${PORT:-10000}"
 ```
 
-The original `gunicorn euroafrica.wsgi` entry point was valid and was not the cause of the 404. An explicit port binding makes the Render port contract clear. The existing build command also receives the singleton repair through `migrate`; using `build.sh` additionally initializes the category content.
+The original `gunicorn euroafrica.wsgi` entry point was valid and was not the cause of the 404. An explicit port binding makes the Render port contract clear. The existing build command also receives the singleton repair through `migrate`; using `build.sh` additionally initializes category content and links the committed photographs safely.
 
 Required dashboard environment values (plain values, no quotes/brackets):
 
@@ -69,7 +72,7 @@ For reliable uploads, attach a **persistent disk** to the web service at `/var/d
 MEDIA_ROOT=/var/data/media
 ```
 
-The disk requires a paid Render service. A free service's writable filesystem is ephemeral; setting MEDIA_ROOT alone does not make it persistent. Without persistent storage, do not rely on saved admin uploads surviving deploys. Existing local media files are not in Git: copy owner uploads into the matching paths on the persistent disk if migrating an existing content database. Never clear image fields just to hide missing files.
+The disk requires a paid Render service. A free service's writable filesystem is ephemeral; setting MEDIA_ROOT alone does not make it persistent. Without persistent storage, do not rely on saved admin uploads surviving deploys. The 57 bundled media files are now committed. Current deployment uses the repository media directory with no disk. If adding a disk later, copy existing files to it before changing MEDIA_ROOT; mounting a new empty directory hides repository media. Never clear image fields just to hide missing files.
 
 No persistent disk is required to start the application. Remove MEDIA_ROOT=/var/data/media when no disk is mounted. Stock-image installation is a manual optional command (`python manage.py install_stock_images`), to run only after writable durable storage is configured. It is never run by start.sh. Existing image references and files are not replaced. Uploads on the free filesystem remain ephemeral.
 

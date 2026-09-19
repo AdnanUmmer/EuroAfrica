@@ -117,12 +117,13 @@ class WebsiteTests(TestCase):
         self.assertRedirects(response, '/contact/thanks/')
         self.assertEqual(Enquiry.objects.count(), 1)
         self.assertEqual(self.client.get('/contact/thanks/')['X-Robots-Tag'], 'noindex, nofollow')
-    @override_settings(ENQUIRY_EMAIL='owner@example.org')
+    @override_settings(CONTACT_NOTIFICATION_EMAIL='owner@example.org')
     @patch('trade.views.send_mail', side_effect=RuntimeError('SMTP unavailable'))
     def test_email_failure_preserves_submission(self, mocked):
         response = self.client.post('/contact/', {'name': 'A', 'email': 'a@example.org', 'message': 'Hello'})
         self.assertEqual(response.status_code, 302)
         self.assertEqual(Enquiry.objects.count(), 1)
+        mocked.assert_called_once()
     def test_honeypot_csrf_and_rate_limit(self):
         data = {'name': 'A', 'email': 'a@example.org', 'message': 'Hello', 'website': 'spam'}
         self.client.post('/contact/', data)
