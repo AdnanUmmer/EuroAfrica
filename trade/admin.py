@@ -83,8 +83,28 @@ class EnquiryAdmin(admin.ModelAdmin):
     list_display = ['name', 'email', 'category', 'status', 'created_at']
     list_filter = ['status', 'category']
     search_fields = ['name', 'email', 'company', 'message']
-    readonly_fields = ['name', 'email', 'company', 'phone', 'category', 'message', 'created_at']
-    fields = ['name', 'email', 'company', 'phone', 'category', 'message', 'created_at', 'status', 'staff_notes']
+    readonly_fields = ['name', 'email', 'company', 'phone', 'category', 'message', 'privacy_consent_at', 'created_at']
+    fields = ['name', 'email', 'company', 'phone', 'category', 'message', 'privacy_consent_at', 'created_at', 'status', 'staff_notes']
+    date_hierarchy = 'created_at'
+    list_select_related = ['category']
+    actions = ['mark_read', 'mark_replied', 'mark_spam', 'archive']
+
+    def set_status(self, request, queryset, value):
+        count = queryset.update(status=value)
+        self.message_user(request, f'{count} selected enquiries updated.')
+
+    @admin.action(description='Mark selected enquiries as read', permissions=['change'])
+    def mark_read(self, request, queryset): self.set_status(request, queryset, 'read')
+
+    @admin.action(description='Mark selected enquiries as replied', permissions=['change'])
+    def mark_replied(self, request, queryset): self.set_status(request, queryset, 'replied')
+
+    @admin.action(description='Mark selected enquiries as spam', permissions=['change'])
+    def mark_spam(self, request, queryset): self.set_status(request, queryset, 'spam')
+
+    @admin.action(description='Archive selected enquiries', permissions=['change'])
+    def archive(self, request, queryset): self.set_status(request, queryset, 'archived')
+
     def has_add_permission(self, request): return False
 
 @admin.register(CategoryProduct)

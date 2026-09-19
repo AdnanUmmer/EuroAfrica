@@ -64,3 +64,7 @@ For production-mode verification without changing local settings:
 ```
 
 The second script uses an isolated SQLite database; actual PostgreSQL and Linux/proxy validation remain deployment steps. See `VERIFICATION.md` for measured results and limitations.
+
+## SEO and enquiry protection
+
+See [SEO_AND_ENQUIRY_READINESS.md](SEO_AND_ENQUIRY_READINESS.md) for the anti-spam flow, Turnstile setup, migration safety, measured checks and launch checklist. Run `python manage.py audit_seo --simulate-indexing` to check rendered SEO without enabling public indexing. Production enquiries require real Turnstile keys.

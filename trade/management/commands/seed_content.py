@@ -1,6 +1,7 @@
 from django.core.management.base import BaseCommand
 from django.contrib.auth.models import Group, Permission
 from trade.models import *
+from trade.category_guidance import GUIDANCE
 
 DATA = [
 ('Cut Flowers', 'cut-flowers', ['Roses', 'Summer flowers', 'Alstroemeria'], 'Colour, form and seasonality connect the world of cut flowers—from familiar roses to summer flowers and alstroemeria.', 'Cut flowers bring together distinct shapes, stem structures and colour palettes for floral arrangements. Roses offer a recognisable focal flower; summer flowers introduce variety; alstroemeria adds clusters of patterned blooms.\n\nWhen discussing this category, identify the flower type, preferred colour and intended use. Variety, handling and timing are useful topics for a detailed enquiry.'),
@@ -40,6 +41,8 @@ class Command(BaseCommand):
         for i, (title, slug, products, summary, overview) in enumerate(DATA):
             category, created = seed_object(TradeCategory, slug, dict(direction=directions[i >= 7], title=title, summary=summary, overview=overview, order=i, published=True, featured=i in (0, 1, 2, 7), editorial_notes='Source mentions nuclear reactors. Owner verification required; not a confirmed offering.' if i == 7 else ''))
             if created:
+                heading, text = GUIDANCE[slug]
+                CategorySection.objects.create(category=category, heading=heading, text=text, order=10)
                 for order, name in enumerate(products): CategoryProduct.objects.create(category=category, name=name, order=order)
         ContentPage.objects.get_or_create(slug='about', defaults=dict(title='About EuroAfrica', summary='A perspective on the products connecting African and European markets.', body='Bridging Markets • Creating Opportunities\n\nEuroAfrica presents an introduction to trade categories connecting Africa and Europe. The website brings together product examples across agriculture, food, manufactured goods and industrial equipment.\n\nExplore the two trade directions to learn about the categories and the products included. For a specific question, use the contact form and select the category that interests you.\n\nThe category information is an overview. It does not establish availability, sourcing arrangements or confirmed services for an individual product.', published=True))
         ContentPage.objects.get_or_create(slug='privacy', defaults=dict(title='Privacy notice', summary='How personal information submitted through this website is handled.', body='OWNER REVIEW REQUIRED BEFORE PUBLICATION. Confirm the legal controller identity and contact details, purposes and legal basis, recipients and processors, retention periods, international transfers, applicable rights and complaint process. This draft is not a finished privacy notice. The form stores name, email, optional company, phone, category and message. A keyed hash of the source IP and hourly window is used to limit submissions.', published=False))

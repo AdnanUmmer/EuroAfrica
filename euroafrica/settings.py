@@ -100,3 +100,11 @@ LOGGING = {
         'trade': {'handlers': ['console'], 'level': 'WARNING', 'propagate': False},
     },
 }
+
+# Production always verifies Turnstile. Empty keys disable submissions, not startup.
+TURNSTILE_SITE_KEY = os.getenv('TURNSTILE_SITE_KEY', '').strip()
+TURNSTILE_SECRET_KEY = os.getenv('TURNSTILE_SECRET_KEY', '').strip()
+CONTACT_MIN_SECONDS = 2
+CONTACT_TOKEN_MAX_AGE = 7200
+CONTACT_IP_LIMIT = 10
+CONTACT_EMAIL_LIMIT = 5

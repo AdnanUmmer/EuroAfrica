@@ -176,8 +176,9 @@ class Enquiry(models.Model):
     category = models.ForeignKey(TradeCategory, null=True, blank=True, on_delete=models.SET_NULL)
     message = models.TextField(max_length=5000)
     created_at = models.DateTimeField(auto_now_add=True)
-    status = models.CharField(max_length=20, choices=[('new', 'New'), ('in_progress', 'In progress'), ('resolved', 'Resolved')], default='new')
+    status = models.CharField(max_length=20, choices=[('new', 'New'), ('in_progress', 'In progress'), ('resolved', 'Resolved'), ('read', 'Read'), ('replied', 'Replied'), ('spam', 'Spam'), ('archived', 'Archived')], default='new')
     staff_notes = models.TextField(blank=True)
+    privacy_consent_at = models.DateTimeField(null=True, blank=True, editable=False)
     class Meta:
         ordering = ['-created_at']
         verbose_name_plural = 'Enquiries'
@@ -198,3 +199,9 @@ class StockImageInitialization(models.Model):
     """Record first default-image setup so later deliberate clears stay cleared."""
     key = models.CharField(max_length=150, primary_key=True)
     created_at = models.DateTimeField(auto_now_add=True)
+
+
+class SubmissionReceipt(models.Model):
+    """Short-lived keyed digests only; never store tokens, messages or IPs here."""
+    key = models.CharField(max_length=64, primary_key=True)
+    expires_at = models.DateTimeField(db_index=True)

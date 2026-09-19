@@ -10,6 +10,7 @@ from django.core.files.uploadedfile import SimpleUploadedFile
 from django.core.exceptions import ValidationError
 from .models import *
 from .validators import validate_image
+from .test_helpers import enquiry_data
 
 
 class CanonicalConfigurationTests(SimpleTestCase):
@@ -113,14 +114,14 @@ class WebsiteTests(TestCase):
         response = self.client.post('/contact/', {'name': 'A', 'email': 'bad', 'message': 'Hello'})
         self.assertEqual(response.status_code, 200)
         self.assertEqual(Enquiry.objects.count(), 0)
-        response = self.client.post('/contact/', {'name': 'A', 'email': 'a@example.org', 'message': 'Hello', 'category': obj.pk})
+        response = self.client.post('/contact/', enquiry_data(name='A', email='a@example.org', message='Hello', category=obj.pk))
         self.assertRedirects(response, '/contact/thanks/')
         self.assertEqual(Enquiry.objects.count(), 1)
         self.assertEqual(self.client.get('/contact/thanks/')['X-Robots-Tag'], 'noindex, nofollow')
     @override_settings(CONTACT_NOTIFICATION_EMAIL='owner@example.org')
-    @patch('trade.views.send_mail', side_effect=RuntimeError('SMTP unavailable'))
+    @patch('trade.views.EmailMessage.send', side_effect=RuntimeError('SMTP unavailable'))
     def test_email_failure_preserves_submission(self, mocked):
-        response = self.client.post('/contact/', {'name': 'A', 'email': 'a@example.org', 'message': 'Hello'})
+        response = self.client.post('/contact/', enquiry_data(name='A', email='a@example.org', message='Hello'))
         self.assertEqual(response.status_code, 302)
         self.assertEqual(Enquiry.objects.count(), 1)
         mocked.assert_called_once()

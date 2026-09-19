@@ -1,12 +1,15 @@
 from urllib.parse import urlsplit
 from django.conf import settings
 from django.core.management.base import BaseCommand, CommandError
+from django.core.management import call_command
 from trade.models import ContentPage, HomePage, SiteSettings
 
 class Command(BaseCommand):
     help = 'Fail until the production indexing and owner-content launch requirements are satisfied.'
     def handle(self, **options):
         issues = []
+        from trade.antispam import turnstile_configured
+        if not turnstile_configured(): issues.append('Configure real Turnstile keys before accepting live enquiries.')
         if settings.DEBUG: issues.append('DEBUG must be false.')
         if settings.STAGING: issues.append('STAGING must be false on the production site.')
         if not settings.INDEXABLE: issues.append('INDEXABLE must be true on production.')
@@ -19,4 +22,5 @@ class Command(BaseCommand):
         if not SiteSettings.objects.filter(pk=1).exclude(email='').exists(): issues.append('Configure a verified public contact email.')
         if not HomePage.objects.filter(pk=1).exclude(hero_image='').exists(): issues.append('Replace the homepage illustration with approved hero photography.')
         if issues: raise CommandError('\n'.join(issues))
+        call_command('audit_seo', stdout=self.stdout)
         self.stdout.write(self.style.SUCCESS('Configuration checks passed. Complete live HTTP, Search Console, accessibility and performance checks in DEPLOYMENT.md.'))

@@ -34,7 +34,15 @@ with tempfile.TemporaryDirectory() as directory:
         before = client.get('/')
         assert before.status_code == 404 and HomePage.objects.count() == 0
         print('REPRODUCED: migrations through 0005 only, HomePage rows=0, GET / = 404')
+        call_command('migrate', 'trade', '0007', stdout=StringIO(), verbosity=0)
+        from django.db.migrations.executor import MigrationExecutor
+        historical = MigrationExecutor(connections['default']).loader.project_state([('trade', '0007_stockimageinitialization')]).apps
+        legacy = historical.get_model('trade', 'Enquiry').objects.create(name='Migration check', email='check@example.org', message='Preserve this enquiry', status='resolved')
         call_command('migrate', stdout=StringIO(), verbosity=0)
+        from trade.models import Enquiry
+        preserved = Enquiry.objects.get(pk=legacy.pk)
+        assert preserved.message == 'Preserve this enquiry' and preserved.status == 'resolved' and preserved.privacy_consent_at is None
+        print('PASS: new enquiry migration preserves historical enquiries/statuses without inventing consent')
         for model in (HomePage, SiteSettings, ContactPage): assert model.objects.filter(pk=1).exists()
         for path in ('/', '/contact/'):
             response = client.get(path)
@@ -98,6 +106,8 @@ with tempfile.TemporaryDirectory() as directory:
             evidence.mkdir(exist_ok=True)
             (evidence / 'render-media-audit.json').write_text(output.getvalue(), encoding='utf-8')
             assert b'/media/content/' in client.get('/').content
+        with override_settings(INDEXABLE=True):
+            call_command('audit_seo', simulate_indexing=True)
         print('PASS: 18 database image references and every emitted srcset URL return 200; repeat linking is safe')
         assert b'/admin/password_reset/' in client.get('/admin/login/').content
         assert client.get('/admin/password_reset/').status_code == 200

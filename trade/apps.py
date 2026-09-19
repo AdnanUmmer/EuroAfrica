@@ -8,4 +8,4 @@ class TradeConfig(AppConfig):
     name = 'trade'
     verbose_name = 'EuroAfrica content'
     def ready(self):
-        from . import signals
+        from . import signals, checks

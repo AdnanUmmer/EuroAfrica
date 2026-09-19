@@ -17,6 +17,7 @@ from django.test import TestCase, Client, override_settings
 from django.urls import path
 from euroafrica.urls import urlpatterns as project_urls
 from .media import image as media_image
+from .test_helpers import enquiry_data
 from .models import HomePage, TradeCategory, TradeDirection, Enquiry, StockImageInitialization
 from .templatetags.trade_images import image_srcset
 
@@ -81,14 +82,14 @@ class RecoveryAndEmailTests(TestCase):
 
     @override_settings(CONTACT_NOTIFICATION_EMAIL='receiver@example.org')
     def test_enquiry_notification_fields_and_recipient(self):
-        data={'name':'Visitor','email':'visitor@example.org','company':'Example Company','phone':'123','message':'A plain text question.'}
+        data=enquiry_data(company='Example Company',phone='123',message='A plain text question.')
         response=self.client.post('/contact/',data)
         self.assertEqual(response.status_code,302)
         self.assertEqual(Enquiry.objects.count(),1)
         self.assertEqual(len(mail.outbox),1)
         self.assertEqual(mail.outbox[0].to,['receiver@example.org'])
         self.assertEqual(mail.outbox[0].from_email,'sender@example.org')
-        for value in data.values():self.assertIn(value,mail.outbox[0].body)
+        for key in ('name','email','company','phone','message'):self.assertIn(data[key],mail.outbox[0].body)
         self.assertIn('/admin/trade/enquiry/',mail.outbox[0].body)
 
     def test_admin_login_logout_and_default_action_permissions(self):

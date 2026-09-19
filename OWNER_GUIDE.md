@@ -67,3 +67,9 @@ python manage.py changepassword <username>
 The second command prompts securely without exposing the password in command history. Set a current email on the staff account in Users. Never print password hashes or create a shared hardcoded account.
 
 DEFAULT_FROM_EMAIL selects the verified sender; CONTACT_NOTIFICATION_EMAIL selects the owner inbox receiving enquiries. The public contact address is separate. Notification failure does not delete enquiries. Review Enquiries in admin even when delivery is unavailable. See [production configuration](PRODUCTION_READINESS.md).
+
+## Enquiry protection and status actions
+
+New enquiries record the time of explicit response consent. Existing enquiries retain their original status and have no invented consent date. Use the selected-row actions to mark Read, Replied, Spam or Archived; these require change permission and send no email. In progress and Resolved remain available. Submission details and consent time are read-only; staff notes stay editable.
+
+Production submissions require configured Cloudflare Turnstile keys. A temporary verification failure offers a retry and never emails rejected spam. A successful duplicate returns confirmation without adding another record or notification. See [setup and privacy/retention checklist](SEO_AND_ENQUIRY_READINESS.md).

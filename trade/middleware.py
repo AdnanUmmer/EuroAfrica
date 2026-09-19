@@ -30,4 +30,6 @@ class SiteMiddleware:
             response['Cache-Control'] = 'private, no-store'
         response['Referrer-Policy'] = 'strict-origin-when-cross-origin'
         response['Content-Security-Policy'] = "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; font-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'"
+        if request.path == '/contact/' and settings.TURNSTILE_SITE_KEY:
+            response['Content-Security-Policy'] = response['Content-Security-Policy'].replace("script-src 'self'", "script-src 'self' https://challenges.cloudflare.com") + "; frame-src https://challenges.cloudflare.com; connect-src 'self' https://challenges.cloudflare.com"
         return response
