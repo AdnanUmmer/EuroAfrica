@@ -44,6 +44,9 @@ class SiteSettings(Singleton, SEO):
     def __str__(self): return 'Brand, contact details & default SEO'
 
 class HomePage(Singleton, SEO):
+    hero_detail = models.TextField(blank=True)
+    final_heading = models.CharField(max_length=180, blank=True)
+    final_text = models.TextField(blank=True)
     hero_heading = models.CharField(max_length=180, default='Connecting Africa and Europe Through Trade')
     hero_text = models.TextField(default='Explore the products and sectors connecting African and European markets—from fresh produce and specialty goods to machinery, technology, and industrial supplies.')
     hero_image = image_field()
@@ -87,6 +90,7 @@ class Published(SEO):
     def __str__(self): return self.title
 
 class TradeDirection(Published):
+    heading = models.CharField(max_length=180, blank=True)
     seed_key = models.CharField(max_length=180, unique=True, null=True, blank=True, editable=False)
     slug = models.SlugField(unique=True)
     introduction = models.TextField()
@@ -99,6 +103,7 @@ class TradeDirection(Published):
     def get_absolute_url(self): return reverse('direction', args=[self.slug])
 
 class TradeCategory(Published):
+    link_label = models.CharField(max_length=100, blank=True)
     seed_key = models.CharField(max_length=180, unique=True, null=True, blank=True, editable=False)
     direction = models.ForeignKey(TradeDirection, on_delete=models.PROTECT, related_name='categories')
     overview = models.TextField()
@@ -169,6 +174,8 @@ class ContactPage(Singleton, SEO):
     def __str__(self): return 'Contact page'
 
 class Enquiry(models.Model):
+    interest = models.CharField(max_length=30, choices=[('general', 'General Enquiry'), ('africa-to-europe', 'Africa → Europe Trade'), ('europe-to-africa', 'Europe → Africa Trade')], default='general')
+    market = models.CharField(max_length=120, blank=True)
     name = models.CharField(max_length=120)
     email = models.EmailField()
     company = models.CharField(max_length=180, blank=True)
@@ -205,3 +212,21 @@ class SubmissionReceipt(models.Model):
     """Short-lived keyed digests only; never store tokens, messages or IPs here."""
     key = models.CharField(max_length=64, primary_key=True)
     expires_at = models.DateTimeField(db_index=True)
+
+
+class HomeFeature(models.Model):
+    homepage = models.ForeignKey(HomePage, on_delete=models.CASCADE, related_name='features')
+    heading = models.CharField(max_length=180)
+    text = models.TextField()
+    order = models.PositiveIntegerField(default=0)
+    class Meta:
+        ordering = ['order', 'pk']
+
+
+class ContentSection(models.Model):
+    page = models.ForeignKey(ContentPage, on_delete=models.CASCADE, related_name='sections')
+    heading = models.CharField(max_length=180)
+    text = models.TextField()
+    order = models.PositiveIntegerField(default=0)
+    class Meta:
+        ordering = ['order', 'pk']

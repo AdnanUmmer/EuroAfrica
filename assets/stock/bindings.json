@@ -126,7 +126,7 @@
     "key": "natural-cosmetics",
     "file": "natural-cosmetics.webp",
     "source": "https://unsplash.com/photos/handmade-soaps-and-natural-beauty-products-displayed-on-wooden-shelves-aDx3Kb7QdPI",
-    "author": "Kaw\u00ea Rodrigues",
+    "author": "Kawê Rodrigues",
     "alt": "Soaps and personal-care products on wooden shelves",
     "image_url": "https://images.unsplash.com/photo-1781451481507-a136c5488f79?auto=format&fit=max&w=1600&q=85",
     "license": "Unsplash License",
@@ -226,6 +226,127 @@
     ]
   },
   "processed-foodstuffs-wheat": {
+    "key": "processed-foodstuffs-wheat",
+    "file": "processed-foodstuffs-wheat.webp",
+    "source": "https://unsplash.com/photos/wheat-grain-in-focus-photography-during-sunset-yOQntxCp0r0",
+    "author": "Ann Savchenko",
+    "alt": "Wheat heads in evening light",
+    "image_url": "https://images.unsplash.com/photo-1531603845872-e4a07041f521?auto=format&fit=max&w=1600&q=85",
+    "license": "Unsplash License",
+    "license_url": "https://unsplash.com/license",
+    "attribution": "Not required; credited in asset register",
+    "retrieved": "2026-09-17",
+    "context": "Illustrative stock photograph; no EuroAfrica ownership, location, supplier or origin claim.",
+    "path": "content/2026/09/56189c80c396463eb1a953a54abeb297.webp",
+    "known_paths": [
+      "content/2026/09/56189c80c396463eb1a953a54abeb297.webp"
+    ]
+  },
+  "agricultural-commodities": {
+    "key": "beverages",
+    "file": "beverages.webp",
+    "source": "https://unsplash.com/photos/coffee-beans-JS-QXqSGVE8",
+    "author": "Alex Jones",
+    "alt": "Roasted coffee beans in processing equipment",
+    "image_url": "https://images.unsplash.com/photo-1414808549009-35951c724e9f?auto=format&fit=max&w=1600&q=85",
+    "license": "Unsplash License",
+    "license_url": "https://unsplash.com/license",
+    "attribution": "Not required; credited in asset register",
+    "retrieved": "2026-09-17",
+    "context": "Illustrative stock photograph; no EuroAfrica ownership, location, supplier or origin claim.",
+    "path": "content/2026/09/f6429cafe3984f9f8099ed76bc0d5165.webp",
+    "known_paths": [
+      "content/2026/09/f6429cafe3984f9f8099ed76bc0d5165.webp"
+    ]
+  },
+  "horticulture": {
+    "key": "fresh-fruits-vegetables",
+    "file": "fresh-fruits-vegetables.webp",
+    "source": "https://unsplash.com/photos/avocado-on-green-surface-0FS1bxTios8",
+    "author": "Louis Hansel",
+    "alt": "Sliced avocado on a green surface",
+    "image_url": "https://images.unsplash.com/photo-1579254646899-04ad03b05cdc?auto=format&fit=max&w=1600&q=85",
+    "license": "Unsplash License",
+    "license_url": "https://unsplash.com/license",
+    "attribution": "Not required; credited in asset register",
+    "retrieved": "2026-09-17",
+    "context": "Illustrative stock photograph; no EuroAfrica ownership, location, supplier or origin claim.",
+    "path": "content/2026/09/3a7c98b5ccf34fbf97a8b18280f50f2f.webp",
+    "known_paths": [
+      "content/2026/09/3a7c98b5ccf34fbf97a8b18280f50f2f.webp",
+      "content/2026/09/e76c23b1092249abaa2334a681745a81.webp"
+    ]
+  },
+  "textiles-apparel": {
+    "key": "handicrafts-textiles",
+    "file": "handicrafts-textiles.webp",
+    "source": "https://unsplash.com/photos/woven-baskets-and-hats-displayed-on-a-textured-surface-lA3cILAjlcc",
+    "author": "Anes mchayaa",
+    "alt": "Woven baskets and hats on a textured surface",
+    "image_url": "https://images.unsplash.com/photo-1756374190688-a75e7bfd2c64?auto=format&fit=max&w=1600&q=85",
+    "license": "Unsplash License",
+    "license_url": "https://unsplash.com/license",
+    "attribution": "Not required; credited in asset register",
+    "retrieved": "2026-09-17",
+    "context": "Illustrative stock photograph; no EuroAfrica ownership, location, supplier or origin claim.",
+    "path": "content/2026/09/5a40910fd4444d96a119c9b599ff37d9.webp",
+    "known_paths": [
+      "content/2026/09/5a40910fd4444d96a119c9b599ff37d9.webp",
+      "content/2026/09/ef389b9ee34b4a55813d87b1ef377d86.webp"
+    ]
+  },
+  "machinery-appliances": {
+    "key": "machinery-mechanical-appliances",
+    "file": "machinery-mechanical-appliances.webp",
+    "source": "https://unsplash.com/photos/industrial-machinery-with-pipes-and-valves-sIfOwIa8Lq0",
+    "author": "Dave Meckler",
+    "alt": "Industrial machinery with pipes and valves",
+    "image_url": "https://images.unsplash.com/photo-1773517458853-1afbaee86901?auto=format&fit=max&w=1600&q=85",
+    "license": "Unsplash License",
+    "license_url": "https://unsplash.com/license",
+    "attribution": "Not required; credited in asset register",
+    "retrieved": "2026-09-17",
+    "context": "Illustrative stock photograph; no EuroAfrica ownership, location, supplier or origin claim.",
+    "path": "content/2026/09/2ce70ac450934f368ce9164765b1d811.webp",
+    "known_paths": [
+      "content/2026/09/2ce70ac450934f368ce9164765b1d811.webp"
+    ]
+  },
+  "transport-equipment": {
+    "key": "transportation-vehicles",
+    "file": "transportation-vehicles.webp",
+    "source": "https://unsplash.com/photos/assortment-of-assorted-vehicle-lights-in-bins-uNKJQv_aRog",
+    "author": "Diego Romeo",
+    "alt": "Vehicle lights organized in storage bins",
+    "image_url": "https://images.unsplash.com/photo-1777213003360-0419fd2fbfdf?auto=format&fit=max&w=1600&q=85",
+    "license": "Unsplash License",
+    "license_url": "https://unsplash.com/license",
+    "attribution": "Not required; credited in asset register",
+    "retrieved": "2026-09-17",
+    "context": "Illustrative stock photograph; no EuroAfrica ownership, location, supplier or origin claim.",
+    "path": "content/2026/09/fdf34cf9e6e8405ebe66b584a445d11c.webp",
+    "known_paths": [
+      "content/2026/09/fdf34cf9e6e8405ebe66b584a445d11c.webp"
+    ]
+  },
+  "refined-mineral-products-fuels": {
+    "key": "refined-petroleum-minerals",
+    "file": "refined-petroleum-minerals.webp",
+    "source": "https://unsplash.com/photos/oil-refinery-by-a-river-at-dusk-EbISsANu3Iw",
+    "author": "Anthony Maw",
+    "alt": "Distillation structures at a refinery at dusk",
+    "image_url": "https://images.unsplash.com/photo-1743723180480-243b89c5ebaa?auto=format&fit=max&w=1600&q=85",
+    "license": "Unsplash License",
+    "license_url": "https://unsplash.com/license",
+    "attribution": "Not required; credited in asset register",
+    "retrieved": "2026-09-17",
+    "context": "Illustrative stock photograph; no EuroAfrica ownership, location, supplier or origin claim.",
+    "path": "content/2026/09/d715214397364381ba06db9c4ad8e24f.webp",
+    "known_paths": [
+      "content/2026/09/d715214397364381ba06db9c4ad8e24f.webp"
+    ]
+  },
+  "agri-food-foodstuffs": {
     "key": "processed-foodstuffs-wheat",
     "file": "processed-foodstuffs-wheat.webp",
     "source": "https://unsplash.com/photos/wheat-grain-in-focus-photography-during-sunset-yOQntxCp0r0",

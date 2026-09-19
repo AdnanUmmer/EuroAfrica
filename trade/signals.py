@@ -7,7 +7,7 @@ from django.db.models.signals import pre_save, post_save, post_delete, post_migr
 from django.db.models import ImageField
 from django.dispatch import receiver
 from django.utils import timezone
-from .models import TradeCategory, TradeDirection, URLHistory, CategoryProduct, CategorySection, CategoryImage, FooterLink, SiteSettings
+from .models import TradeCategory, TradeDirection, URLHistory, CategoryProduct, CategorySection, CategoryImage, FooterLink, SiteSettings, HomeFeature, HomePage, ContentSection, ContentPage
 
 @receiver(pre_save)
 def prepare_content(sender, instance, **kwargs):
@@ -43,6 +43,10 @@ def prepare_content(sender, instance, **kwargs):
 @receiver(post_save)
 @receiver(post_delete)
 def touch_parent(sender, instance, **kwargs):
+    if sender == HomeFeature:
+        HomePage.objects.filter(pk=instance.homepage_id).update(updated_at=timezone.now())
+    if sender == ContentSection:
+        ContentPage.objects.filter(pk=instance.page_id).update(updated_at=timezone.now())
     if sender == FooterLink:
         SiteSettings.objects.update(updated_at=timezone.now())
     if sender in (CategoryProduct, CategorySection, CategoryImage):

@@ -27,26 +27,15 @@ def seed_object(model, slug, defaults):
     return model.objects.create(seed_key=slug, slug=slug, **defaults), True
 
 class Command(BaseCommand):
-    help = 'Create initial content without overwriting existing owner edits.'
+    help = 'Create approved starter content and permissions without replacing later owner edits.'
     def handle(self, *args, **options):
-        SiteSettings.objects.get_or_create(pk=1)
-        HomePage.objects.get_or_create(pk=1)
-        ContactPage.objects.get_or_create(pk=1)
-        directions = []
-        for order, (title, slug, summary, intro) in enumerate([
-            ('Africa to Europe', 'africa-to-europe', 'From fresh produce and flowers to distinctive materials and everyday essentials.', 'Explore seven categories spanning flowers, food, handicrafts, textiles and personal care. The examples introduce the breadth of the Africa-to-Europe direction without implying a single origin or a confirmed supply portfolio.'),
-            ('Europe to Africa', 'europe-to-africa', 'Machinery, technology and industrial materials, alongside food and beverages.', 'Explore six categories covering mechanical appliances, chemicals, electrical equipment, transportation, refined products and foodstuffs. Each category presents the supplied examples as a starting point for learning and enquiry.')]):
-            obj, _ = seed_object(TradeDirection, slug, dict(title=title, summary=summary, introduction=intro, order=order, published=True))
-            directions.append(obj)
-        for i, (title, slug, products, summary, overview) in enumerate(DATA):
-            category, created = seed_object(TradeCategory, slug, dict(direction=directions[i >= 7], title=title, summary=summary, overview=overview, order=i, published=True, featured=i in (0, 1, 2, 7), editorial_notes='Source mentions nuclear reactors. Owner verification required; not a confirmed offering.' if i == 7 else ''))
-            if created:
-                heading, text = GUIDANCE[slug]
-                CategorySection.objects.create(category=category, heading=heading, text=text, order=10)
-                for order, name in enumerate(products): CategoryProduct.objects.create(category=category, name=name, order=order)
-        ContentPage.objects.get_or_create(slug='about', defaults=dict(title='About EuroAfrica', summary='A perspective on the products connecting African and European markets.', body='Bridging Markets • Creating Opportunities\n\nEuroAfrica presents an introduction to trade categories connecting Africa and Europe. The website brings together product examples across agriculture, food, manufactured goods and industrial equipment.\n\nExplore the two trade directions to learn about the categories and the products included. For a specific question, use the contact form and select the category that interests you.\n\nThe category information is an overview. It does not establish availability, sourcing arrangements or confirmed services for an individual product.', published=True))
-        ContentPage.objects.get_or_create(slug='privacy', defaults=dict(title='Privacy notice', summary='How personal information submitted through this website is handled.', body='OWNER REVIEW REQUIRED BEFORE PUBLICATION. Confirm the legal controller identity and contact details, purposes and legal basis, recipients and processors, retention periods, international transfers, applicable rights and complaint process. This draft is not a finished privacy notice. The form stores name, email, optional company, phone, category and message. A keyed hash of the source IP and hourly window is used to limit submissions.', published=False))
+        from importlib import import_module
+        from types import SimpleNamespace
+        from django.apps import apps
+        from django.db import connection
+        import_module('trade.migrations.0011_approved_website_content').install(apps, SimpleNamespace(connection=connection), overwrite=False)
+        ContentPage.objects.get_or_create(slug='privacy', defaults=dict(title='Privacy notice', summary='How enquiry data is handled.', body='OWNER REVIEW REQUIRED BEFORE PUBLICATION. Confirm controller identity, contact details, purposes, processors including Cloudflare verification and email delivery, retention, transfers and applicable rights. This is an unpublished editorial draft.', published=False))
         group, _ = Group.objects.get_or_create(name='Editor')
-        models = ['sitesettings', 'homepage', 'contactpage', 'tradedirection', 'tradecategory', 'categoryproduct', 'categorysection', 'categoryimage', 'contentpage', 'enquiry', 'footerlink']
-        group.permissions.add(*Permission.objects.filter(content_type__app_label='trade', content_type__model__in=models).exclude(codename='add_enquiry'))
-        self.stdout.write(self.style.SUCCESS('Seeded 2 directions, 13 categories and Editor permissions; existing content preserved.'))
+        names = ['sitesettings','homepage','contactpage','tradedirection','tradecategory','categoryproduct','categorysection','categoryimage','contentpage','enquiry','footerlink','homefeature','contentsection']
+        group.permissions.add(*Permission.objects.filter(content_type__app_label='trade',content_type__model__in=names).exclude(codename='add_enquiry'))
+        self.stdout.write(self.style.SUCCESS('Approved starter content and Editor permissions ready; existing edits preserved.'))

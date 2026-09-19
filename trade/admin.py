@@ -46,7 +46,18 @@ class ContentAdmin(ImageAdminMixin, admin.ModelAdmin):
     def publication(self, obj):
         return format_html('<span class="status-badge {}">{}</span>', 'published' if obj.published else 'draft', 'Published' if obj.published else 'Draft')
 
+class HomeFeatureInline(admin.StackedInline):
+    model = HomeFeature
+    extra = 0
+
+class ContentSectionInline(admin.StackedInline):
+    model = ContentSection
+    extra = 0
+
 class SingletonAdmin(ContentAdmin):
+    def get_inlines(self, request, obj=None):
+        return [HomeFeatureInline] if self.model == HomePage else []
+
     def has_add_permission(self, request): return not self.model.objects.exists() and super().has_add_permission(request)
     def has_delete_permission(self, request, obj=None): return False
 
@@ -72,6 +83,8 @@ class CategoryAdmin(ContentAdmin):
 
 @admin.register(TradeDirection, ContentPage)
 class PageAdmin(ContentAdmin):
+    def get_inlines(self, request, obj=None):
+        return [ContentSectionInline] if self.model == ContentPage else []
     list_display = ['title', 'publication', 'indexable', 'order']
     search_fields = ['title']
     list_filter = ['published']
@@ -80,11 +93,11 @@ admin.site.register([SiteSettings, HomePage, ContactPage], SingletonAdmin)
 
 @admin.register(Enquiry)
 class EnquiryAdmin(admin.ModelAdmin):
-    list_display = ['name', 'email', 'category', 'status', 'created_at']
-    list_filter = ['status', 'category']
-    search_fields = ['name', 'email', 'company', 'message']
-    readonly_fields = ['name', 'email', 'company', 'phone', 'category', 'message', 'privacy_consent_at', 'created_at']
-    fields = ['name', 'email', 'company', 'phone', 'category', 'message', 'privacy_consent_at', 'created_at', 'status', 'staff_notes']
+    list_display = ['name', 'email', 'company', 'interest', 'category', 'market', 'status', 'created_at']
+    list_filter = ['status', 'interest', 'category']
+    search_fields = ['name', 'email', 'company', 'market', 'message']
+    readonly_fields = ['name', 'email', 'company', 'phone', 'interest', 'category', 'market', 'message', 'privacy_consent_at', 'created_at']
+    fields = ['name', 'email', 'company', 'phone', 'interest', 'category', 'market', 'message', 'privacy_consent_at', 'created_at', 'status', 'staff_notes']
     date_hierarchy = 'created_at'
     list_select_related = ['category']
     actions = ['mark_read', 'mark_replied', 'mark_spam', 'archive']

@@ -59,8 +59,9 @@ def rate_allowed(identity, scope, limit, seconds):
 
 def receipt_keys(data):
     normalized = ' '.join(unicodedata.normalize('NFKC', data['message']).split()).casefold()
+    scope = '/'.join([data.get('interest', 'general'), str(getattr(data.get('category'), 'pk', 'general')), ' '.join(data.get('market', '').casefold().split())])
     return sorted([
-        salted_hmac('enquiry-duplicate', data['email'].casefold() + '/' + normalized).hexdigest(),
+        salted_hmac('enquiry-duplicate', data['email'].casefold() + '/' + scope + '/' + normalized).hexdigest(),
         salted_hmac('enquiry-replay', data['form_token']).hexdigest(),
     ])
 

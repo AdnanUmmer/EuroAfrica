@@ -67,7 +67,7 @@ def preview(request, kind, pk):
 def contact(request):
     from . import antispam
     obj = get_object_or_404(ContactPage, pk=1)
-    form = EnquiryForm(request.POST if request.method == 'POST' else None, initial={'category': request.GET.get('category', 'general')})
+    form = EnquiryForm(request.POST if request.method == 'POST' else None, initial={'category': request.GET.get('category', 'general'), 'interest': request.GET.get('interest', 'general')})
     status = 200
     configured = not antispam.turnstile_required() or antispam.turnstile_configured()
     if request.method == 'POST':
@@ -91,7 +91,7 @@ def contact(request):
                     try:
                         message = '\n'.join([
                             f'Enquiry #{enquiry.pk}', f'Name: {enquiry.name}', f'Email: {enquiry.email}',
-                            f'Company: {enquiry.company}', f'Phone: {enquiry.phone}',
+                            f'Company: {enquiry.company}', f'Phone: {enquiry.phone}', f'Interest: {enquiry.get_interest_display()}', f'Country / market: {enquiry.market}',
                             f'Category: {enquiry.category or "General enquiry"}', f'Submitted: {enquiry.created_at.isoformat()}',
                             '', enquiry.message, '', f'Review: {settings.SITE_URL}/admin/trade/enquiry/{enquiry.pk}/change/',
                         ])

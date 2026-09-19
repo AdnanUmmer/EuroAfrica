@@ -138,6 +138,9 @@ class MediaReadinessTests(TestCase):
             self.assertTrue(home.hero_image.storage.exists(home.hero_image.name))
             for obj in [home]+list(TradeCategory.objects.all()):
                 file=obj.hero_image if isinstance(obj,HomePage) else obj.image
+                if not file:
+                    self.assertContains(self.client.get(obj.get_absolute_url()), 'illustration.svg')
+                    continue
                 response=self.client.get(file.url);self.assertEqual(response.status_code,200);response.close()
                 for variant in image_srcset(file).split(', '):
                     if variant:

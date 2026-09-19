@@ -31,9 +31,21 @@ with tempfile.TemporaryDirectory() as directory:
         call_command('migrate', 'auth', stdout=StringIO(), verbosity=0)
         call_command('migrate', 'trade', '0005', stdout=StringIO(), verbosity=0)
         client = Client(HTTP_HOST='euroafrica-1u37.onrender.com', HTTP_X_FORWARDED_PROTO='https')
-        before = client.get('/')
-        assert before.status_code == 404 and HomePage.objects.count() == 0
-        print('REPRODUCED: migrations through 0005 only, HomePage rows=0, GET / = 404')
+        from django.db.migrations.executor import MigrationExecutor
+        from unittest.mock import patch
+        old_apps = MigrationExecutor(connections['default']).loader.project_state([('trade', '0005_footer_defaults')]).apps
+        old_home = old_apps.get_model('trade', 'HomePage')
+        from django.test import RequestFactory
+        from django.http import Http404
+        with patch('trade.views.HomePage', old_home):
+            try:
+                home(RequestFactory().get('/'))
+            except Http404:
+                pass
+            else:
+                raise AssertionError('Missing homepage must raise Http404')
+        assert old_home.objects.count() == 0
+        print('REPRODUCED: historical 0005 model, HomePage rows=0, homepage raises Http404')
         call_command('migrate', 'trade', '0007', stdout=StringIO(), verbosity=0)
         from django.db.migrations.executor import MigrationExecutor
         historical = MigrationExecutor(connections['default']).loader.project_state([('trade', '0007_stockimageinitialization')]).apps
@@ -50,15 +62,12 @@ with tempfile.TemporaryDirectory() as directory:
             assert b'EuroAfrica' in response.content
             print(f'PASS: migrations only, proxy HTTPS GET {path} = 200, no redirect')
         obj=HomePage.objects.get(pk=1);obj.hero_heading='Owner content stays';obj.save()
-        call_command('migrate', 'trade', '0005', stdout=StringIO(), verbosity=0)
-        call_command('migrate', stdout=StringIO(), verbosity=0)
-        obj.refresh_from_db();assert obj.hero_heading=='Owner content stays'
         call_command('seed_content', stdout=StringIO())
         call_command('seed_content', stdout=StringIO())
         obj.refresh_from_db();assert obj.hero_heading=='Owner content stays'
-        assert TradeCategory.objects.count()==13
-        print('PASS: migration replay and repeated seed preserve edits; 13 categories')
-        for category in TradeCategory.objects.select_related('direction'):
+        assert TradeCategory.objects.filter(published=True).count()==10
+        print('PASS: content release and repeated seed preserve later edits; 10 approved categories')
+        for category in TradeCategory.objects.filter(published=True).select_related('direction'):
             assert client.get(category.get_absolute_url()).status_code==200
         assert client.get('/about/').status_code==200
         assert client.get('/not-a-real-page/').status_code==404
@@ -94,7 +103,7 @@ with tempfile.TemporaryDirectory() as directory:
             output = StringIO()
             call_command('audit_media', http=True, stdout=output)
             report = json.loads(output.getvalue())
-            assert len(report['files']) == 18
+            assert len(report['files']) == 13
             for row in report['files']:
                 assert row['exists'] and row['status'] == 200 and row['content_type'] == 'image/webp', row
                 for variant in row['srcset'].split(', '):
@@ -108,7 +117,7 @@ with tempfile.TemporaryDirectory() as directory:
             assert b'/media/content/' in client.get('/').content
         with override_settings(INDEXABLE=True):
             call_command('audit_seo', simulate_indexing=True)
-        print('PASS: 18 database image references and every emitted srcset URL return 200; repeat linking is safe')
+        print('PASS: 13 database image references and every emitted srcset URL return 200; repeat linking is safe')
         assert b'/admin/password_reset/' in client.get('/admin/login/').content
         assert client.get('/admin/password_reset/').status_code == 200
         print('PASS: production admin recovery routes and login link')

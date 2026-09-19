@@ -10,7 +10,7 @@ from django.core.files.uploadedfile import SimpleUploadedFile
 from django.core.exceptions import ValidationError
 from .models import *
 from .validators import validate_image
-from .test_helpers import enquiry_data
+from .test_helpers import enquiry_data, page_inline_data
 
 
 class CanonicalConfigurationTests(SimpleTestCase):
@@ -36,8 +36,8 @@ class WebsiteTests(TestCase):
         call_command('seed_content', stdout=StringIO())
     def test_seed_structure_and_preserve_edits(self):
         self.assertEqual(list(TradeDirection.objects.values_list('categories__direction').distinct()).__len__(), 2)
-        self.assertEqual(TradeCategory.objects.count(), 13)
-        self.assertEqual(TradeDirection.objects.get(slug='africa-to-europe').categories.count(), 7)
+        self.assertEqual(TradeCategory.objects.count(), 10)
+        self.assertEqual(TradeDirection.objects.get(slug='africa-to-europe').categories.count(), 4)
         self.assertEqual(TradeDirection.objects.get(slug='europe-to-africa').categories.count(), 6)
         obj = TradeCategory.objects.first()
         obj.summary = 'Owner revision'
@@ -47,7 +47,7 @@ class WebsiteTests(TestCase):
         call_command('seed_content', stdout=StringIO())
         obj.refresh_from_db()
         self.assertEqual(obj.summary, 'Owner revision')
-        self.assertEqual(TradeCategory.objects.count(), 13)
+        self.assertEqual(TradeCategory.objects.count(), 10)
         self.assertEqual(CategoryProduct.objects.count(), count)
     def test_public_pages_metadata_and_json(self):
         paths = ['/', '/about/', '/contact/'] + [o.get_absolute_url() for o in TradeDirection.objects.all()] + [o.get_absolute_url() for o in TradeCategory.objects.all()]
@@ -152,7 +152,7 @@ class WebsiteTests(TestCase):
         self.assertEqual(self.client.get(old).status_code, 404)
     def test_sitemap_and_noindex(self):
         root = ElementTree.fromstring(self.client.get('/sitemap.xml').content)
-        self.assertEqual(len(root), 18)
+        self.assertEqual(len(root), 15)
         for node in root:
             self.assertTrue(node[0].text.startswith('https://www.euroafrica.example/'))
             self.assertTrue(node[1].text)
@@ -180,13 +180,13 @@ class WebsiteTests(TestCase):
         user.groups.add(Group.objects.get(name='Editor'))
         self.client.force_login(user)
         obj = ContentPage.objects.get(slug='about')
-        response = self.client.post(f'/admin/trade/contentpage/{obj.pk}/change/', {'title': 'About our markets', 'slug': 'about', 'summary': 'Owner-edited introduction.', 'body': 'Owner-edited body.', 'published': 'on', 'indexable': 'on', 'order': 0, 'image_position': 'center', '_save': 'Save'})
+        response = self.client.post(f'/admin/trade/contentpage/{obj.pk}/change/', {**page_inline_data(obj), 'title': 'About our markets', 'slug': 'about', 'summary': 'Owner-edited introduction.', 'body': 'Owner-edited body.', 'published': 'on', 'indexable': 'on', 'order': 0, 'image_position': 'center', '_save': 'Save'})
         self.assertEqual(response.status_code, 302)
         self.assertContains(self.client.get('/about/'), 'Owner-edited body.')
     def test_modified_date_tracks_product_changes(self):
         obj = TradeCategory.objects.first()
         before = obj.updated_at
-        product = obj.products.first(); product.name = 'Edited product'; product.save()
+        product = CategoryProduct.objects.create(category=obj, name='An owner product'); product.name = 'Edited product'; product.save()
         obj.refresh_from_db()
         self.assertGreater(obj.updated_at, before)
     def test_upload_is_reencoded_and_responsive(self):
@@ -220,7 +220,7 @@ class WebsiteTests(TestCase):
         user.groups.add(Group.objects.get(name='Editor'))
         self.client.force_login(user)
         obj = ContentPage.objects.get(slug='about')
-        data = {'title': obj.title, 'slug': 'about', 'summary': obj.summary, 'body': 'Edited through admin.', 'published': 'on', 'indexable': 'on', 'order': 0, 'image_position': 'top', 'image_alt': 'Test landscape', 'image_caption': 'Temporary test caption', '_save': 'Save'}
+        data = {**page_inline_data(obj), 'title': obj.title, 'slug': 'about', 'summary': obj.summary, 'body': 'Edited through admin.', 'published': 'on', 'indexable': 'on', 'order': 0, 'image_position': 'top', 'image_alt': 'Test landscape', 'image_caption': 'Temporary test caption', '_save': 'Save'}
         with tempfile.TemporaryDirectory() as directory, override_settings(MEDIA_ROOT=directory):
             names = []
             for colour in ('navy', 'gold'):

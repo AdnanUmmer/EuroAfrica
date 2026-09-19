@@ -174,3 +174,9 @@ footer :focus-visible { outline-color: #e3c58f; }
 .form-panel,.field{min-width:0}
 .field input,.field textarea,.field select{max-width:100%}
 #submission-status{font-size:.9rem;margin:12px 0 0}
+
+/* Approved editorial copy uses the existing responsive layout. */
+.why-features{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-block:30px}
+.why-features h3{font-size:1.45rem}.final-cta{max-width:1000px}.contact-banner .wrap>div{max-width:800px}
+.hero-copy>p:not(.eyebrow){max-width:65ch}.section-heading .prose{min-width:0}
+@media(max-width:760px){.why-features{grid-template-columns:1fr}.contact-banner .wrap>div{max-width:100%}}

@@ -15,9 +15,9 @@ class SEOReadinessTests(TestCase):
     def test_rendered_audit_all_pages_and_unique_content(self):
         output=StringIO();call_command('audit_seo',simulate_indexing=True,json=True,stdout=output)
         report=json.loads(output.getvalue());self.assertEqual(report['errors'],[])
-        self.assertEqual(len(report['pages']),18);self.assertEqual(report['sitemap_urls'],18)
-        self.assertEqual(CategorySection.objects.count(),13)
-        self.assertEqual(len(set(CategorySection.objects.values_list('text',flat=True))),13)
+        self.assertEqual(len(report['pages']),15);self.assertEqual(report['sitemap_urls'],15)
+        self.assertEqual(TradeCategory.objects.filter(published=True).count(),10)
+        self.assertEqual(len(set(TradeCategory.objects.values_list('overview',flat=True))),10)
 
     def test_direction_context_sharing_defaults_and_admin_overrides(self):
         obj=TradeCategory.objects.first()
@@ -46,7 +46,7 @@ class SEOReadinessTests(TestCase):
     def test_seed_does_not_recreate_removed_or_edited_guidance(self):
         category=TradeCategory.objects.first();category.overview='Owner copy';category.save()
         CategorySection.objects.filter(category=category).delete()
-        other=CategorySection.objects.first();other.text='Owner guidance';other.save()
+        other=CategorySection.objects.create(category=TradeCategory.objects.last(), heading='Owner section', text='Owner guidance')
         call_command('seed_content',stdout=StringIO())
         category.refresh_from_db();other.refresh_from_db()
         self.assertEqual(category.overview,'Owner copy');self.assertEqual(other.text,'Owner guidance')
@@ -57,7 +57,9 @@ class SEOReadinessTests(TestCase):
         from django.apps import apps
         from django.db import connection
         migration=importlib.import_module('trade.migrations.0009_category_guidance')
-        first,second=list(TradeCategory.objects.all()[:2])
+        from trade.management.commands.seed_content import DATA
+        first=TradeCategory.objects.create(direction=TradeDirection.objects.first(),seed_key=DATA[0][1],slug=DATA[0][1],title=DATA[0][0],summary=DATA[0][3],overview=DATA[0][4])
+        second=TradeCategory.objects.create(direction=TradeDirection.objects.first(),seed_key=DATA[1][1],slug=DATA[1][1],title=DATA[1][0],summary=DATA[1][3],overview=DATA[1][4])
         CategorySection.objects.filter(category__in=[first,second]).delete()
         second.overview='Owner revision';second.save()
         from types import SimpleNamespace

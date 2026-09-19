@@ -2,7 +2,7 @@
 {% block content %}
 {% include 'trade/breadcrumbs.html' %}
 <section class="section wrap contact-layout">
-  <div><p class="eyebrow">CONTACT EUROAFRICA</p><h1>{{ obj.title }}</h1><p class="lead">{{ obj.introduction }}</p><p class="contact-tag">{{ site.tagline }}</p></div>
+  <div><p class="eyebrow">CONTACT EUROAFRICA</p><h1>{{ obj.title }}</h1><div class="lead">{{ obj.introduction|linebreaks }}</div><p class="contact-tag">{{ site.tagline }}</p></div>
   <div class="form-panel">
   {% if thanks %}
     <h2>Enquiry received</h2><p role="status">{{ obj.confirmation }}</p><a class="button" href="/">Return home</a>
@@ -24,7 +24,7 @@
       {% endif %}{% endfor %}
       {% if privacy_published %}<p class="smallprint">Read our <a href="/privacy/">privacy notice</a> for information about your enquiry data.</p>{% else %}<p class="smallprint">Your details are used to respond to this enquiry. Please avoid sending sensitive personal information.</p>{% endif %}
       {% if turnstile_key %}<div id="enquiry-verification" class="enquiry-verification" data-sitekey="{{ turnstile_key }}"></div><noscript><p>Enable JavaScript for the security check before submitting.{% if site.email %} Alternatively, <a href="mailto:{{ site.email }}">email our team</a>.{% endif %}</p></noscript>{% endif %}
-      <button class="button" type="submit" {% if verification_unavailable %}disabled{% endif %}>Send enquiry <span aria-hidden="true">↗</span></button>
+      <button class="button" type="submit" {% if verification_unavailable %}disabled{% endif %}>Submit Enquiry <span aria-hidden="true">↗</span></button>
       <p id="submission-status" role="status" aria-live="polite"></p>
     </form>
     <script src="{% static 'trade/contact.js' %}" defer></script>
