@@ -2,7 +2,7 @@
 {% block content %}
 {% include 'trade/breadcrumbs.html' %}
 <section class="section wrap contact-layout">
-  <div><p class="eyebrow">CONTACT EUROAFRICA</p><h1>{{ obj.title }}</h1><div class="lead">{{ obj.introduction|linebreaks }}</div><p class="contact-tag">{{ site.tagline }}</p></div>
+  <div><p class="eyebrow">CONTACT EUROAFRICA</p><h1>{{ obj.title }}</h1><div class="lead">{{ obj.introduction|linebreaks }}</div><p class="contact-tag">{{ site.tagline }}</p>{% include 'trade/office_details.html' %}</div>
   <div class="form-panel">
   {% if thanks %}
     <h2>Enquiry received</h2><p role="status">{{ obj.confirmation }}</p><a class="button" href="/">Return home</a>

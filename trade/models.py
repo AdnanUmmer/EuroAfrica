@@ -2,7 +2,7 @@ from django.db import models
 from django.urls import reverse
 from django.utils import timezone
 from django.core.exceptions import ValidationError
-from .validators import validate_image, validate_destination
+from .validators import validate_image, validate_pdf, validate_destination
 
 IMAGE_POSITIONS = [('center', 'Centre'), ('top', 'Top'), ('bottom', 'Bottom'), ('left', 'Left'), ('right', 'Right')]
 
@@ -35,8 +35,10 @@ class SiteSettings(Singleton, SEO):
     logo_alt = models.CharField(max_length=200, default='EuroAfrica')
     favicon = image_field()
     email = models.EmailField(blank=True)
-    phone = models.CharField(max_length=60, blank=True)
-    address = models.TextField(blank=True)
+    phone = models.CharField('headquarters phone', max_length=60, blank=True, default='+36 30 369 6643')
+    address = models.TextField('headquarters address', blank=True, default='Budapest, Hungary')
+    africa_phone = models.CharField('Africa office phone', max_length=60, blank=True, default='+254727909090')
+    africa_address = models.TextField('Africa office address', blank=True, default='Nairobi, Kenya')
     linkedin = models.URLField(blank=True)
     instagram = models.URLField(blank=True)
     footer_copy = models.CharField(max_length=300, default='An introduction to the products and sectors connecting African and European markets.')
@@ -111,6 +113,7 @@ class TradeCategory(Published):
     hero_alt = models.CharField(max_length=240, blank=True)
     hero_caption = models.CharField(max_length=300, blank=True)
     hero_position = models.CharField(max_length=10, choices=IMAGE_POSITIONS, default='center')
+    brochure = models.FileField('Brochure / PDF', upload_to='brochures/%Y/%m/', blank=True, validators=[validate_pdf], help_text='Optional PDF document; maximum 25 MB.')
     featured = models.BooleanField(default=False)
     editorial_notes = models.TextField(blank=True, help_text='Internal only. Never displayed on the public site.')
     class Meta(Published.Meta):
@@ -118,6 +121,8 @@ class TradeCategory(Published):
         verbose_name_plural = 'Trade categories'
     def get_absolute_url(self): return reverse('category', args=[self.direction.slug, self.slug])
     def clean(self):
+        if self.brochure and self.seed_key != 'tobacco-products' and self.slug != 'tobacco-products':
+            raise ValidationError({'brochure': 'Brochures are only available for the Tobacco Products category.'})
         if self.direction_id and self.slug:
             history = URLHistory.objects.filter(path=self.get_absolute_url()).first()
             if history and (history.kind != 'TradeCategory' or history.object_id != self.pk):

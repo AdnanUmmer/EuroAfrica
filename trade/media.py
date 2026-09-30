@@ -1,4 +1,4 @@
-"""Bounded image delivery from repository media or a configured upload volume."""
+"""Bounded delivery of images and PDF documents from repository or uploaded media."""
 from pathlib import Path
 from django.conf import settings
 from django.http import FileResponse, Http404
@@ -12,14 +12,15 @@ def image(request, path):
         target = (root / path).resolve()
     except (OSError, ValueError):
         raise Http404 from None
-    types = {'.webp': 'image/webp', '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg'}
+    types = {'.webp': 'image/webp', '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.pdf': 'application/pdf'}
     if not target.is_relative_to(root) or target.suffix.lower() not in types:
         raise Http404
     try:
         stream = target.open('rb')
     except (OSError, ValueError):
         raise Http404 from None
-    response = FileResponse(stream, content_type=types[target.suffix.lower()])
+    is_pdf = target.suffix.lower() == '.pdf'
+    response = FileResponse(stream, content_type=types[target.suffix.lower()], as_attachment=is_pdf, filename=target.name if is_pdf else None)
     response['Cache-Control'] = 'private, no-store' if settings.STAGING else 'public, max-age=604800'
     response['X-Content-Type-Options'] = 'nosniff'
     return response

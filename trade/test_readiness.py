@@ -137,7 +137,7 @@ class MediaReadinessTests(TestCase):
             home.refresh_from_db();self.assertEqual(home.hero_heading,'Owner edit')
             self.assertTrue(home.hero_image.storage.exists(home.hero_image.name))
             for obj in [home]+list(TradeCategory.objects.all()):
-                file=obj.hero_image if isinstance(obj,HomePage) else obj.image
+                file=obj.hero_image if isinstance(obj,HomePage) or obj.seed_key == 'tobacco-products' else obj.image
                 if not file:
                     self.assertContains(self.client.get(obj.get_absolute_url()), 'illustration.svg')
                     continue

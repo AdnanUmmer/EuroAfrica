@@ -32,7 +32,7 @@ class ContentAdmin(ImageAdminMixin, admin.ModelAdmin):
         editorial = ['published', 'indexable', 'order', 'editorial_notes']
         all_fields = [f.name for f in self.model._meta.fields if f.editable and not f.primary_key]
         images = [x for x in all_fields if x not in seo and (x in ['header_logo', 'footer_logo', 'logo_alt', 'favicon'] or 'image' in x or x.endswith(('_alt', '_caption', '_position')))]
-        groups = [('Content', {'fields': [x for x in all_fields if x not in seo + editorial + images]}), ('Images', {'fields': images, 'description': 'Upload JPEG, PNG or WebP under 6 MB. Recommended: 1600 × 1100 for banners, 1000 × 750 for cards. Describe the image in alt text. Crop focus controls which part stays visible.'}), ('Visibility & order', {'fields': [x for x in editorial if x in all_fields]}), ('SEO & sharing', {'fields': seo, 'description': 'Optional overrides. Keep every published title and description specific to its page.'}), ('Review & preview', {'fields': ['updated_at', 'preview_link']})]
+        groups = [('Content', {'fields': [x for x in all_fields if x not in seo + editorial + images + ['brochure']]}), ('Images', {'fields': images, 'description': 'Upload JPEG, PNG or WebP under 6 MB. Recommended: 1600 × 1100 for banners, 1000 × 750 for cards. Describe the image in alt text. Crop focus controls which part stays visible.'}), ('Visibility & order', {'fields': [x for x in editorial if x in all_fields]}), ('SEO & sharing', {'fields': seo, 'description': 'Optional overrides. Keep every published title and description specific to its page.'}), ('Review & preview', {'fields': ['updated_at', 'preview_link']})]
         return [(label, options) for label, options in groups if options['fields']]
     def formfield_for_dbfield(self, db_field, request, **kwargs):
         field = super().formfield_for_dbfield(db_field, request, **kwargs)
@@ -80,6 +80,16 @@ class CategoryAdmin(ContentAdmin):
     prepopulated_fields = {'slug': ['title']}
     inlines = [ProductInline, SectionInline, ImageInline]
     list_editable = ['order', 'featured']
+    def get_form(self, request, obj=None, **kwargs):
+        form = super().get_form(request, obj, **kwargs)
+        if obj and (obj.seed_key == 'tobacco-products' or obj.slug == 'tobacco-products'):
+            form.base_fields['hero_image'].label = 'Tobacco section image'
+        return form
+    def get_fieldsets(self, request, obj=None):
+        fieldsets = list(super().get_fieldsets(request, obj))
+        if obj and (obj.seed_key == 'tobacco-products' or obj.slug == 'tobacco-products'):
+            fieldsets.append(('Brochure / PDF', {'fields': ['brochure'], 'description': 'Upload a PDF up to 25 MB. Use Clear to remove the current document.'}))
+        return fieldsets
 
 @admin.register(TradeDirection, ContentPage)
 class PageAdmin(ContentAdmin):

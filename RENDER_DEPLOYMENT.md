@@ -62,9 +62,9 @@ Keep INDEXABLE=false until the privacy notice, public contact details and launch
 
 Do not enable HSTS_INCLUDE_SUBDOMAINS or HSTS_PRELOAD simply to silence checks. Their default false values produce Django warnings W005/W021, intentionally documented pending a domain-wide HTTPS/preload decision.
 
-## Uploaded images: immediate deployment issue
+## Uploaded media: immediate deployment issue
 
-WhiteNoise correctly serves **collected static files**, not admin uploads. Previously DEBUG=false also removed the only `/media/` route, and Render has no project Nginx configuration. The Render-only media handler now streams validated image file extensions with bounded filesystem paths, cache headers and nosniff; missing files and traversal attempts return 404. Admin uploads retain the existing Pillow validation/re-encoding. This handler suits this small informational site; object storage/CDN is preferable if traffic or horizontal scaling grows.
+WhiteNoise correctly serves **collected static files**, not admin uploads. Previously DEBUG=false also removed the only `/media/` route, and Render has no project Nginx configuration. The media handler now streams validated image and PDF file extensions with bounded filesystem paths, cache headers and nosniff; PDFs are served as attachments, and missing files and traversal attempts return 404. Admin images retain the existing Pillow validation/re-encoding; Tobacco brochure uploads are PDF-validated and limited to 25 MB. The supplied Tobacco image and catalogue are bundled under `media/` and referenced by the Tobacco category record. This handler suits this small informational site; object storage/CDN is preferable if traffic or horizontal scaling grows.
 
 For reliable uploads, attach a **persistent disk** to the web service at `/var/data` and add:
 
@@ -72,14 +72,14 @@ For reliable uploads, attach a **persistent disk** to the web service at `/var/d
 MEDIA_ROOT=/var/data/media
 ```
 
-The disk requires a paid Render service. A free service's writable filesystem is ephemeral; setting MEDIA_ROOT alone does not make it persistent. Without persistent storage, do not rely on saved admin uploads surviving deploys. The 57 bundled media files are now committed. Current deployment uses the repository media directory with no disk. If adding a disk later, copy existing files to it before changing MEDIA_ROOT; mounting a new empty directory hides repository media. Never clear image fields just to hide missing files.
+The disk requires a paid Render service. A free service's writable filesystem is ephemeral; setting MEDIA_ROOT alone does not make it persistent. Without persistent storage, do not rely on saved admin uploads surviving deploys. Current deployment uses the repository media directory with no disk. If adding a disk later, copy the complete repository `media/` directory, including the Tobacco image and catalogue, to it before changing MEDIA_ROOT; mounting a new empty directory hides repository media. Never clear image fields just to hide missing files.
 
 No persistent disk is required to start the application. Remove MEDIA_ROOT=/var/data/media when no disk is mounted. Stock-image installation is a manual optional command (`python manage.py install_stock_images`), to run only after writable durable storage is configured. It is never run by start.sh. Existing image references and files are not replaced. Uploads on the free filesystem remain ephemeral.
 
 ## Verification performed
 
 - `manage.py check`: no issues, using explicit local test environment values. The local `.env` initially failed the existing production-secret guard; it was not changed or printed.
-- `manage.py test trade --noinput`: 25 tests passed, including canonical configuration regression coverage.
+- `manage.py test trade --noinput`: 80 tests passed, including Tobacco image/PDF upload, replacement, removal, rendering and delivery coverage.
 - `manage.py makemigrations --check --dry-run`: no model drift.
 - `scripts/check_production.py`: production-oriented deploy checks and manifest static collection passed; this existing helper explicitly opts into HSTS subdomains/preload for its isolated checks.
 - A second `check --deploy` using Render-style settings with the actual default HSTS opt-ins disabled exited 0 with only W005/W021, as explained above; no warnings were silenced.
