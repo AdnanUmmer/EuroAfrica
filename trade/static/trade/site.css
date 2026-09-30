@@ -180,5 +180,5 @@ footer :focus-visible { outline-color: #e3c58f; }
 .why-features h3{font-size:1.45rem}.final-cta{max-width:1000px}.contact-banner .wrap>div{max-width:800px}
 .hero-copy>p:not(.eyebrow){max-width:65ch}.section-heading .prose{min-width:0}
 @media(max-width:760px){.why-features{grid-template-columns:1fr}.contact-banner .wrap>div{max-width:100%}}
-.category-art.tobacco-art{height:auto;aspect-ratio:735 / 1039;background:#080808}
-.category-art.tobacco-art>img{object-fit:contain}
+.category-card .visual,.category-art{height:auto;aspect-ratio:4 / 3}
+.category-card .visual>img,.category-art>img{width:100%;height:100%;object-fit:cover}

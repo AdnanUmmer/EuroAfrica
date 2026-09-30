@@ -12,7 +12,7 @@
     {% endif %}
   </div>
   <figure class="media-figure">
-    <div class="visual category-art{% if obj.slug == 'tobacco-products' %} tobacco-art{% endif %}">
+    <div class="visual category-art">
       {% if obj.hero_image %}
         {% include 'trade/image.html' with image=obj.hero_image alt=obj.hero_alt position=obj.hero_position priority=True %}
       {% else %}

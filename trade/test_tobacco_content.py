@@ -67,13 +67,22 @@ class TobaccoContentTests(TestCase):
         self.assertContains(response, self.tobacco.brochure.url)
         self.assertContains(response, 'Download Brochure')
         hero = response.content.decode().split('<section class="category-hero', 1)[1].split('</section>', 1)[0]
-        self.assertRegex(hero, re.compile(r'<div class="visual category-art tobacco-art">.*?src="/media/content/tobacco-section\.jpeg"', re.S))
+        self.assertRegex(hero, re.compile(r'<div class="visual category-art">.*?src="/media/content/tobacco-section\.jpeg"', re.S))
         self.assertNotIn('illustration.svg', hero)
+        self.assertNotIn('tobacco-art', hero)
 
     def test_uploaded_category_image_is_used_in_cards(self):
         response = self.client.get(self.tobacco.direction.get_absolute_url())
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, self.tobacco.hero_image.url)
+        self.assertContains(response, 'class="card-image visual variant-')
+        self.assertNotContains(response, 'tobacco-art')
+
+    def test_category_images_share_responsive_aspect_ratio_and_cover_crop(self):
+        css = Path(settings.BASE_DIR, 'trade', 'static', 'trade', 'site.css').read_text(encoding='utf-8')
+        self.assertIn('.category-card .visual,.category-art{height:auto;aspect-ratio:4 / 3}', css)
+        self.assertIn('.category-card .visual>img,.category-art>img{width:100%;height:100%;object-fit:cover}', css)
+        self.assertNotIn('tobacco-art', css)
 
     def test_brochure_is_optional_on_frontend(self):
         TradeCategory.objects.filter(pk=self.tobacco.pk).update(brochure='')
