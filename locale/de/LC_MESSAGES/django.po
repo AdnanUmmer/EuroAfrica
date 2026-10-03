@@ -1,0 +1,377 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: EuroAfrica\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "A CLOSER LOOK"
+msgstr "NÄHER BETRACHTET"
+
+#, python-format
+msgid "A closer look at %(title)s"
+msgstr "%(title)s näher betrachtet"
+
+msgid "ABOUT EUROAFRICA"
+msgstr "ÜBER EUROAFRICA"
+
+msgid "AFRICA"
+msgstr "AFRIKA"
+
+msgid "AFRICA ↔ EUROPE"
+msgstr "AFRIKA ↔ EUROPA"
+
+msgid "About"
+msgstr "Über uns"
+
+msgid "About EuroAfrica"
+msgstr "Über EuroAfrica"
+
+msgid "Africa & Europe"
+msgstr "Afrika und Europa"
+
+msgid "Africa office"
+msgstr "Büro in Afrika"
+
+msgid "Africa to Europe"
+msgstr "Afrika → Europa"
+
+msgid "Africa → Europe"
+msgstr "Afrika → Europa"
+
+msgid "Africa → Europe Trade"
+msgstr "Handel Afrika → Europa"
+
+msgid "Alternatively,"
+msgstr "Alternativ können Sie"
+
+msgid "Apply"
+msgstr "Anwenden"
+
+msgid "Breadcrumb"
+msgstr "Brotkrümelnavigation"
+
+msgid "Business email"
+msgstr "Geschäftliche E-Mail-Adresse"
+
+msgid "CATEGORY OVERVIEW"
+msgstr "KATEGORIEÜBERSICHT"
+
+msgid "CONTACT EUROAFRICA"
+msgstr "KONTAKT ZU EUROAFRICA"
+
+msgid "Category information will be published here when available."
+msgstr ""
+"Informationen zu den Kategorien werden hier veröffentlicht, sobald sie "
+"verfügbar sind."
+
+msgid ""
+"Choose a category in the selected trade direction, or select General "
+"Enquiry."
+msgstr ""
+"Wählen Sie eine Kategorie in der ausgewählten Handelsrichtung oder wählen "
+"Sie Allgemeine Anfrage."
+
+msgid "Choose a product or category"
+msgstr "Produkt oder Kategorie auswählen"
+
+msgid "Choose an available enquiry type."
+msgstr "Wählen Sie eine verfügbare Anfrageart."
+
+msgid "Company / organisation"
+msgstr "Unternehmen / Organisation"
+
+msgid "Contact"
+msgstr "Kontakt"
+
+msgid "Contact EuroAfrica ↗"
+msgstr "EuroAfrica kontaktieren ↗"
+
+msgid "Contact Us"
+msgstr "Kontakt"
+
+msgid "Continue the conversation"
+msgstr "Lassen Sie uns weiterreden"
+
+msgid "Country / market of interest"
+msgstr "Land / Markt von Interesse"
+
+msgid "DIVERSITY IN EVERY DIRECTION"
+msgstr "VIELFALT IN JEDER RICHTUNG"
+
+msgid ""
+"Describe the product or topic and what you would like to know. Maximum 5,000"
+" characters."
+msgstr ""
+"Beschreiben Sie das Produkt oder Thema und was Sie wissen möchten. Maximal "
+"5.000 Zeichen."
+
+msgid "Discover EuroAfrica ↗"
+msgstr "EuroAfrica kennenlernen ↗"
+
+msgid "Discover the products behind the connection."
+msgstr "Entdecken Sie die Produkte, die Märkte verbinden."
+
+msgid "Download Brochure"
+msgstr "Broschüre herunterladen"
+
+msgid "EUROPE"
+msgstr "EUROPA"
+
+msgid "EXPLORE THE CONNECTION"
+msgstr "VERBINDUNGEN ENTDECKEN"
+
+msgid "Enable JavaScript for the security check before submitting."
+msgstr ""
+"Aktivieren Sie JavaScript für die Sicherheitsprüfung vor dem Absenden."
+
+msgid "Enquire About This Category"
+msgstr "Zu dieser Kategorie anfragen"
+
+#, python-format
+msgid "Enquire about %(title)s"
+msgstr "Anfrage zu %(title)s"
+
+msgid "Enquiry received"
+msgstr "Anfrage erhalten"
+
+msgid "Enter this value on one line."
+msgstr "Geben Sie diesen Wert in einer Zeile ein."
+
+msgid "EuroAfrica home"
+msgstr "EuroAfrica Startseite"
+
+msgid "Europe to Africa"
+msgstr "Europa → Afrika"
+
+msgid "Europe → Africa"
+msgstr "Europa → Afrika"
+
+msgid "Europe → Africa Trade"
+msgstr "Handel Europa → Afrika"
+
+msgid "Explore"
+msgstr "Entdecken"
+
+#, python-format
+msgid "Explore %(direction_title)s"
+msgstr "%(direction_title)s entdecken"
+
+#, python-format
+msgid "Explore %(title)s"
+msgstr "%(title)s entdecken"
+
+msgid "Explore EuroAfrica"
+msgstr "EuroAfrica entdecken"
+
+msgid "Explore Trade Categories"
+msgstr "Handelskategorien entdecken"
+
+msgid "Explore the categories"
+msgstr "Kategorien entdecken"
+
+msgid "Featured product categories"
+msgstr "Ausgewählte Produktkategorien"
+
+msgid "Fields marked * are required."
+msgstr "Mit * gekennzeichnete Felder sind Pflichtfelder."
+
+msgid "Full name"
+msgstr "Vollständiger Name"
+
+msgid "General / not yet sure"
+msgstr "Allgemein / noch unentschieden"
+
+msgid "General Enquiry"
+msgstr "Allgemeine Anfrage"
+
+msgid "Get in touch"
+msgstr "Kontakt aufnehmen"
+
+msgid "Headquarters"
+msgstr "Hauptsitz"
+
+msgid "Home"
+msgstr "Startseite"
+
+msgid "I agree to my details being used to respond to this enquiry."
+msgstr ""
+"Ich stimme zu, dass meine Angaben zur Beantwortung dieser Anfrage verwendet "
+"werden."
+
+msgid "Illustration"
+msgstr "Illustration"
+
+msgid "I’m interested in"
+msgstr "Ich interessiere mich für"
+
+msgid "KEEP EXPLORING"
+msgstr "WEITER ENTDECKEN"
+
+msgid "LET’S CONNECT"
+msgstr "KOMMEN WIR INS GESPRÄCH"
+
+msgid "Language"
+msgstr "Sprache"
+
+msgid "Leave this field empty"
+msgstr "Dieses Feld leer lassen"
+
+msgid "Main navigation"
+msgstr "Hauptnavigation"
+
+msgid "Make an Enquiry"
+msgstr "Eine Anfrage stellen"
+
+msgid "Markets in connection"
+msgstr "Verbundene Märkte"
+
+msgid "Menu"
+msgstr "Menü"
+
+msgid "Mobile navigation"
+msgstr "Mobile Navigation"
+
+#, python-format
+msgid "More from %(direction_title)s"
+msgstr "Mehr aus %(direction_title)s"
+
+msgid "Online enquiries are temporarily unavailable. Please try again later."
+msgstr ""
+"Online-Anfragen sind vorübergehend nicht verfügbar. Bitte versuchen Sie es "
+"später erneut."
+
+msgid "Phone number"
+msgstr "Telefonnummer"
+
+msgid "Please review your enquiry and try again."
+msgstr "Bitte überprüfen Sie Ihre Anfrage und versuchen Sie es erneut."
+
+msgid "Please try again later"
+msgstr "Bitte versuchen Sie es später erneut"
+
+msgid "Please try again shortly."
+msgstr "Bitte versuchen Sie es in Kürze erneut."
+
+msgid "Please wait for the security check to complete, then try again."
+msgstr ""
+"Bitte warten Sie, bis die Sicherheitsprüfung abgeschlossen ist, und "
+"versuchen Sie es erneut."
+
+msgid "Privacy"
+msgstr "Datenschutz"
+
+msgid "Private editorial preview — unpublished content"
+msgstr "Private redaktionelle Vorschau — unveröffentlichter Inhalt"
+
+msgid "Product / category"
+msgstr "Produkt / Kategorie"
+
+msgid "Product diversity"
+msgstr "Produktvielfalt"
+
+msgid "Products included"
+msgstr "Enthaltene Produkte"
+
+msgid "Read our"
+msgstr "Lesen Sie unsere"
+
+msgid "Return home"
+msgstr "Zur Startseite"
+
+msgid "Send an Enquiry"
+msgstr "Anfrage senden"
+
+msgid "Send an enquiry"
+msgstr "Anfrage senden"
+
+msgid "Sending your enquiry…"
+msgstr "Ihre Anfrage wird gesendet…"
+
+msgid "Skip to content"
+msgstr "Zum Inhalt springen"
+
+msgid "Submit Enquiry"
+msgstr "Anfrage absenden"
+
+msgid "TRADE DIRECTION"
+msgstr "HANDELSRICHTUNG"
+
+msgid "TWO CONTINENTS. ONE SHARED HORIZON."
+msgstr "ZWEI KONTINENTE. EIN GEMEINSAMER HORIZONT."
+
+msgid "Temporarily unavailable"
+msgstr "Vorübergehend nicht verfügbar"
+
+msgid "Temporarily unavailable | EuroAfrica"
+msgstr "Vorübergehend nicht verfügbar | EuroAfrica"
+
+msgid "The address may have changed or the page is not published."
+msgstr ""
+"Die Adresse hat sich möglicherweise geändert oder die Seite ist nicht "
+"veröffentlicht."
+
+msgid ""
+"The hourly enquiry limit has been reached. Please wait an hour before trying"
+" again."
+msgstr ""
+"Das stündliche Anfragelimit wurde erreicht. Bitte warten Sie eine Stunde, "
+"bevor Sie es erneut versuchen."
+
+msgid ""
+"The security check could not load. Please reload this page and try again."
+msgstr ""
+"Die Sicherheitsprüfung konnte nicht geladen werden. Bitte laden Sie die "
+"Seite neu und versuchen Sie es erneut."
+
+msgid "This page could not be found"
+msgstr "Diese Seite wurde nicht gefunden"
+
+msgid "Too many attempts. Please try again later."
+msgstr "Zu viele Versuche. Bitte versuchen Sie es später erneut."
+
+msgid "Too many attempts. Please wait ten minutes before trying again."
+msgstr ""
+"Zu viele Versuche. Bitte warten Sie zehn Minuten, bevor Sie es erneut "
+"versuchen."
+
+msgid "Trade directions"
+msgstr "Handelsrichtungen"
+
+msgid "We could not verify your enquiry. Please wait a moment and try again."
+msgstr ""
+"Ihre Anfrage konnte nicht überprüft werden. Bitte warten Sie einen Moment "
+"und versuchen Sie es erneut."
+
+msgid "You can"
+msgstr "Sie können"
+
+msgid ""
+"Your details are used to respond to this enquiry. Please avoid sending "
+"sensitive personal information."
+msgstr ""
+"Ihre Angaben werden zur Beantwortung dieser Anfrage verwendet. Bitte senden "
+"Sie keine sensiblen personenbezogenen Daten."
+
+msgid "Your enquiry"
+msgstr "Ihre Anfrage"
+
+msgid "email our team"
+msgstr "unserem Team eine E-Mail senden"
+
+msgid "for information about your enquiry data."
+msgstr "für Informationen zu Ihren Anfragedaten."
+
+msgid "privacy notice"
+msgstr "Datenschutzhinweise"
+
+#, python-format
+msgid "%(heading)s Trade Categories | %(brand)s"
+msgstr "Handelskategorien %(heading)s | %(brand)s"
+
+#, python-format
+msgid "Contact %(brand)s | Africa–Europe Trade Enquiries"
+msgstr "Kontakt zu %(brand)s | Handelsanfragen Afrika–Europa"

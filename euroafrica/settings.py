@@ -25,7 +25,7 @@ if not DEBUG and urlparse(SITE_URL).hostname not in ALLOWED_HOSTS:
 if STAGING and not (STAGING_USER and STAGING_PASSWORD):
     raise ValueError('Staging requires HTTP Basic authentication credentials')
 INSTALLED_APPS = ['trade.apps.EuroAfricaAdminConfig', 'django.contrib.auth', 'django.contrib.contenttypes', 'django.contrib.sessions', 'django.contrib.messages', 'django.contrib.staticfiles', 'trade.apps.TradeConfig']
-MIDDLEWARE = ['django.middleware.security.SecurityMiddleware', 'whitenoise.middleware.WhiteNoiseMiddleware', 'django.contrib.sessions.middleware.SessionMiddleware', 'django.middleware.common.CommonMiddleware', 'django.middleware.csrf.CsrfViewMiddleware', 'django.contrib.auth.middleware.AuthenticationMiddleware', 'trade.middleware.SiteMiddleware', 'django.contrib.messages.middleware.MessageMiddleware', 'django.middleware.clickjacking.XFrameOptionsMiddleware']
+MIDDLEWARE = ['django.middleware.security.SecurityMiddleware', 'whitenoise.middleware.WhiteNoiseMiddleware', 'django.contrib.sessions.middleware.SessionMiddleware', 'django.middleware.locale.LocaleMiddleware', 'django.middleware.common.CommonMiddleware', 'django.middleware.csrf.CsrfViewMiddleware', 'django.contrib.auth.middleware.AuthenticationMiddleware', 'trade.middleware.SiteMiddleware', 'django.contrib.messages.middleware.MessageMiddleware', 'django.middleware.clickjacking.XFrameOptionsMiddleware']
 ROOT_URLCONF = 'euroafrica.urls'
 if DEBUG:
     MIDDLEWARE.remove('whitenoise.middleware.WhiteNoiseMiddleware')
@@ -47,7 +47,14 @@ if db:
 else:
     DATABASES = {'default': {'ENGINE': 'django.db.backends.sqlite3', 'NAME': BASE_DIR / 'db.sqlite3'}}
 AUTH_PASSWORD_VALIDATORS = [{'NAME': 'django.contrib.auth.password_validation.' + n} for n in ['UserAttributeSimilarityValidator', 'MinimumLengthValidator', 'CommonPasswordValidator', 'NumericPasswordValidator']]
-LANGUAGE_CODE = 'en-gb'
+LANGUAGE_CODE = 'en'
+USE_I18N = True
+LANGUAGES = [('en', 'English'), ('ar', 'العربية'), ('hu', 'Magyar'), ('uk', 'Українська'), ('fr', 'Français'), ('de', 'Deutsch')]
+LOCALE_PATHS = [BASE_DIR / 'locale']
+LANGUAGE_COOKIE_AGE = 31536000
+LANGUAGE_COOKIE_SECURE = not DEBUG
+LANGUAGE_COOKIE_HTTPONLY = True
+LANGUAGE_COOKIE_SAMESITE = 'Lax'
 TIME_ZONE = 'UTC'
 USE_TZ = True
 STATIC_URL = '/static/'

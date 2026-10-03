@@ -1,0 +1,356 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: EuroAfrica\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
+
+msgid "A CLOSER LOOK"
+msgstr "نظرة أقرب"
+
+#, python-format
+msgid "A closer look at %(title)s"
+msgstr "نظرة أقرب على %(title)s"
+
+msgid "ABOUT EUROAFRICA"
+msgstr "عن EuroAfrica"
+
+msgid "AFRICA"
+msgstr "أفريقيا"
+
+msgid "AFRICA ↔ EUROPE"
+msgstr "أفريقيا ↔ أوروبا"
+
+msgid "About"
+msgstr "من نحن"
+
+msgid "About EuroAfrica"
+msgstr "عن EuroAfrica"
+
+msgid "Africa & Europe"
+msgstr "أفريقيا وأوروبا"
+
+msgid "Africa office"
+msgstr "مكتب أفريقيا"
+
+msgid "Africa to Europe"
+msgstr "من أفريقيا إلى أوروبا"
+
+msgid "Africa → Europe"
+msgstr "من أفريقيا إلى أوروبا"
+
+msgid "Africa → Europe Trade"
+msgstr "التجارة من أفريقيا إلى أوروبا"
+
+msgid "Alternatively,"
+msgstr "أو بدلاً من ذلك،"
+
+msgid "Apply"
+msgstr "تطبيق"
+
+msgid "Breadcrumb"
+msgstr "مسار التصفح"
+
+msgid "Business email"
+msgstr "البريد الإلكتروني للعمل"
+
+msgid "CATEGORY OVERVIEW"
+msgstr "نظرة عامة على الفئة"
+
+msgid "CONTACT EUROAFRICA"
+msgstr "تواصل مع EuroAfrica"
+
+msgid "Category information will be published here when available."
+msgstr "ستُنشر معلومات الفئات هنا عند توفرها."
+
+msgid ""
+"Choose a category in the selected trade direction, or select General "
+"Enquiry."
+msgstr "اختر فئة ضمن اتجاه التجارة المحدد، أو اختر استفسارًا عامًا."
+
+msgid "Choose a product or category"
+msgstr "اختر منتجًا أو فئة"
+
+msgid "Choose an available enquiry type."
+msgstr "اختر نوع استفسار متاحًا."
+
+msgid "Company / organisation"
+msgstr "الشركة / المؤسسة"
+
+msgid "Contact"
+msgstr "التواصل"
+
+msgid "Contact EuroAfrica ↗"
+msgstr "تواصل مع EuroAfrica ↗"
+
+msgid "Contact Us"
+msgstr "تواصل معنا"
+
+msgid "Continue the conversation"
+msgstr "لنكمل الحوار"
+
+msgid "Country / market of interest"
+msgstr "البلد / السوق محل الاهتمام"
+
+msgid "DIVERSITY IN EVERY DIRECTION"
+msgstr "تنوع في كل اتجاه"
+
+msgid ""
+"Describe the product or topic and what you would like to know. Maximum 5,000"
+" characters."
+msgstr "صف المنتج أو الموضوع وما تود معرفته. الحد الأقصى 5000 حرف."
+
+msgid "Discover EuroAfrica ↗"
+msgstr "تعرّف على EuroAfrica ↗"
+
+msgid "Discover the products behind the connection."
+msgstr "اكتشف المنتجات التي تربط الأسواق."
+
+msgid "Download Brochure"
+msgstr "تنزيل الكتيّب"
+
+msgid "EUROPE"
+msgstr "أوروبا"
+
+msgid "EXPLORE THE CONNECTION"
+msgstr "اكتشف الروابط"
+
+msgid "Enable JavaScript for the security check before submitting."
+msgstr "فعّل JavaScript لإجراء التحقق الأمني قبل الإرسال."
+
+msgid "Enquire About This Category"
+msgstr "استفسر عن هذه الفئة"
+
+#, python-format
+msgid "Enquire about %(title)s"
+msgstr "استفسر عن %(title)s"
+
+msgid "Enquiry received"
+msgstr "تم استلام الاستفسار"
+
+msgid "Enter this value on one line."
+msgstr "أدخل هذه القيمة في سطر واحد."
+
+msgid "EuroAfrica home"
+msgstr "الصفحة الرئيسية لـ EuroAfrica"
+
+msgid "Europe to Africa"
+msgstr "من أوروبا إلى أفريقيا"
+
+msgid "Europe → Africa"
+msgstr "من أوروبا إلى أفريقيا"
+
+msgid "Europe → Africa Trade"
+msgstr "التجارة من أوروبا إلى أفريقيا"
+
+msgid "Explore"
+msgstr "استكشف"
+
+#, python-format
+msgid "Explore %(direction_title)s"
+msgstr "استكشف %(direction_title)s"
+
+#, python-format
+msgid "Explore %(title)s"
+msgstr "استكشف %(title)s"
+
+msgid "Explore EuroAfrica"
+msgstr "استكشف EuroAfrica"
+
+msgid "Explore Trade Categories"
+msgstr "استكشف فئات التجارة"
+
+msgid "Explore the categories"
+msgstr "استكشف الفئات"
+
+msgid "Featured product categories"
+msgstr "فئات المنتجات المميزة"
+
+msgid "Fields marked * are required."
+msgstr "الحقول المميزة بعلامة * مطلوبة."
+
+msgid "Full name"
+msgstr "الاسم الكامل"
+
+msgid "General / not yet sure"
+msgstr "عام / لم أحدد بعد"
+
+msgid "General Enquiry"
+msgstr "استفسار عام"
+
+msgid "Get in touch"
+msgstr "تواصل معنا"
+
+msgid "Headquarters"
+msgstr "المقر الرئيسي"
+
+msgid "Home"
+msgstr "الرئيسية"
+
+msgid "I agree to my details being used to respond to this enquiry."
+msgstr "أوافق على استخدام بياناتي للرد على هذا الاستفسار."
+
+msgid "Illustration"
+msgstr "رسم توضيحي"
+
+msgid "I’m interested in"
+msgstr "أنا مهتم بـ"
+
+msgid "KEEP EXPLORING"
+msgstr "تابع الاستكشاف"
+
+msgid "LET’S CONNECT"
+msgstr "لنتواصل"
+
+msgid "Language"
+msgstr "اللغة"
+
+msgid "Leave this field empty"
+msgstr "اترك هذا الحقل فارغًا"
+
+msgid "Main navigation"
+msgstr "التنقل الرئيسي"
+
+msgid "Make an Enquiry"
+msgstr "قدّم استفسارًا"
+
+msgid "Markets in connection"
+msgstr "أسواق مترابطة"
+
+msgid "Menu"
+msgstr "القائمة"
+
+msgid "Mobile navigation"
+msgstr "التنقل على الهاتف"
+
+#, python-format
+msgid "More from %(direction_title)s"
+msgstr "المزيد: %(direction_title)s"
+
+msgid "Online enquiries are temporarily unavailable. Please try again later."
+msgstr "الاستفسارات عبر الإنترنت غير متاحة مؤقتًا. يُرجى المحاولة لاحقًا."
+
+msgid "Phone number"
+msgstr "رقم الهاتف"
+
+msgid "Please review your enquiry and try again."
+msgstr "يُرجى مراجعة استفسارك والمحاولة مجددًا."
+
+msgid "Please try again later"
+msgstr "يُرجى المحاولة لاحقًا"
+
+msgid "Please try again shortly."
+msgstr "يُرجى المحاولة مجددًا بعد قليل."
+
+msgid "Please wait for the security check to complete, then try again."
+msgstr "يُرجى انتظار اكتمال التحقق الأمني، ثم المحاولة مجددًا."
+
+msgid "Privacy"
+msgstr "الخصوصية"
+
+msgid "Private editorial preview — unpublished content"
+msgstr "معاينة تحريرية خاصة — محتوى غير منشور"
+
+msgid "Product / category"
+msgstr "المنتج / الفئة"
+
+msgid "Product diversity"
+msgstr "تنوع المنتجات"
+
+msgid "Products included"
+msgstr "المنتجات المشمولة"
+
+msgid "Read our"
+msgstr "اقرأ"
+
+msgid "Return home"
+msgstr "العودة إلى الرئيسية"
+
+msgid "Send an Enquiry"
+msgstr "أرسل استفسارًا"
+
+msgid "Send an enquiry"
+msgstr "أرسل استفسارًا"
+
+msgid "Sending your enquiry…"
+msgstr "جارٍ إرسال استفسارك…"
+
+msgid "Skip to content"
+msgstr "انتقل إلى المحتوى"
+
+msgid "Submit Enquiry"
+msgstr "إرسال الاستفسار"
+
+msgid "TRADE DIRECTION"
+msgstr "اتجاه التجارة"
+
+msgid "TWO CONTINENTS. ONE SHARED HORIZON."
+msgstr "قارتان. أفق مشترك واحد."
+
+msgid "Temporarily unavailable"
+msgstr "غير متاح مؤقتًا"
+
+msgid "Temporarily unavailable | EuroAfrica"
+msgstr "غير متاح مؤقتًا | EuroAfrica"
+
+msgid "The address may have changed or the page is not published."
+msgstr "ربما تغيّر العنوان أو لم تُنشر الصفحة."
+
+msgid ""
+"The hourly enquiry limit has been reached. Please wait an hour before trying"
+" again."
+msgstr ""
+"تم بلوغ الحد الأقصى للاستفسارات في الساعة. يُرجى الانتظار ساعة قبل المحاولة "
+"مجددًا."
+
+msgid ""
+"The security check could not load. Please reload this page and try again."
+msgstr "تعذّر تحميل التحقق الأمني. يُرجى إعادة تحميل الصفحة والمحاولة مجددًا."
+
+msgid "This page could not be found"
+msgstr "تعذّر العثور على هذه الصفحة"
+
+msgid "Too many attempts. Please try again later."
+msgstr "محاولات كثيرة جدًا. يُرجى المحاولة لاحقًا."
+
+msgid "Too many attempts. Please wait ten minutes before trying again."
+msgstr "محاولات كثيرة جدًا. يُرجى الانتظار عشر دقائق قبل المحاولة مجددًا."
+
+msgid "Trade directions"
+msgstr "اتجاهات التجارة"
+
+msgid "We could not verify your enquiry. Please wait a moment and try again."
+msgstr "تعذّر التحقق من استفسارك. يُرجى الانتظار قليلًا والمحاولة مجددًا."
+
+msgid "You can"
+msgstr "يمكنك"
+
+msgid ""
+"Your details are used to respond to this enquiry. Please avoid sending "
+"sensitive personal information."
+msgstr ""
+"تُستخدم بياناتك للرد على هذا الاستفسار. يُرجى تجنّب إرسال معلومات شخصية "
+"حساسة."
+
+msgid "Your enquiry"
+msgstr "استفسارك"
+
+msgid "email our team"
+msgstr "مراسلة فريقنا عبر البريد الإلكتروني"
+
+msgid "for information about your enquiry data."
+msgstr "للحصول على معلومات حول بيانات استفسارك."
+
+msgid "privacy notice"
+msgstr "إشعار الخصوصية"
+
+#, python-format
+msgid "%(heading)s Trade Categories | %(brand)s"
+msgstr "فئات التجارة: %(heading)s | %(brand)s"
+
+#, python-format
+msgid "Contact %(brand)s | Africa–Europe Trade Enquiries"
+msgstr "تواصل مع %(brand)s | استفسارات التجارة بين أفريقيا وأوروبا"

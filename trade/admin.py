@@ -3,6 +3,7 @@ from django.utils.html import format_html
 from django.db import models
 from django.contrib.admin.widgets import AdminFileWidget
 from .models import *
+from .translation_admin import TranslationLinkMixin
 
 admin.site.site_header = 'EuroAfrica content studio'
 admin.site.site_title = 'EuroAfrica admin'
@@ -18,8 +19,8 @@ class ImagePreviewWidget(AdminFileWidget):
 class ImageAdminMixin:
     formfield_overrides = {models.ImageField: {'widget': ImagePreviewWidget}}
 
-class ContentAdmin(ImageAdminMixin, admin.ModelAdmin):
-    readonly_fields = ['updated_at', 'image_preview', 'preview_link']
+class ContentAdmin(TranslationLinkMixin, ImageAdminMixin, admin.ModelAdmin):
+    readonly_fields = ['updated_at', 'image_preview', 'preview_link', 'translations_link']
     def image_preview(self, obj):
         image = getattr(obj, 'image', None) or getattr(obj, 'hero_image', None) or getattr(obj, 'header_logo', None)
         return format_html('<img src="{}" width="180" style="max-height:120px;object-fit:contain">', image.url) if image else 'No uploaded image'
@@ -32,7 +33,7 @@ class ContentAdmin(ImageAdminMixin, admin.ModelAdmin):
         editorial = ['published', 'indexable', 'order', 'editorial_notes']
         all_fields = [f.name for f in self.model._meta.fields if f.editable and not f.primary_key]
         images = [x for x in all_fields if x not in seo and (x in ['header_logo', 'footer_logo', 'logo_alt', 'favicon'] or 'image' in x or x.endswith(('_alt', '_caption', '_position')))]
-        groups = [('Content', {'fields': [x for x in all_fields if x not in seo + editorial + images + ['brochure']]}), ('Images', {'fields': images, 'description': 'Upload JPEG, PNG or WebP under 6 MB. Recommended: 1600 × 1100 for banners, 1000 × 750 for cards. Describe the image in alt text. Crop focus controls which part stays visible.'}), ('Visibility & order', {'fields': [x for x in editorial if x in all_fields]}), ('SEO & sharing', {'fields': seo, 'description': 'Optional overrides. Keep every published title and description specific to its page.'}), ('Review & preview', {'fields': ['updated_at', 'preview_link']})]
+        groups = [('Content', {'fields': [x for x in all_fields if x not in seo + editorial + images + ['brochure']]}), ('Images', {'fields': images, 'description': 'Upload JPEG, PNG or WebP under 6 MB. Recommended: 1600 × 1100 for banners, 1000 × 750 for cards. Describe the image in alt text. Crop focus controls which part stays visible.'}), ('Visibility & order', {'fields': [x for x in editorial if x in all_fields]}), ('SEO & sharing', {'fields': seo, 'description': 'Optional overrides. Keep every published title and description specific to its page.'}), ('Review & preview', {'fields': ['updated_at', 'preview_link', 'translations_link']})]
         return [(label, options) for label, options in groups if options['fields']]
     def formfield_for_dbfield(self, db_field, request, **kwargs):
         field = super().formfield_for_dbfield(db_field, request, **kwargs)
@@ -46,11 +47,13 @@ class ContentAdmin(ImageAdminMixin, admin.ModelAdmin):
     def publication(self, obj):
         return format_html('<span class="status-badge {}">{}</span>', 'published' if obj.published else 'draft', 'Published' if obj.published else 'Draft')
 
-class HomeFeatureInline(admin.StackedInline):
+class HomeFeatureInline(TranslationLinkMixin, admin.StackedInline):
+    readonly_fields = ['translations_link']
     model = HomeFeature
     extra = 0
 
-class ContentSectionInline(admin.StackedInline):
+class ContentSectionInline(TranslationLinkMixin, admin.StackedInline):
+    readonly_fields = ['translations_link']
     model = ContentSection
     extra = 0
 
@@ -64,7 +67,8 @@ class SingletonAdmin(ContentAdmin):
 class ProductInline(ImageAdminMixin, admin.StackedInline):
     model = CategoryProduct
     extra = 0
-class SectionInline(admin.StackedInline):
+class SectionInline(TranslationLinkMixin, admin.StackedInline):
+    readonly_fields = ['translations_link']
     model = CategorySection
     extra = 0
 class ImageInline(ImageAdminMixin, admin.StackedInline):
@@ -131,16 +135,18 @@ class EnquiryAdmin(admin.ModelAdmin):
     def has_add_permission(self, request): return False
 
 @admin.register(CategoryProduct)
-class ProductAdmin(ImageAdminMixin, admin.ModelAdmin):
+class ProductAdmin(TranslationLinkMixin, ImageAdminMixin, admin.ModelAdmin):
+    readonly_fields = ['translations_link']
     list_display = ['name', 'category', 'order']
     list_editable = ['order']
     list_filter = ['category__direction', 'category']
     search_fields = ['name', 'category__title']
     list_select_related = ['category']
-    fieldsets = [('Content', {'fields': ['category', 'name', 'description', 'order']}), ('Image', {'fields': ['image', 'image_alt', 'image_caption', 'image_position']})]
+    fieldsets = [('Content', {'fields': ['category', 'name', 'description', 'order']}), ('Image', {'fields': ['image', 'image_alt', 'image_caption', 'image_position']}), ('Translations', {'fields': ['translations_link']})]
 
 @admin.register(CategoryImage)
-class GalleryAdmin(ImageAdminMixin, admin.ModelAdmin):
+class GalleryAdmin(TranslationLinkMixin, ImageAdminMixin, admin.ModelAdmin):
+    readonly_fields = ['translations_link']
     list_display = ['category', 'image_alt', 'order']
     list_editable = ['order']
     list_filter = ['category']
@@ -148,7 +154,8 @@ class GalleryAdmin(ImageAdminMixin, admin.ModelAdmin):
     list_select_related = ['category']
 
 @admin.register(FooterLink)
-class FooterLinkAdmin(admin.ModelAdmin):
+class FooterLinkAdmin(TranslationLinkMixin, admin.ModelAdmin):
+    readonly_fields = ['translations_link']
     list_display = ['label', 'destination', 'group', 'order', 'visible']
     list_editable = ['order', 'visible']
     list_filter = ['group', 'visible']

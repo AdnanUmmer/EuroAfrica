@@ -1,3 +1,4 @@
+from django.utils.translation import gettext_lazy as _
 """Layered enquiry protection shared across PostgreSQL-backed workers."""
 import ipaddress
 import json
@@ -17,7 +18,7 @@ from django.utils.crypto import salted_hmac
 from .models import SubmissionWindow, SubmissionReceipt
 
 logger = logging.getLogger(__name__)
-GENERIC_ERROR = 'We could not verify your enquiry. Please wait a moment and try again.'
+GENERIC_ERROR = _('We could not verify your enquiry. Please wait a moment and try again.')
 
 
 def timing_token():

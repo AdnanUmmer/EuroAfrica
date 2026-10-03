@@ -1,0 +1,363 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: EuroAfrica\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+
+msgid "A CLOSER LOOK"
+msgstr "ДЕТАЛЬНІШЕ"
+
+#, python-format
+msgid "A closer look at %(title)s"
+msgstr "Детальніше про %(title)s"
+
+msgid "ABOUT EUROAFRICA"
+msgstr "ПРО EUROAFRICA"
+
+msgid "AFRICA"
+msgstr "АФРИКА"
+
+msgid "AFRICA ↔ EUROPE"
+msgstr "АФРИКА ↔ ЄВРОПА"
+
+msgid "About"
+msgstr "Про нас"
+
+msgid "About EuroAfrica"
+msgstr "Про EuroAfrica"
+
+msgid "Africa & Europe"
+msgstr "Африка та Європа"
+
+msgid "Africa office"
+msgstr "Офіс в Африці"
+
+msgid "Africa to Europe"
+msgstr "Африка → Європа"
+
+msgid "Africa → Europe"
+msgstr "Африка → Європа"
+
+msgid "Africa → Europe Trade"
+msgstr "Торгівля: Африка → Європа"
+
+msgid "Alternatively,"
+msgstr "Або"
+
+msgid "Apply"
+msgstr "Застосувати"
+
+msgid "Breadcrumb"
+msgstr "Навігаційний шлях"
+
+msgid "Business email"
+msgstr "Робоча електронна пошта"
+
+msgid "CATEGORY OVERVIEW"
+msgstr "ОГЛЯД КАТЕГОРІЇ"
+
+msgid "CONTACT EUROAFRICA"
+msgstr "ЗВ’ЯЗОК ІЗ EUROAFRICA"
+
+msgid "Category information will be published here when available."
+msgstr ""
+"Інформацію про категорії буде опубліковано тут, щойно вона стане доступною."
+
+msgid ""
+"Choose a category in the selected trade direction, or select General "
+"Enquiry."
+msgstr ""
+"Виберіть категорію в обраному напрямку торгівлі або виберіть загальний "
+"запит."
+
+msgid "Choose a product or category"
+msgstr "Виберіть товар або категорію"
+
+msgid "Choose an available enquiry type."
+msgstr "Виберіть доступний тип запиту."
+
+msgid "Company / organisation"
+msgstr "Компанія / організація"
+
+msgid "Contact"
+msgstr "Контакти"
+
+msgid "Contact EuroAfrica ↗"
+msgstr "Зв’язатися з EuroAfrica ↗"
+
+msgid "Contact Us"
+msgstr "Зв’язатися з нами"
+
+msgid "Continue the conversation"
+msgstr "Продовжимо розмову"
+
+msgid "Country / market of interest"
+msgstr "Країна / ринок, що вас цікавить"
+
+msgid "DIVERSITY IN EVERY DIRECTION"
+msgstr "РІЗНОМАНІТТЯ В КОЖНОМУ НАПРЯМКУ"
+
+msgid ""
+"Describe the product or topic and what you would like to know. Maximum 5,000"
+" characters."
+msgstr ""
+"Опишіть товар або тему та що саме ви хотіли б дізнатися. Не більше 5000 "
+"символів."
+
+msgid "Discover EuroAfrica ↗"
+msgstr "Дізнайтеся про EuroAfrica ↗"
+
+msgid "Discover the products behind the connection."
+msgstr "Відкрийте товари, що поєднують ринки."
+
+msgid "Download Brochure"
+msgstr "Завантажити брошуру"
+
+msgid "EUROPE"
+msgstr "ЄВРОПА"
+
+msgid "EXPLORE THE CONNECTION"
+msgstr "ДОСЛІДІТЬ ЗВ’ЯЗОК"
+
+msgid "Enable JavaScript for the security check before submitting."
+msgstr "Увімкніть JavaScript для перевірки безпеки перед надсиланням."
+
+msgid "Enquire About This Category"
+msgstr "Запит щодо цієї категорії"
+
+#, python-format
+msgid "Enquire about %(title)s"
+msgstr "Запит щодо %(title)s"
+
+msgid "Enquiry received"
+msgstr "Запит отримано"
+
+msgid "Enter this value on one line."
+msgstr "Введіть це значення в одному рядку."
+
+msgid "EuroAfrica home"
+msgstr "Головна сторінка EuroAfrica"
+
+msgid "Europe to Africa"
+msgstr "Європа → Африка"
+
+msgid "Europe → Africa"
+msgstr "Європа → Африка"
+
+msgid "Europe → Africa Trade"
+msgstr "Торгівля: Європа → Африка"
+
+msgid "Explore"
+msgstr "Огляд"
+
+#, python-format
+msgid "Explore %(direction_title)s"
+msgstr "Дослідіть напрямок %(direction_title)s"
+
+#, python-format
+msgid "Explore %(title)s"
+msgstr "Дослідіть %(title)s"
+
+msgid "Explore EuroAfrica"
+msgstr "Дослідіть EuroAfrica"
+
+msgid "Explore Trade Categories"
+msgstr "Дослідіть торговельні категорії"
+
+msgid "Explore the categories"
+msgstr "Дослідіть категорії"
+
+msgid "Featured product categories"
+msgstr "Рекомендовані категорії товарів"
+
+msgid "Fields marked * are required."
+msgstr "Поля, позначені *, є обов’язковими."
+
+msgid "Full name"
+msgstr "Повне ім’я"
+
+msgid "General / not yet sure"
+msgstr "Загальне / ще не визначено"
+
+msgid "General Enquiry"
+msgstr "Загальний запит"
+
+msgid "Get in touch"
+msgstr "Зв’яжіться з нами"
+
+msgid "Headquarters"
+msgstr "Головний офіс"
+
+msgid "Home"
+msgstr "Головна"
+
+msgid "I agree to my details being used to respond to this enquiry."
+msgstr "Я погоджуюся на використання моїх даних для відповіді на цей запит."
+
+msgid "Illustration"
+msgstr "Ілюстрація"
+
+msgid "I’m interested in"
+msgstr "Мене цікавить"
+
+msgid "KEEP EXPLORING"
+msgstr "ДОСЛІДЖУЙТЕ ДАЛІ"
+
+msgid "LET’S CONNECT"
+msgstr "БУДЬМО НА ЗВ’ЯЗКУ"
+
+msgid "Language"
+msgstr "Мова"
+
+msgid "Leave this field empty"
+msgstr "Залиште це поле порожнім"
+
+msgid "Main navigation"
+msgstr "Основна навігація"
+
+msgid "Make an Enquiry"
+msgstr "Зробити запит"
+
+msgid "Markets in connection"
+msgstr "Поєднані ринки"
+
+msgid "Menu"
+msgstr "Меню"
+
+msgid "Mobile navigation"
+msgstr "Мобільна навігація"
+
+#, python-format
+msgid "More from %(direction_title)s"
+msgstr "Більше з напрямку %(direction_title)s"
+
+msgid "Online enquiries are temporarily unavailable. Please try again later."
+msgstr "Онлайн-запити тимчасово недоступні. Спробуйте пізніше."
+
+msgid "Phone number"
+msgstr "Номер телефону"
+
+msgid "Please review your enquiry and try again."
+msgstr "Перевірте свій запит і спробуйте ще раз."
+
+msgid "Please try again later"
+msgstr "Спробуйте пізніше"
+
+msgid "Please try again shortly."
+msgstr "Спробуйте ще раз за мить."
+
+msgid "Please wait for the security check to complete, then try again."
+msgstr "Дочекайтеся завершення перевірки безпеки, а потім спробуйте ще раз."
+
+msgid "Privacy"
+msgstr "Конфіденційність"
+
+msgid "Private editorial preview — unpublished content"
+msgstr "Приватний редакційний перегляд — неопублікований вміст"
+
+msgid "Product / category"
+msgstr "Товар / категорія"
+
+msgid "Product diversity"
+msgstr "Різноманіття товарів"
+
+msgid "Products included"
+msgstr "Товари в категорії"
+
+msgid "Read our"
+msgstr "Ознайомтеся з"
+
+msgid "Return home"
+msgstr "На головну"
+
+msgid "Send an Enquiry"
+msgstr "Надіслати запит"
+
+msgid "Send an enquiry"
+msgstr "Надіслати запит"
+
+msgid "Sending your enquiry…"
+msgstr "Надсилання запиту…"
+
+msgid "Skip to content"
+msgstr "Перейти до вмісту"
+
+msgid "Submit Enquiry"
+msgstr "Надіслати запит"
+
+msgid "TRADE DIRECTION"
+msgstr "НАПРЯМОК ТОРГІВЛІ"
+
+msgid "TWO CONTINENTS. ONE SHARED HORIZON."
+msgstr "ДВА КОНТИНЕНТИ. ОДИН СПІЛЬНИЙ ГОРИЗОНТ."
+
+msgid "Temporarily unavailable"
+msgstr "Тимчасово недоступно"
+
+msgid "Temporarily unavailable | EuroAfrica"
+msgstr "Тимчасово недоступно | EuroAfrica"
+
+msgid "The address may have changed or the page is not published."
+msgstr "Адреса могла змінитися, або сторінку ще не опубліковано."
+
+msgid ""
+"The hourly enquiry limit has been reached. Please wait an hour before trying"
+" again."
+msgstr ""
+"Досягнуто погодинного ліміту запитів. Зачекайте годину, перш ніж спробувати "
+"знову."
+
+msgid ""
+"The security check could not load. Please reload this page and try again."
+msgstr ""
+"Не вдалося завантажити перевірку безпеки. Оновіть сторінку та спробуйте ще "
+"раз."
+
+msgid "This page could not be found"
+msgstr "Сторінку не знайдено"
+
+msgid "Too many attempts. Please try again later."
+msgstr "Забагато спроб. Спробуйте пізніше."
+
+msgid "Too many attempts. Please wait ten minutes before trying again."
+msgstr "Забагато спроб. Зачекайте десять хвилин, перш ніж спробувати знову."
+
+msgid "Trade directions"
+msgstr "Напрямки торгівлі"
+
+msgid "We could not verify your enquiry. Please wait a moment and try again."
+msgstr "Не вдалося перевірити ваш запит. Зачекайте мить і спробуйте ще раз."
+
+msgid "You can"
+msgstr "Ви можете"
+
+msgid ""
+"Your details are used to respond to this enquiry. Please avoid sending "
+"sensitive personal information."
+msgstr ""
+"Ваші дані використовуються для відповіді на цей запит. Не надсилайте чутливу"
+" особисту інформацію."
+
+msgid "Your enquiry"
+msgstr "Ваш запит"
+
+msgid "email our team"
+msgstr "написати нашій команді"
+
+msgid "for information about your enquiry data."
+msgstr "щодо даних вашого запиту."
+
+msgid "privacy notice"
+msgstr "повідомленням про конфіденційність"
+
+#, python-format
+msgid "%(heading)s Trade Categories | %(brand)s"
+msgstr "Торговельні категорії: %(heading)s | %(brand)s"
+
+#, python-format
+msgid "Contact %(brand)s | Africa–Europe Trade Enquiries"
+msgstr "Зв’язок із %(brand)s | Запити про торгівлю Африки та Європи"

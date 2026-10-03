@@ -1,18 +1,21 @@
-{% extends 'trade/base.html' %}{% load static %}
+{% extends 'trade/base.html' %}{% load static i18n %}
 {% block content %}
 {% include 'trade/breadcrumbs.html' %}
 <section class="section wrap contact-layout">
-  <div><p class="eyebrow">CONTACT EUROAFRICA</p><h1>{{ obj.title }}</h1><div class="lead">{{ obj.introduction|linebreaks }}</div><p class="contact-tag">{{ site.tagline }}</p>{% include 'trade/office_details.html' %}</div>
+  <div><p class="eyebrow">{% translate 'CONTACT EUROAFRICA' %}</p><h1 dir="auto">{{ obj.translated.title }}</h1><div class="lead" dir="auto">{{ obj.translated.introduction|linebreaks }}</div><p class="contact-tag" dir="auto">{{ site.translated.tagline }}</p>{% include 'trade/office_details.html' %}</div>
   <div class="form-panel">
   {% if thanks %}
-    <h2>Enquiry received</h2><p role="status">{{ obj.confirmation }}</p><a class="button" href="/">Return home</a>
+    <h2>{% translate 'Enquiry received' %}</h2><p role="status" dir="auto">{{ obj.translated.confirmation }}</p><a class="button" href="/">{% translate 'Return home' %}</a>
   {% else %}
-    <h2>Send an enquiry</h2><p>Fields marked * are required.</p>
-    {% if verification_unavailable %}<p role="status">Online enquiries are temporarily unavailable. Please try again later.{% if site.email %} You can <a href="mailto:{{ site.email }}">email our team</a>.{% endif %}</p>{% endif %}
-    <form method="post" id="enquiry-form">
+    <h2>{% translate 'Send an enquiry' %}</h2><p>{% translate 'Fields marked * are required.' %}</p>
+    {% if verification_unavailable %}<p role="status">{% translate 'Online enquiries are temporarily unavailable. Please try again later.' %}{% if site.email %} {% translate 'You can' %} <a href="mailto:{{ site.email }}">{% translate 'email our team' %}</a>.{% endif %}</p>{% endif %}
+    <form method="post" id="enquiry-form"
+      data-sending="{% translate 'Sending your enquiry…' %}"
+      data-check-error="{% translate 'The security check could not load. Please reload this page and try again.' %}"
+      data-check-pending="{% translate 'Please wait for the security check to complete, then try again.' %}">
       {% csrf_token %}{{ form.form_token }}
-      {% if form.errors %}<div role="alert" class="errors" id="form-errors" tabindex="-1"><p>Please review your enquiry and try again.</p>{{ form.non_field_errors }}{% for field in form %}{% if field.errors and not field.is_hidden and field.name != 'website' %}<p><a href="#{{ field.id_for_label }}">{{ field.label }}: {{ field.errors|striptags }}</a></p>{% endif %}{% endfor %}</div>{% endif %}
-      <div class="enquiry-trap" aria-hidden="true"><label for="{{ form.website.id_for_label }}">Leave this field empty</label>{{ form.website }}</div>
+      {% if form.errors %}<div role="alert" class="errors" id="form-errors" tabindex="-1"><p>{% translate 'Please review your enquiry and try again.' %}</p>{{ form.non_field_errors }}{% for field in form %}{% if field.errors and not field.is_hidden and field.name != 'website' %}<p><a href="#{{ field.id_for_label }}">{{ field.label }}: {{ field.errors|striptags }}</a></p>{% endif %}{% endfor %}</div>{% endif %}
+      <div class="enquiry-trap" aria-hidden="true"><label for="{{ form.website.id_for_label }}">{% translate 'Leave this field empty' %}</label>{{ form.website }}</div>
       {% for field in form.visible_fields %}{% if field.name != 'website' %}
         <div class="field{% if field.name == 'privacy_consent' %} consent-field{% endif %}">
           {% if field.name == 'privacy_consent' %}{{ field }}{% endif %}
@@ -22,9 +25,9 @@
           {{ field.errors }}
         </div>
       {% endif %}{% endfor %}
-      {% if privacy_published %}<p class="smallprint">Read our <a href="/privacy/">privacy notice</a> for information about your enquiry data.</p>{% else %}<p class="smallprint">Your details are used to respond to this enquiry. Please avoid sending sensitive personal information.</p>{% endif %}
-      {% if turnstile_key %}<div id="enquiry-verification" class="enquiry-verification" data-sitekey="{{ turnstile_key }}"></div><noscript><p>Enable JavaScript for the security check before submitting.{% if site.email %} Alternatively, <a href="mailto:{{ site.email }}">email our team</a>.{% endif %}</p></noscript>{% endif %}
-      <button class="button" type="submit" {% if verification_unavailable %}disabled{% endif %}>Submit Enquiry <span aria-hidden="true">↗</span></button>
+      {% if privacy_published %}<p class="smallprint">{% translate 'Read our' %} <a href="/privacy/">{% translate 'privacy notice' %}</a> {% translate 'for information about your enquiry data.' %}</p>{% else %}<p class="smallprint">{% translate 'Your details are used to respond to this enquiry. Please avoid sending sensitive personal information.' %}</p>{% endif %}
+      {% if turnstile_key %}<div id="enquiry-verification" class="enquiry-verification" data-sitekey="{{ turnstile_key }}"></div><noscript><p>{% translate 'Enable JavaScript for the security check before submitting.' %}{% if site.email %} {% translate 'Alternatively,' %} <a href="mailto:{{ site.email }}">{% translate 'email our team' %}</a>.{% endif %}</p></noscript>{% endif %}
+      <button class="button" type="submit" {% if verification_unavailable %}disabled{% endif %}>{% translate 'Submit Enquiry' %}</button>
       <p id="submission-status" role="status" aria-live="polite"></p>
     </form>
     <script src="{% static 'trade/contact.js' %}" defer></script>

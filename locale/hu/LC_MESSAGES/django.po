@@ -1,0 +1,366 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: EuroAfrica\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "A CLOSER LOOK"
+msgstr "KÖZELEBBRŐL"
+
+#, python-format
+msgid "A closer look at %(title)s"
+msgstr "%(title)s közelebbről"
+
+msgid "ABOUT EUROAFRICA"
+msgstr "A EUROAFRICA BEMUTATÁSA"
+
+msgid "AFRICA"
+msgstr "AFRIKA"
+
+msgid "AFRICA ↔ EUROPE"
+msgstr "AFRIKA ↔ EURÓPA"
+
+msgid "About"
+msgstr "Rólunk"
+
+msgid "About EuroAfrica"
+msgstr "A EuroAfricáról"
+
+msgid "Africa & Europe"
+msgstr "Afrika és Európa"
+
+msgid "Africa office"
+msgstr "Afrikai iroda"
+
+msgid "Africa to Europe"
+msgstr "Afrika → Európa"
+
+msgid "Africa → Europe"
+msgstr "Afrika → Európa"
+
+msgid "Africa → Europe Trade"
+msgstr "Afrika → Európa kereskedelem"
+
+msgid "Alternatively,"
+msgstr "Másik lehetőségként:"
+
+msgid "Apply"
+msgstr "Alkalmaz"
+
+msgid "Breadcrumb"
+msgstr "Navigációs útvonal"
+
+msgid "Business email"
+msgstr "Üzleti e-mail-cím"
+
+msgid "CATEGORY OVERVIEW"
+msgstr "A KATEGÓRIA ÁTTEKINTÉSE"
+
+msgid "CONTACT EUROAFRICA"
+msgstr "KAPCSOLAT A EUROAFRICÁVAL"
+
+msgid "Category information will be published here when available."
+msgstr "A kategóriák adatai itt jelennek meg, amint elérhetők."
+
+msgid ""
+"Choose a category in the selected trade direction, or select General "
+"Enquiry."
+msgstr ""
+"Válasszon kategóriát a kijelölt kereskedelmi irányból, vagy válassza az "
+"Általános érdeklődés lehetőséget."
+
+msgid "Choose a product or category"
+msgstr "Válasszon terméket vagy kategóriát"
+
+msgid "Choose an available enquiry type."
+msgstr "Válasszon elérhető érdeklődési típust."
+
+msgid "Company / organisation"
+msgstr "Cég / szervezet"
+
+msgid "Contact"
+msgstr "Kapcsolat"
+
+msgid "Contact EuroAfrica ↗"
+msgstr "Kapcsolat a EuroAfricával ↗"
+
+msgid "Contact Us"
+msgstr "Kapcsolat"
+
+msgid "Continue the conversation"
+msgstr "Folytassuk a beszélgetést"
+
+msgid "Country / market of interest"
+msgstr "Érdeklődési ország / piac"
+
+msgid "DIVERSITY IN EVERY DIRECTION"
+msgstr "SOKSZÍNŰSÉG MINDEN IRÁNYBAN"
+
+msgid ""
+"Describe the product or topic and what you would like to know. Maximum 5,000"
+" characters."
+msgstr ""
+"Írja le a terméket vagy témát, és azt, amit szeretne megtudni. Legfeljebb "
+"5000 karakter."
+
+msgid "Discover EuroAfrica ↗"
+msgstr "Ismerje meg a EuroAfricát ↗"
+
+msgid "Discover the products behind the connection."
+msgstr "Fedezze fel a kapcsolatot teremtő termékeket."
+
+msgid "Download Brochure"
+msgstr "Brosúra letöltése"
+
+msgid "EUROPE"
+msgstr "EURÓPA"
+
+msgid "EXPLORE THE CONNECTION"
+msgstr "FEDEZZE FEL A KAPCSOLATOT"
+
+msgid "Enable JavaScript for the security check before submitting."
+msgstr "Küldés előtt engedélyezze a JavaScriptet a biztonsági ellenőrzéshez."
+
+msgid "Enquire About This Category"
+msgstr "Érdeklődés erről a kategóriáról"
+
+#, python-format
+msgid "Enquire about %(title)s"
+msgstr "Érdeklődés: %(title)s"
+
+msgid "Enquiry received"
+msgstr "Érdeklődését megkaptuk"
+
+msgid "Enter this value on one line."
+msgstr "Egy sorban adja meg ezt az értéket."
+
+msgid "EuroAfrica home"
+msgstr "EuroAfrica kezdőlap"
+
+msgid "Europe to Africa"
+msgstr "Európa → Afrika"
+
+msgid "Europe → Africa"
+msgstr "Európa → Afrika"
+
+msgid "Europe → Africa Trade"
+msgstr "Európa → Afrika kereskedelem"
+
+msgid "Explore"
+msgstr "Felfedezés"
+
+#, python-format
+msgid "Explore %(direction_title)s"
+msgstr "Fedezze fel: %(direction_title)s"
+
+#, python-format
+msgid "Explore %(title)s"
+msgstr "Fedezze fel: %(title)s"
+
+msgid "Explore EuroAfrica"
+msgstr "Fedezze fel a EuroAfricát"
+
+msgid "Explore Trade Categories"
+msgstr "Kereskedelmi kategóriák felfedezése"
+
+msgid "Explore the categories"
+msgstr "Fedezze fel a kategóriákat"
+
+msgid "Featured product categories"
+msgstr "Kiemelt termékkategóriák"
+
+msgid "Fields marked * are required."
+msgstr "A *-gal jelölt mezők kitöltése kötelező."
+
+msgid "Full name"
+msgstr "Teljes név"
+
+msgid "General / not yet sure"
+msgstr "Általános / még nem tudom"
+
+msgid "General Enquiry"
+msgstr "Általános érdeklődés"
+
+msgid "Get in touch"
+msgstr "Lépjen kapcsolatba velünk"
+
+msgid "Headquarters"
+msgstr "Központ"
+
+msgid "Home"
+msgstr "Kezdőlap"
+
+msgid "I agree to my details being used to respond to this enquiry."
+msgstr ""
+"Hozzájárulok, hogy adataimat az érdeklődésem megválaszolására használják."
+
+msgid "Illustration"
+msgstr "Illusztráció"
+
+msgid "I’m interested in"
+msgstr "Ez érdekel"
+
+msgid "KEEP EXPLORING"
+msgstr "FEDEZZEN FEL TÖBBET"
+
+msgid "LET’S CONNECT"
+msgstr "LÉPJÜNK KAPCSOLATBA"
+
+msgid "Language"
+msgstr "Nyelv"
+
+msgid "Leave this field empty"
+msgstr "Hagyja üresen ezt a mezőt"
+
+msgid "Main navigation"
+msgstr "Fő navigáció"
+
+msgid "Make an Enquiry"
+msgstr "Érdeklődés küldése"
+
+msgid "Markets in connection"
+msgstr "Összekapcsolódó piacok"
+
+msgid "Menu"
+msgstr "Menü"
+
+msgid "Mobile navigation"
+msgstr "Mobil navigáció"
+
+#, python-format
+msgid "More from %(direction_title)s"
+msgstr "Továbbiak: %(direction_title)s"
+
+msgid "Online enquiries are temporarily unavailable. Please try again later."
+msgstr ""
+"Az online érdeklődés átmenetileg nem elérhető. Kérjük, próbálja újra később."
+
+msgid "Phone number"
+msgstr "Telefonszám"
+
+msgid "Please review your enquiry and try again."
+msgstr "Kérjük, ellenőrizze az érdeklődését, és próbálja újra."
+
+msgid "Please try again later"
+msgstr "Kérjük, próbálja újra később"
+
+msgid "Please try again shortly."
+msgstr "Kérjük, próbálja újra hamarosan."
+
+msgid "Please wait for the security check to complete, then try again."
+msgstr "Várja meg a biztonsági ellenőrzés végét, majd próbálja újra."
+
+msgid "Privacy"
+msgstr "Adatvédelem"
+
+msgid "Private editorial preview — unpublished content"
+msgstr "Privát szerkesztői előnézet — nem közzétett tartalom"
+
+msgid "Product / category"
+msgstr "Termék / kategória"
+
+msgid "Product diversity"
+msgstr "Termékválaszték"
+
+msgid "Products included"
+msgstr "Ide tartozó termékek"
+
+msgid "Read our"
+msgstr "Olvassa el"
+
+msgid "Return home"
+msgstr "Vissza a kezdőlapra"
+
+msgid "Send an Enquiry"
+msgstr "Érdeklődés küldése"
+
+msgid "Send an enquiry"
+msgstr "Érdeklődés küldése"
+
+msgid "Sending your enquiry…"
+msgstr "Érdeklődés küldése…"
+
+msgid "Skip to content"
+msgstr "Ugrás a tartalomra"
+
+msgid "Submit Enquiry"
+msgstr "Érdeklődés elküldése"
+
+msgid "TRADE DIRECTION"
+msgstr "KERESKEDELMI IRÁNY"
+
+msgid "TWO CONTINENTS. ONE SHARED HORIZON."
+msgstr "KÉT KONTINENS. EGY KÖZÖS HORIZONT."
+
+msgid "Temporarily unavailable"
+msgstr "Átmenetileg nem elérhető"
+
+msgid "Temporarily unavailable | EuroAfrica"
+msgstr "Átmenetileg nem elérhető | EuroAfrica"
+
+msgid "The address may have changed or the page is not published."
+msgstr "A cím megváltozhatott, vagy az oldal nincs közzétéve."
+
+msgid ""
+"The hourly enquiry limit has been reached. Please wait an hour before trying"
+" again."
+msgstr ""
+"Elérte az óránkénti érdeklődési korlátot. Kérjük, várjon egy órát, majd "
+"próbálja újra."
+
+msgid ""
+"The security check could not load. Please reload this page and try again."
+msgstr ""
+"A biztonsági ellenőrzés nem töltődött be. Frissítse az oldalt, majd próbálja"
+" újra."
+
+msgid "This page could not be found"
+msgstr "Az oldal nem található"
+
+msgid "Too many attempts. Please try again later."
+msgstr "Túl sok próbálkozás. Kérjük, próbálja újra később."
+
+msgid "Too many attempts. Please wait ten minutes before trying again."
+msgstr "Túl sok próbálkozás. Kérjük, várjon tíz percet, majd próbálja újra."
+
+msgid "Trade directions"
+msgstr "Kereskedelmi irányok"
+
+msgid "We could not verify your enquiry. Please wait a moment and try again."
+msgstr ""
+"Nem sikerült ellenőrizni az érdeklődését. Várjon egy pillanatot, majd "
+"próbálja újra."
+
+msgid "You can"
+msgstr "Lehetősége van"
+
+msgid ""
+"Your details are used to respond to this enquiry. Please avoid sending "
+"sensitive personal information."
+msgstr ""
+"Adatait az érdeklődés megválaszolására használjuk. Kérjük, ne küldjön "
+"érzékeny személyes adatokat."
+
+msgid "Your enquiry"
+msgstr "Az Ön érdeklődése"
+
+msgid "email our team"
+msgstr "e-mailt küldeni csapatunknak"
+
+msgid "for information about your enquiry data."
+msgstr "az érdeklődéshez megadott adatok kezeléséről."
+
+msgid "privacy notice"
+msgstr "adatvédelmi tájékoztatónkat"
+
+#, python-format
+msgid "%(heading)s Trade Categories | %(brand)s"
+msgstr "%(heading)s kereskedelmi kategóriák | %(brand)s"
+
+#, python-format
+msgid "Contact %(brand)s | Africa–Europe Trade Enquiries"
+msgstr "Kapcsolat: %(brand)s | Afrika–Európa kereskedelmi érdeklődés"

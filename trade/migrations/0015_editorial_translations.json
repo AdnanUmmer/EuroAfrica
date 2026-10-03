@@ -1,0 +1,883 @@
+{
+  "expansions": {
+    "Africa is an important source of globally traded agricultural commodities. Cocoa from Côte d'Ivoire and Ghana, coffee from Ethiopia and Kenya, and sesame seeds from countries including Ethiopia, Sudan and Tanzania represent some of the continent's established agricultural exports.\n\nThese commodities connect African producers and supply chains with food, beverage and processing industries across international markets.": "Africa is an important source of globally traded agricultural commodities. Cocoa from Côte d'Ivoire and Ghana, coffee from Ethiopia and Kenya, and sesame seeds from countries including Ethiopia, Sudan and Tanzania represent some of the continent's established agricultural exports.\n\nThese commodities connect African producers and supply chains with food, beverage and processing industries across international markets.\n\nProduct form is an important distinction: whole beans, seeds and processed ingredients have different uses in food and beverage production. A useful category enquiry identifies the commodity, intended application and destination market, leaving grade, packaging and traceability details to be confirmed for the specific product.",
+    "Africa's varied climates and agricultural regions support the production of fresh fruits, vegetables, avocados and flowers for export.\n\nCountries including Kenya, Morocco and Zimbabwe contribute to horticultural trade, supplying products ranging from fresh produce to cut roses.": "Africa's varied climates and agricultural regions support the production of fresh fruits, vegetables, avocados and flowers for export.\n\nCountries including Kenya, Morocco and Zimbabwe contribute to horticultural trade, supplying products ranging from fresh produce to cut roses.\n\nFruit, vegetables and cut flowers require different handling, presentation and timing. Variety, maturity and intended use help distinguish one item from another. For a focused enquiry, name the crop and planned use, and identify any storage or delivery considerations that need product-specific confirmation.",
+    "Africa holds significant reserves of minerals and metals used across manufacturing, infrastructure, energy and technology industries.\n\nCopper and cobalt from the Democratic Republic of Congo and Zambia, alongside gold and platinum from South Africa and other producing regions, form part of the continent's important mineral trade.": "Africa holds significant reserves of minerals and metals used across manufacturing, infrastructure, energy and technology industries.\n\nCopper and cobalt from the Democratic Republic of Congo and Zambia, alongside gold and platinum from South Africa and other producing regions, form part of the continent's important mineral trade.\n\nMineral-bearing material, concentrates and refined metals should not be treated as interchangeable products. Their composition and processing stage affect their industrial use. Clear product identification and independently verified analysis are important when interpreting a category description; this overview does not establish a grade or a particular source.",
+    "Africa's textile, clothing and footwear industries contribute to trade with European markets, supported in some cases by preferential trade arrangements such as Economic Partnership Agreements.\n\nThe sector represents an important intersection between local manufacturing, employment, international supply chains and access to overseas markets.": "Africa's textile, clothing and footwear industries contribute to trade with European markets, supported in some cases by preferential trade arrangements such as Economic Partnership Agreements.\n\nThe sector represents an important intersection between local manufacturing, employment, international supply chains and access to overseas markets.\n\nFabrics, finished garments and footwear serve different users and applications. Fibre composition, construction, sizing and care requirements provide a practical basis for comparing items. Product-specific discussions should distinguish materials and intended use without assuming a particular brand, certification or manufacturing capacity.",
+    "Valued at more than €41 billion, machinery and appliances represent the largest export category from Europe to Africa. The sector includes industrial factory equipment, power generators and specialised machinery supporting manufacturing, infrastructure development and productive industries across African markets.": "Valued at more than €41 billion, machinery and appliances represent the largest export category from Europe to Africa. The sector includes industrial factory equipment, power generators and specialised machinery supporting manufacturing, infrastructure development and productive industries across African markets.\n\nEquipment should be considered in the context of the process it is intended to support. Operating conditions, power compatibility, maintenance access and integration with existing equipment can matter as much as the machine type. A detailed enquiry should describe the application and the information needed to assess suitability, rather than assume a standard configuration.",
+    "European transport exports to African markets include passenger vehicles, heavy-duty trucks, commercial aircraft, railway equipment and related transportation technologies.\n\nThese products support passenger mobility, logistics, construction, public transportation and commercial supply chains across the continent.": "European transport exports to African markets include passenger vehicles, heavy-duty trucks, commercial aircraft, railway equipment and related transportation technologies.\n\nThese products support passenger mobility, logistics, construction, public transportation and commercial supply chains across the continent.\n\nComplete vehicles, replacement components and specialist transport systems need different kinds of identification. Intended duty, compatibility and supporting documentation help clarify what is being discussed. For parts or equipment, a precise reference and operating context are more useful than a broad category name; availability and service arrangements require separate confirmation.",
+    "European chemical and pharmaceutical exports serve a wide range of African sectors.\n\nProducts include pharmaceuticals and medical supplies as well as industrial chemicals and synthetic fertilisers used by healthcare providers, agricultural operations and industrial businesses.": "European chemical and pharmaceutical exports serve a wide range of African sectors.\n\nProducts include pharmaceuticals and medical supplies as well as industrial chemicals and synthetic fertilisers used by healthcare providers, agricultural operations and industrial businesses.\n\nMedicinal products, industrial substances and agricultural inputs must be distinguished by their intended use. Names alone do not establish composition, safe handling or suitability for a market. Product documentation and the applicable professional review are essential to a specific assessment; this page provides category information, not medical or application advice.",
+    "Refined petroleum products and fuels form another component of Europe-to-Africa trade, particularly in markets where domestic refining capacity does not fully meet demand.\n\nThese products support transportation, industry, commercial activity and broader energy requirements.": "Refined petroleum products and fuels form another component of Europe-to-Africa trade, particularly in markets where domestic refining capacity does not fully meet demand.\n\nThese products support transportation, industry, commercial activity and broader energy requirements.\n\nFinished fuels, lubricating products and other refined materials differ in composition and application. A category name should not be read as a specification. Identifying the material and intended use provides a starting point for reviewing relevant documentation, handling requirements and compatibility without assuming that products are interchangeable.",
+    "European agricultural and food exports include wheat, dairy products and a broad range of processed consumer foods.\n\nThese goods form part of established food supply chains serving retail, hospitality, food processing and consumer markets across Africa.": "European agricultural and food exports include wheat, dairy products and a broad range of processed consumer foods.\n\nThese goods form part of established food supply chains serving retail, hospitality, food processing and consumer markets across Africa.\n\nBulk ingredients and packaged foods have different presentation, storage and labelling needs. Ingredient composition, allergens and the intended retail or processing use help define an enquiry. The relevant product information should be checked individually; this overview does not establish shelf life, dietary certification or the availability of any particular brand.",
+    "Tobacco products are also traded from European producers into certain African markets. As a regulated product category, their importation, distribution and sale are subject to the applicable laws, duties and public-health requirements of individual markets.": "Tobacco products are also traded from European producers into certain African markets. As a regulated product category, their importation, distribution and sale are subject to the applicable laws, duties and public-health requirements of individual markets.\n\nCategory-level trade information should be read separately from product-specific claims. Packaging descriptions and catalogue entries do not establish market approval, availability or authorization. This page offers a neutral overview of the category; requirements and public-health information must be checked with the relevant authorities for the market concerned."
+  },
+  "translations": {
+    "Bridging Markets • Creating Opportunities": {
+      "ar": "ربط الأسواق • خلق الفرص",
+      "hu": "Piacok összekapcsolása • Lehetőségek teremtése",
+      "uk": "Поєднуємо ринки • Створюємо можливості",
+      "fr": "Relier les marchés • Créer des opportunités",
+      "de": "Märkte verbinden • Chancen schaffen"
+    },
+    "An informational platform focused on trade between African and European markets.": {
+      "ar": "منصة معلومات تركز على التجارة بين الأسواق الأفريقية والأوروبية.",
+      "hu": "Tájékoztató platform az afrikai és európai piacok közötti kereskedelemről.",
+      "uk": "Інформаційна платформа про торгівлю між африканськими та європейськими ринками.",
+      "fr": "Une plateforme d’information consacrée au commerce entre les marchés africains et européens.",
+      "de": "Eine Informationsplattform zum Handel zwischen afrikanischen und europäischen Märkten."
+    },
+    "Bridging continents. Connecting perspectives.": {
+      "ar": "نربط القارات. ونجمع وجهات النظر.",
+      "hu": "Kontinenseket kötünk össze. Nézőpontokat kapcsolunk össze.",
+      "uk": "Поєднуємо континенти. Зближуємо погляди.",
+      "fr": "Relier les continents. Rapprocher les perspectives.",
+      "de": "Kontinente verbinden. Perspektiven zusammenbringen."
+    },
+    "Budapest, Hungary": {
+      "ar": "بودابست، المجر",
+      "hu": "Budapest, Magyarország",
+      "uk": "Будапешт, Угорщина",
+      "fr": "Budapest, Hongrie",
+      "de": "Budapest, Ungarn"
+    },
+    "Nairobi, Kenya": {
+      "ar": "نيروبي، كينيا",
+      "hu": "Nairobi, Kenya",
+      "uk": "Найробі, Кенія",
+      "fr": "Nairobi, Kenya",
+      "de": "Nairobi, Kenia"
+    },
+    "Connecting Africa and Europe Through Trade": {
+      "ar": "ربط أفريقيا وأوروبا عبر التجارة",
+      "hu": "Afrika és Európa összekapcsolása a kereskedelem révén",
+      "uk": "Поєднуємо Африку та Європу через торгівлю",
+      "fr": "Relier l’Afrique et l’Europe par le commerce",
+      "de": "Afrika und Europa durch Handel verbinden"
+    },
+    "Discover the products, industries and opportunities shaping trade between two dynamic markets.": {
+      "ar": "اكتشف المنتجات والصناعات والفرص التي تشكّل التجارة بين سوقين حيويين.",
+      "hu": "Fedezze fel a két dinamikus piac közötti kereskedelmet alakító termékeket, iparágakat és lehetőségeket.",
+      "uk": "Відкрийте товари, галузі та можливості, що формують торгівлю між двома динамічними ринками.",
+      "fr": "Découvrez les produits, les industries et les opportunités qui façonnent les échanges entre deux marchés dynamiques.",
+      "de": "Entdecken Sie Produkte, Branchen und Chancen, die den Handel zwischen zwei dynamischen Märkten prägen."
+    },
+    "EuroAfrica provides a clear view of the key commodities and manufactured goods moving between Africa and Europe. From agricultural produce and strategic minerals to machinery, pharmaceuticals and transport equipment, explore the sectors driving commercial exchange across both continents.": {
+      "ar": "تقدم EuroAfrica صورة واضحة عن أهم السلع والمنتجات المصنّعة المتداولة بين أفريقيا وأوروبا. من المحاصيل الزراعية والمعادن الاستراتيجية إلى الآلات والأدوية ومعدات النقل، اكتشف القطاعات التي تدفع التبادل التجاري بين القارتين.",
+      "hu": "A EuroAfrica világos képet ad az Afrika és Európa között mozgó főbb árucikkekről és iparcikkekről. A mezőgazdasági terményektől és stratégiai ásványoktól a gépeken és gyógyszereken át a közlekedési eszközökig fedezze fel a két kontinens kereskedelmét alakító ágazatokat.",
+      "uk": "EuroAfrica пропонує чіткий огляд основних сировинних і промислових товарів, що переміщуються між Африкою та Європою. Від сільськогосподарської продукції та стратегічних мінералів до машин, ліків і транспортного обладнання — дослідіть галузі, які забезпечують торговельний обмін між континентами.",
+      "fr": "EuroAfrica présente clairement les principales matières premières et les produits manufacturés échangés entre l’Afrique et l’Europe. Des produits agricoles et minéraux stratégiques aux machines, produits pharmaceutiques et équipements de transport, découvrez les secteurs qui animent les échanges entre les deux continents.",
+      "de": "EuroAfrica bietet einen klaren Überblick über die wichtigsten Rohstoffe und Industrieerzeugnisse im Handel zwischen Afrika und Europa. Von Agrarprodukten und strategischen Mineralien bis zu Maschinen, Arzneimitteln und Transportausrüstung: Entdecken Sie die Branchen, die den Austausch zwischen beiden Kontinenten prägen."
+    },
+    "Aerial view of a container ship at sea": {
+      "ar": "منظر جوي لسفينة حاويات في البحر",
+      "hu": "Konténerszállító hajó a tengeren, légifelvételen",
+      "uk": "Вигляд контейнеровоза в морі з висоти",
+      "fr": "Vue aérienne d’un porte-conteneurs en mer",
+      "de": "Luftaufnahme eines Containerschiffs auf See"
+    },
+    "Illustrative photograph by Bent Van Aeken / Unsplash.": {
+      "ar": "صورة توضيحية بعدسة Bent Van Aeken / Unsplash.",
+      "hu": "Illusztratív fotó: Bent Van Aeken / Unsplash.",
+      "uk": "Ілюстративне фото: Bent Van Aeken / Unsplash.",
+      "fr": "Photographie illustrative de Bent Van Aeken / Unsplash.",
+      "de": "Illustratives Foto von Bent Van Aeken / Unsplash."
+    },
+    "Explore Trade Categories": {
+      "ar": "استكشف فئات التجارة",
+      "hu": "Kereskedelmi kategóriák felfedezése",
+      "uk": "Дослідіть торговельні категорії",
+      "fr": "Explorer les catégories commerciales",
+      "de": "Handelskategorien entdecken"
+    },
+    "Make an Enquiry": {
+      "ar": "قدّم استفسارًا",
+      "hu": "Érdeklődés küldése",
+      "uk": "Зробити запит",
+      "fr": "Faire une demande",
+      "de": "Eine Anfrage stellen"
+    },
+    "Two Continents. Diverse Markets. Growing Opportunities.": {
+      "ar": "قارتان. أسواق متنوعة. فرص متنامية.",
+      "hu": "Két kontinens. Sokszínű piacok. Bővülő lehetőségek.",
+      "uk": "Два континенти. Різноманітні ринки. Нові можливості.",
+      "fr": "Deux continents. Des marchés diversifiés. Des opportunités croissantes.",
+      "de": "Zwei Kontinente. Vielfältige Märkte. Wachsende Chancen."
+    },
+    "Africa and Europe are connected by established trade relationships spanning agriculture, manufacturing, energy, infrastructure and consumer goods.\n\nAfrican markets supply Europe with valuable agricultural commodities, horticultural produce, minerals and manufactured goods, while European industries provide African markets with machinery, transport equipment, pharmaceuticals, refined products and foodstuffs.\n\nEuroAfrica brings these trade flows together in one accessible platform, helping businesses, professionals and interested stakeholders understand what is traded, where key products originate and the sectors creating commercial opportunities between the two regions.": {
+      "ar": "تربط أفريقيا وأوروبا علاقات تجارية راسخة تشمل الزراعة والتصنيع والطاقة والبنية التحتية والسلع الاستهلاكية.\n\nتزود الأسواق الأفريقية أوروبا بسلع زراعية مهمة ومنتجات بستانية ومعادن ومنتجات مصنّعة، بينما توفر الصناعات الأوروبية للأسواق الأفريقية الآلات ومعدات النقل والأدوية والمنتجات المكررة والمواد الغذائية.\n\nتجمع EuroAfrica هذه التدفقات التجارية في منصة واحدة سهلة الاستخدام، لمساعدة الشركات والمهنيين والمهتمين على فهم السلع المتداولة ومصادر المنتجات الرئيسية والقطاعات التي تتيح فرصًا تجارية بين المنطقتين.",
+      "hu": "Afrikát és Európát a mezőgazdaságot, a feldolgozóipart, az energiát, az infrastruktúrát és a fogyasztási cikkeket átfogó, kialakult kereskedelmi kapcsolatok kötik össze.\n\nAz afrikai piacok értékes mezőgazdasági árucikkeket, kertészeti termékeket, ásványokat és iparcikkeket szállítanak Európába. Az európai iparágak gépekkel, közlekedési eszközökkel, gyógyszerekkel, finomított termékekkel és élelmiszerekkel látják el az afrikai piacokat.\n\nA EuroAfrica egy könnyen használható platformon mutatja be ezeket az áramlásokat, segítve a vállalkozásokat, szakembereket és érdeklődőket a kereskedett termékek, azok eredete és a két régió közötti üzleti lehetőségeket teremtő ágazatok megértésében.",
+      "uk": "Африку та Європу поєднують усталені торговельні відносини в сільському господарстві, виробництві, енергетиці, інфраструктурі та споживчих товарах.\n\nАфриканські ринки постачають до Європи цінну аграрну продукцію, плодоовочеві товари, мінерали й промислові вироби. Європейська промисловість забезпечує африканські ринки машинами, транспортним обладнанням, ліками, продуктами переробки та харчовими товарами.\n\nEuroAfrica об’єднує ці потоки на доступній платформі, допомагаючи компаніям, фахівцям та іншим зацікавленим сторонам зрозуміти, які товари продаються, звідки вони походять і які галузі створюють комерційні можливості між регіонами.",
+      "fr": "L’Afrique et l’Europe sont liées par des relations commerciales établies dans l’agriculture, l’industrie, l’énergie, les infrastructures et les biens de consommation.\n\nLes marchés africains fournissent à l’Europe des matières premières agricoles, des produits horticoles, des minéraux et des produits manufacturés. Les industries européennes approvisionnent les marchés africains en machines, équipements de transport, produits pharmaceutiques, produits raffinés et denrées alimentaires.\n\nEuroAfrica rassemble ces flux sur une plateforme accessible, pour aider les entreprises, les professionnels et les parties intéressées à comprendre les biens échangés, leur origine et les secteurs porteurs d’opportunités entre les deux régions.",
+      "de": "Afrika und Europa verbinden etablierte Handelsbeziehungen in Landwirtschaft, Industrie, Energie, Infrastruktur und Konsumgütern.\n\nAfrikanische Märkte beliefern Europa mit wertvollen Agrarrohstoffen, Gartenbauerzeugnissen, Mineralien und Industrieprodukten. Europäische Unternehmen liefern Maschinen, Transportausrüstung, Arzneimittel, raffinierte Erzeugnisse und Lebensmittel an afrikanische Märkte.\n\nEuroAfrica führt diese Warenströme auf einer zugänglichen Plattform zusammen. Unternehmen, Fachleute und weitere Interessierte erfahren, welche Produkte gehandelt werden, woher sie stammen und welche Branchen wirtschaftliche Möglichkeiten zwischen beiden Regionen eröffnen."
+    },
+    "Understand the Trade Behind the Markets": {
+      "ar": "افهم التجارة وراء الأسواق",
+      "hu": "Ismerje meg a piacok mögötti kereskedelmet",
+      "uk": "Зрозумійте торгівлю, що стоїть за ринками",
+      "fr": "Comprendre le commerce derrière les marchés",
+      "de": "Den Handel hinter den Märkten verstehen"
+    },
+    "International trade can be complex. EuroAfrica makes the landscape easier to understand by organising key trade categories, products and market information into a clear and accessible resource.": {
+      "ar": "قد تكون التجارة الدولية معقدة. تسهّل EuroAfrica فهمها من خلال تنظيم فئات التجارة الرئيسية والمنتجات ومعلومات الأسواق في مصدر واضح وسهل الاستخدام.",
+      "hu": "A nemzetközi kereskedelem összetett lehet. A EuroAfrica világos, könnyen elérhető forrásba rendezi a főbb kereskedelmi kategóriákat, termékeket és piaci információkat, megkönnyítve a tájékozódást.",
+      "uk": "Міжнародна торгівля може бути складною. EuroAfrica допомагає в ній розібратися, впорядковуючи основні торговельні категорії, товари та ринкову інформацію в зрозумілий і доступний ресурс.",
+      "fr": "Le commerce international peut être complexe. EuroAfrica en facilite la compréhension en organisant les principales catégories commerciales, les produits et les informations sur les marchés dans une ressource claire et accessible.",
+      "de": "Internationaler Handel kann komplex sein. EuroAfrica erleichtert den Überblick, indem wichtige Handelskategorien, Produkte und Marktinformationen klar und zugänglich zusammengeführt werden."
+    },
+    "Explore a Trade Relationship Built on Complementary Strengths": {
+      "ar": "اكتشف علاقة تجارية تقوم على نقاط قوة متكاملة",
+      "hu": "Fedezzen fel egy egymást kiegészítő erősségekre épülő kereskedelmi kapcsolatot",
+      "uk": "Дослідіть торговельні відносини, засновані на взаємодоповнювальних перевагах",
+      "fr": "Découvrir une relation commerciale fondée sur des atouts complémentaires",
+      "de": "Eine Handelsbeziehung auf Basis ergänzender Stärken entdecken"
+    },
+    "Africa and Europe bring different strengths to international trade.\n\nAfrica combines agricultural capacity, natural resources and expanding manufacturing industries. Europe contributes advanced machinery, transportation systems, pharmaceuticals, industrial products and established manufacturing capabilities.\n\nTogether, these complementary strengths create trade relationships across numerous sectors and markets.\n\nEuroAfrica helps you explore those connections and identify the categories shaping commerce between the two continents.": {
+      "ar": "تسهم أفريقيا وأوروبا بنقاط قوة مختلفة في التجارة الدولية.\n\nتجمع أفريقيا بين القدرة الزراعية والموارد الطبيعية والصناعات التحويلية المتنامية. وتسهم أوروبا بآلات متطورة وأنظمة نقل وأدوية ومنتجات صناعية وقدرات تصنيعية راسخة.\n\nتُنشئ هذه المزايا المتكاملة علاقات تجارية عبر قطاعات وأسواق عديدة.\n\nتساعدك EuroAfrica على استكشاف هذه الروابط والتعرف على الفئات التي تشكّل التجارة بين القارتين.",
+      "hu": "Afrika és Európa eltérő erősségekkel vesz részt a nemzetközi kereskedelemben.\n\nAfrika mezőgazdasági kapacitással, természeti erőforrásokkal és bővülő feldolgozóiparral rendelkezik. Európa fejlett gépekkel, közlekedési rendszerekkel, gyógyszerekkel, ipari termékekkel és kiépült gyártási kapacitással járul hozzá.\n\nEzek az egymást kiegészítő erősségek számos ágazatban és piacon teremtenek kereskedelmi kapcsolatokat.\n\nA EuroAfrica segít feltárni e kapcsolatokat és a két kontinens kereskedelmét alakító kategóriákat.",
+      "uk": "Африка та Європа мають різні сильні сторони в міжнародній торгівлі.\n\nАфрика поєднує аграрний потенціал, природні ресурси та виробничі галузі, що розвиваються. Європа пропонує сучасні машини, транспортні системи, ліки, промислові товари та усталені виробничі потужності.\n\nРазом ці взаємодоповнювальні переваги створюють торговельні відносини в багатьох галузях і на різних ринках.\n\nEuroAfrica допомагає дослідити ці зв’язки та визначити категорії, що формують торгівлю між континентами.",
+      "fr": "L’Afrique et l’Europe apportent des atouts différents au commerce international.\n\nL’Afrique associe capacité agricole, ressources naturelles et industries manufacturières en expansion. L’Europe contribue par des machines avancées, des systèmes de transport, des produits pharmaceutiques, des biens industriels et des capacités de production établies.\n\nCes atouts complémentaires créent des relations commerciales dans de nombreux secteurs et marchés.\n\nEuroAfrica vous aide à explorer ces liens et à identifier les catégories qui façonnent les échanges entre les deux continents.",
+      "de": "Afrika und Europa bringen unterschiedliche Stärken in den internationalen Handel ein.\n\nAfrika vereint landwirtschaftliche Kapazitäten, natürliche Ressourcen und wachsende Fertigungsindustrien. Europa trägt moderne Maschinen, Verkehrssysteme, Arzneimittel, Industrieprodukte und etablierte Produktionskapazitäten bei.\n\nGemeinsam schaffen diese ergänzenden Stärken Handelsbeziehungen in zahlreichen Branchen und Märkten.\n\nEuroAfrica hilft Ihnen, diese Verbindungen und die Kategorien zu erkunden, die den Handel zwischen beiden Kontinenten prägen."
+    },
+    "Woven baskets and hats on a textured surface": {
+      "ar": "سلال وقبعات منسوجة على سطح ذي ملمس بارز",
+      "hu": "Fonott kosarak és kalapok texturált felületen",
+      "uk": "Плетені кошики й капелюхи на фактурній поверхні",
+      "fr": "Paniers et chapeaux tressés sur une surface texturée",
+      "de": "Geflochtene Körbe und Hüte auf einer strukturierten Oberfläche"
+    },
+    "Illustrative photograph by Anes mchayaa / Unsplash.": {
+      "ar": "صورة توضيحية بعدسة Anes mchayaa / Unsplash.",
+      "hu": "Illusztratív fotó: Anes mchayaa / Unsplash.",
+      "uk": "Ілюстративне фото: Anes mchayaa / Unsplash.",
+      "fr": "Photographie illustrative de Anes mchayaa / Unsplash.",
+      "de": "Illustratives Foto von Anes mchayaa / Unsplash."
+    },
+    "Looking for More Information?": {
+      "ar": "هل تبحث عن مزيد من المعلومات؟",
+      "hu": "További információt keres?",
+      "uk": "Шукаєте більше інформації?",
+      "fr": "Vous souhaitez en savoir plus ?",
+      "de": "Möchten Sie mehr erfahren?"
+    },
+    "Whether you're researching a particular product category, exploring a market or looking for information about trade between Africa and Europe, you can contact us with your enquiry.\n\nTell us what you're interested in and provide the relevant details. Our team will review your enquiry and respond using the contact information provided.": {
+      "ar": "سواء كنت تبحث في فئة منتجات محددة أو تستكشف سوقًا أو تحتاج إلى معلومات عن التجارة بين أفريقيا وأوروبا، يمكنك التواصل معنا باستفسارك.\n\nأخبرنا بما يهمك وقدم التفاصيل ذات الصلة. سيراجع فريقنا استفسارك ويرد عبر معلومات الاتصال التي تقدمها.",
+      "hu": "Akár egy termékkategóriát vizsgál, akár egy piacot fedez fel, akár az Afrika és Európa közötti kereskedelemről keres információt, kérdésével kapcsolatba léphet velünk.\n\nÍrja le, mi érdekli, és adja meg a fontos részleteket. Csapatunk áttekinti megkeresését, és a megadott elérhetőségeken válaszol.",
+      "uk": "Якщо ви досліджуєте певну категорію товарів, вивчаєте ринок або шукаєте інформацію про торгівлю між Африкою та Європою, зверніться до нас із запитом.\n\nРозкажіть, що вас цікавить, і надайте відповідні подробиці. Наша команда розгляне запит і відповість за вказаними контактними даними.",
+      "fr": "Que vous étudiiez une catégorie de produits, exploriez un marché ou recherchiez des informations sur le commerce entre l’Afrique et l’Europe, vous pouvez nous adresser votre demande.\n\nIndiquez ce qui vous intéresse et fournissez les détails utiles. Notre équipe examinera votre demande et vous répondra aux coordonnées communiquées.",
+      "de": "Ob Sie eine Produktkategorie recherchieren, einen Markt erkunden oder Informationen zum Handel zwischen Afrika und Europa suchen: Sie können uns Ihre Anfrage senden.\n\nBeschreiben Sie Ihr Interesse und nennen Sie die relevanten Einzelheiten. Unser Team prüft Ihre Anfrage und antwortet über die angegebenen Kontaktdaten."
+    },
+    "Discover the Trade Connecting Africa and Europe": {
+      "ar": "اكتشف التجارة التي تربط أفريقيا وأوروبا",
+      "hu": "Fedezze fel az Afrikát és Európát összekötő kereskedelmet",
+      "uk": "Відкрийте торгівлю, що поєднує Африку та Європу",
+      "fr": "Découvrir le commerce qui relie l’Afrique et l’Europe",
+      "de": "Den Handel zwischen Afrika und Europa entdecken"
+    },
+    "Explore key industries, understand important product categories and discover the commercial connections between African and European markets.": {
+      "ar": "استكشف الصناعات الرئيسية وافهم فئات المنتجات المهمة وتعرّف على الروابط التجارية بين الأسواق الأفريقية والأوروبية.",
+      "hu": "Fedezze fel a főbb iparágakat, ismerje meg a fontos termékkategóriákat és az afrikai, illetve európai piacok közötti kereskedelmi kapcsolatokat.",
+      "uk": "Дослідіть ключові галузі, зрозумійте важливі категорії товарів і відкрийте комерційні зв’язки між африканськими та європейськими ринками.",
+      "fr": "Explorez les principales industries, comprenez les catégories de produits importantes et découvrez les liens commerciaux entre les marchés africains et européens.",
+      "de": "Erkunden Sie zentrale Branchen, lernen Sie wichtige Produktkategorien kennen und entdecken Sie wirtschaftliche Verbindungen zwischen afrikanischen und europäischen Märkten."
+    },
+    "Africa to Europe": {
+      "ar": "من أفريقيا إلى أوروبا",
+      "hu": "Afrika → Európa",
+      "uk": "Африка → Європа",
+      "fr": "Afrique → Europe",
+      "de": "Afrika → Europa"
+    },
+    "Discover What Africa Brings to European Markets": {
+      "ar": "اكتشف ما تقدمه أفريقيا للأسواق الأوروبية",
+      "hu": "Fedezze fel, mit kínál Afrika az európai piacoknak",
+      "uk": "Дізнайтеся, що Африка пропонує європейським ринкам",
+      "fr": "Découvrir ce que l’Afrique apporte aux marchés européens",
+      "de": "Entdecken Sie Afrikas Beitrag zu europäischen Märkten"
+    },
+    "Africa's diverse climates, natural resources and growing industries support a broad range of exports to European markets.": {
+      "ar": "تدعم مناخات أفريقيا المتنوعة ومواردها الطبيعية وصناعاتها المتنامية مجموعة واسعة من الصادرات إلى الأسواق الأوروبية.",
+      "hu": "Afrika változatos éghajlata, természeti erőforrásai és fejlődő iparágai az európai piacokra irányuló export széles körét támogatják.",
+      "uk": "Різноманітний клімат Африки, її природні ресурси та промисловість, що розвивається, забезпечують широкий спектр експорту до європейських ринків.",
+      "fr": "La diversité des climats, les ressources naturelles et les industries en développement de l’Afrique soutiennent une large gamme d’exportations vers les marchés européens.",
+      "de": "Afrikas vielfältige Klimazonen, natürliche Ressourcen und wachsende Industrien ermöglichen ein breites Spektrum an Exporten auf europäische Märkte."
+    },
+    "From internationally recognised agricultural commodities to valuable minerals and manufactured products, these sectors demonstrate the depth and diversity of Africa's role in international trade.": {
+      "ar": "من السلع الزراعية المعروفة عالميًا إلى المعادن القيّمة والمنتجات المصنّعة، تُظهر هذه القطاعات عمق وتنوع دور أفريقيا في التجارة الدولية.",
+      "hu": "A világszerte ismert mezőgazdasági árucikkektől az értékes ásványokon át az iparcikkekig ezek az ágazatok Afrika nemzetközi kereskedelemben betöltött szerepének mélységét és sokszínűségét mutatják.",
+      "uk": "Від всесвітньо відомих аграрних товарів до цінних мінералів і промислової продукції — ці галузі демонструють масштаб і різноманіття ролі Африки в міжнародній торгівлі.",
+      "fr": "Des matières premières agricoles reconnues mondialement aux minéraux précieux et aux produits manufacturés, ces secteurs illustrent l’ampleur et la diversité du rôle de l’Afrique dans le commerce international.",
+      "de": "Von international bekannten Agrarrohstoffen bis zu wertvollen Mineralien und Industrieprodukten zeigen diese Branchen die Bedeutung und Vielfalt Afrikas im internationalen Handel."
+    },
+    "Sliced avocado on a green surface": {
+      "ar": "شرائح أفوكادو على سطح أخضر",
+      "hu": "Szeletelt avokádó zöld felületen",
+      "uk": "Нарізане авокадо на зеленій поверхні",
+      "fr": "Avocat tranché sur une surface verte",
+      "de": "Aufgeschnittene Avocado auf grünem Untergrund"
+    },
+    "Illustrative photograph by Louis Hansel / Unsplash.": {
+      "ar": "صورة توضيحية بعدسة Louis Hansel / Unsplash.",
+      "hu": "Illusztratív fotó: Louis Hansel / Unsplash.",
+      "uk": "Ілюстративне фото: Louis Hansel / Unsplash.",
+      "fr": "Photographie illustrative de Louis Hansel / Unsplash.",
+      "de": "Illustratives Foto von Louis Hansel / Unsplash."
+    },
+    "Europe to Africa": {
+      "ar": "من أوروبا إلى أفريقيا",
+      "hu": "Európa → Afrika",
+      "uk": "Європа → Африка",
+      "fr": "Europe → Afrique",
+      "de": "Europa → Afrika"
+    },
+    "European Products Supporting African Markets": {
+      "ar": "منتجات أوروبية تدعم الأسواق الأفريقية",
+      "hu": "Az afrikai piacokat támogató európai termékek",
+      "uk": "Європейські товари для африканських ринків",
+      "fr": "Des produits européens au service des marchés africains",
+      "de": "Europäische Produkte für afrikanische Märkte"
+    },
+    "European exports to Africa span industrial equipment, transportation, healthcare, energy and food.": {
+      "ar": "تشمل الصادرات الأوروبية إلى أفريقيا المعدات الصناعية والنقل والرعاية الصحية والطاقة والغذاء.",
+      "hu": "Az Afrikába irányuló európai export ipari berendezéseket, közlekedési eszközöket, egészségügyi, energetikai és élelmiszeripari termékeket foglal magában.",
+      "uk": "Європейський експорт до Африки охоплює промислове обладнання, транспорт, охорону здоров’я, енергетику та харчові товари.",
+      "fr": "Les exportations européennes vers l’Afrique couvrent les équipements industriels, le transport, la santé, l’énergie et l’alimentation.",
+      "de": "Europäische Exporte nach Afrika umfassen Industrieausrüstung, Verkehr, Gesundheitswesen, Energie und Lebensmittel."
+    },
+    "These products serve businesses, governments, industries and consumers across African markets while supporting infrastructure development, manufacturing and everyday economic activity.": {
+      "ar": "تخدم هذه المنتجات الشركات والحكومات والصناعات والمستهلكين في الأسواق الأفريقية، وتدعم تطوير البنية التحتية والتصنيع والنشاط الاقتصادي اليومي.",
+      "hu": "Ezek a termékek vállalkozásokat, kormányzatokat, iparágakat és fogyasztókat szolgálnak ki az afrikai piacokon, támogatva az infrastruktúra fejlesztését, a gyártást és a mindennapi gazdasági tevékenységet.",
+      "uk": "Ці товари призначені для підприємств, урядів, галузей і споживачів на африканських ринках та підтримують розвиток інфраструктури, виробництво й повсякденну економічну діяльність.",
+      "fr": "Ces produits servent les entreprises, les gouvernements, les industries et les consommateurs des marchés africains, tout en soutenant le développement des infrastructures, la production et l’activité économique quotidienne.",
+      "de": "Diese Produkte dienen Unternehmen, Regierungen, Industrien und Verbrauchern auf afrikanischen Märkten und unterstützen Infrastrukturentwicklung, Fertigung und den wirtschaftlichen Alltag."
+    },
+    "Electronic components on a printed circuit board": {
+      "ar": "مكونات إلكترونية على لوحة دوائر مطبوعة",
+      "hu": "Elektronikai alkatrészek nyomtatott áramköri lapon",
+      "uk": "Електронні компоненти на друкованій платі",
+      "fr": "Composants électroniques sur un circuit imprimé",
+      "de": "Elektronische Bauteile auf einer Leiterplatte"
+    },
+    "Illustrative photograph by Umberto / Unsplash.": {
+      "ar": "صورة توضيحية بعدسة Umberto / Unsplash.",
+      "hu": "Illusztratív fotó: Umberto / Unsplash.",
+      "uk": "Ілюстративне фото: Umberto / Unsplash.",
+      "fr": "Photographie illustrative de Umberto / Unsplash.",
+      "de": "Illustratives Foto von Umberto / Unsplash."
+    },
+    "Agricultural Commodities": {
+      "ar": "السلع الزراعية",
+      "hu": "Mezőgazdasági árucikkek",
+      "uk": "Сільськогосподарські товари",
+      "fr": "Matières premières agricoles",
+      "de": "Agrarrohstoffe"
+    },
+    "From African farms to international markets.": {
+      "ar": "من المزارع الأفريقية إلى الأسواق الدولية.",
+      "hu": "Afrikai gazdaságokból a nemzetközi piacokra.",
+      "uk": "Від африканських господарств до міжнародних ринків.",
+      "fr": "Des exploitations africaines aux marchés internationaux.",
+      "de": "Von afrikanischen Betrieben auf internationale Märkte."
+    },
+    "Africa is an important source of globally traded agricultural commodities. Cocoa from Côte d'Ivoire and Ghana, coffee from Ethiopia and Kenya, and sesame seeds from countries including Ethiopia, Sudan and Tanzania represent some of the continent's established agricultural exports.\n\nThese commodities connect African producers and supply chains with food, beverage and processing industries across international markets.\n\nProduct form is an important distinction: whole beans, seeds and processed ingredients have different uses in food and beverage production. A useful category enquiry identifies the commodity, intended application and destination market, leaving grade, packaging and traceability details to be confirmed for the specific product.": {
+      "ar": "تُعد أفريقيا مصدرًا مهمًا للسلع الزراعية المتداولة عالميًا. ويمثل الكاكاو من كوت ديفوار وغانا، والبن من إثيوبيا وكينيا، والسمسم من دول منها إثيوبيا والسودان وتنزانيا بعض صادرات القارة الزراعية الراسخة.\n\nتربط هذه السلع المنتجين وسلاسل التوريد الأفريقية بصناعات الغذاء والمشروبات والتصنيع في الأسواق الدولية.\n\nيُعد شكل المنتج فارقًا مهمًا؛ فالحبوب الكاملة والبذور والمكونات المعالجة لها استخدامات مختلفة في إنتاج الأغذية والمشروبات. يحدد الاستفسار المفيد السلعة والاستخدام المقصود وسوق الوجهة، على أن تُؤكد الدرجة والتعبئة وإمكانية التتبع لكل منتج على حدة.",
+      "hu": "Afrika a világszerte forgalmazott mezőgazdasági árucikkek fontos forrása. Az elefántcsontparti és ghánai kakaó, az etióp és kenyai kávé, valamint többek között az etióp, szudáni és tanzániai szezámmag a kontinens hagyományos agrárexportjai közé tartozik.\n\nE termékek összekötik az afrikai termelőket és ellátási láncokat a nemzetközi élelmiszer-, ital- és feldolgozóiparral.\n\nFontos a termék formája: az egész szemek, magvak és feldolgozott összetevők eltérő szerepet töltenek be az élelmiszer- és italgyártásban. Hasznos megadni az árucikket, a tervezett felhasználást és a célpiacot; a minőségi osztályt, csomagolást és nyomon követhetőséget az adott terméknél kell tisztázni.",
+      "uk": "Африка є важливим джерелом сільськогосподарських товарів світової торгівлі. Какао з Кот-д’Івуару та Гани, кава з Ефіопії та Кенії, а також кунжут із таких країн, як Ефіопія, Судан і Танзанія, належать до усталених аграрних експортних товарів континенту.\n\nВони поєднують африканських виробників і ланцюги постачання з міжнародною харчовою, напійною та переробною промисловістю.\n\nВажливо розрізняти форму товару: цілі зерна, насіння та перероблені інгредієнти мають різне застосування у виробництві їжі й напоїв. У запиті варто вказати товар, його призначення та ринок збуту, а сорт, пакування й простежуваність уточнювати для конкретного продукту.",
+      "fr": "L’Afrique est une source importante de matières premières agricoles échangées dans le monde. Le cacao de Côte d’Ivoire et du Ghana, le café d’Éthiopie et du Kenya, ainsi que le sésame de pays comme l’Éthiopie, le Soudan et la Tanzanie figurent parmi ses exportations agricoles établies.\n\nCes produits relient les producteurs et les chaînes d’approvisionnement africains aux industries alimentaires, des boissons et de la transformation sur les marchés internationaux.\n\nLa forme du produit compte : grains entiers, graines et ingrédients transformés ont des usages différents dans la production alimentaire et de boissons. Une demande utile précise le produit, l’application et le marché de destination ; la qualité, le conditionnement et la traçabilité restent à confirmer pour chaque produit.",
+      "de": "Afrika ist eine wichtige Quelle weltweit gehandelter Agrarrohstoffe. Kakao aus Côte d’Ivoire und Ghana, Kaffee aus Äthiopien und Kenia sowie Sesam aus Ländern wie Äthiopien, Sudan und Tansania gehören zu den etablierten Agrarexporten des Kontinents.\n\nDiese Waren verbinden afrikanische Erzeuger und Lieferketten mit der Lebensmittel-, Getränke- und Verarbeitungsindustrie auf internationalen Märkten.\n\nDie Produktform ist entscheidend: Ganze Bohnen, Samen und verarbeitete Zutaten erfüllen unterschiedliche Aufgaben in der Lebensmittel- und Getränkeproduktion. Eine hilfreiche Anfrage nennt Ware, Verwendungszweck und Zielmarkt. Qualitätsklasse, Verpackung und Rückverfolgbarkeit sind für das konkrete Produkt zu klären."
+    },
+    "Explore Agricultural Commodities": {
+      "ar": "استكشف السلع الزراعية",
+      "hu": "Mezőgazdasági árucikkek felfedezése",
+      "uk": "Дослідіть сільськогосподарські товари",
+      "fr": "Explorer les matières premières agricoles",
+      "de": "Agrarrohstoffe entdecken"
+    },
+    "Roasted coffee beans in processing equipment": {
+      "ar": "حبوب بن محمصة داخل معدات المعالجة",
+      "hu": "Pörkölt kávébab feldolgozóberendezésben",
+      "uk": "Обсмажені кавові зерна в обладнанні для переробки",
+      "fr": "Grains de café torréfiés dans un équipement de transformation",
+      "de": "Geröstete Kaffeebohnen in einer Verarbeitungsanlage"
+    },
+    "Illustrative photograph by Alex Jones / Unsplash.": {
+      "ar": "صورة توضيحية بعدسة Alex Jones / Unsplash.",
+      "hu": "Illusztratív fotó: Alex Jones / Unsplash.",
+      "uk": "Ілюстративне фото: Alex Jones / Unsplash.",
+      "fr": "Photographie illustrative de Alex Jones / Unsplash.",
+      "de": "Illustratives Foto von Alex Jones / Unsplash."
+    },
+    "Horticulture": {
+      "ar": "البستنة",
+      "hu": "Kertészet",
+      "uk": "Плодоовочівництво та квітникарство",
+      "fr": "Horticulture",
+      "de": "Gartenbau"
+    },
+    "Fresh produce cultivated for demanding international markets.": {
+      "ar": "منتجات طازجة تُزرع لأسواق دولية ذات متطلبات عالية.",
+      "hu": "Friss termények az igényes nemzetközi piacok számára.",
+      "uk": "Свіжа продукція для вимогливих міжнародних ринків.",
+      "fr": "Des produits frais cultivés pour des marchés internationaux exigeants.",
+      "de": "Frische Erzeugnisse für anspruchsvolle internationale Märkte."
+    },
+    "Africa's varied climates and agricultural regions support the production of fresh fruits, vegetables, avocados and flowers for export.\n\nCountries including Kenya, Morocco and Zimbabwe contribute to horticultural trade, supplying products ranging from fresh produce to cut roses.\n\nFruit, vegetables and cut flowers require different handling, presentation and timing. Variety, maturity and intended use help distinguish one item from another. For a focused enquiry, name the crop and planned use, and identify any storage or delivery considerations that need product-specific confirmation.": {
+      "ar": "تدعم مناخات أفريقيا ومناطقها الزراعية المتنوعة إنتاج الفواكه والخضروات والأفوكادو والزهور الطازجة للتصدير.\n\nتسهم دول منها كينيا والمغرب وزيمبابوي في تجارة المنتجات البستانية، بمنتجات تتراوح من المحاصيل الطازجة إلى الورود المقطوفة.\n\nتختلف الفواكه والخضروات والزهور المقطوفة في متطلبات المناولة والعرض والتوقيت. ويساعد الصنف ودرجة النضج والاستخدام المقصود على التمييز بين المنتجات. لاستفسار محدد، اذكر المحصول واستخدامه المخطط، وحدد اعتبارات التخزين أو التسليم التي تحتاج إلى تأكيد خاص بالمنتج.",
+      "hu": "Afrika változatos éghajlata és mezőgazdasági térségei támogatják az exportra szánt friss gyümölcsök, zöldségek, avokádók és virágok termesztését.\n\nTöbbek között Kenya, Marokkó és Zimbabwe vesz részt a kertészeti kereskedelemben, a friss terményektől a vágott rózsáig terjedő kínálattal.\n\nA gyümölcsök, zöldségek és vágott virágok kezelése, kiszerelése és időzítése eltérő. A fajta, az érettség és a felhasználás segít azonosítani a terméket. Érdeklődésében nevezze meg a növényt és a tervezett felhasználást, valamint a termékspecifikus megerősítést igénylő tárolási vagy szállítási szempontokat.",
+      "uk": "Різноманіття клімату й аграрних регіонів Африки сприяє вирощуванню свіжих фруктів, овочів, авокадо та квітів на експорт.\n\nКенія, Марокко, Зімбабве та інші країни беруть участь у цій торгівлі, постачаючи продукцію від свіжих плодів до зрізаних троянд.\n\nФрукти, овочі та зрізані квіти потребують різного поводження, представлення й термінів. Сорт, стиглість і призначення допомагають відрізнити товари. У запиті назвіть культуру та плановане використання, а також умови зберігання чи доставки, які слід уточнити для конкретної продукції.",
+      "fr": "Les climats et les régions agricoles variés de l’Afrique favorisent la production de fruits, légumes, avocats et fleurs frais destinés à l’exportation.\n\nDes pays comme le Kenya, le Maroc et le Zimbabwe contribuent au commerce horticole, avec des produits allant des denrées fraîches aux roses coupées.\n\nLes fruits, légumes et fleurs coupées ont des besoins distincts de manutention, de présentation et de calendrier. La variété, la maturité et l’usage prévu permettent de préciser le produit. Indiquez la culture et son utilisation, ainsi que les conditions de stockage ou de livraison à confirmer pour le produit concerné.",
+      "de": "Afrikas vielfältige Klimazonen und Agrarregionen ermöglichen den Anbau frischer Früchte, Gemüse, Avocados und Blumen für den Export.\n\nLänder wie Kenia, Marokko und Simbabwe tragen mit Erzeugnissen von frischem Obst und Gemüse bis zu Schnittrosen zum Gartenbauhandel bei.\n\nObst, Gemüse und Schnittblumen unterscheiden sich bei Handhabung, Aufmachung und Zeitplanung. Sorte, Reifegrad und Verwendungszweck helfen bei der Einordnung. Nennen Sie in einer gezielten Anfrage die Kultur und ihren Einsatz sowie Lagerungs- oder Lieferbedingungen, die produktspezifisch zu bestätigen sind."
+    },
+    "Explore Horticulture": {
+      "ar": "استكشف البستنة",
+      "hu": "A kertészet felfedezése",
+      "uk": "Дослідіть плодоовочівництво та квітникарство",
+      "fr": "Explorer l’horticulture",
+      "de": "Gartenbau entdecken"
+    },
+    "Raw Minerals & Metals": {
+      "ar": "المعادن والفلزات الخام",
+      "hu": "Ásványi nyersanyagok és fémek",
+      "uk": "Мінеральна сировина та метали",
+      "fr": "Minéraux bruts et métaux",
+      "de": "Mineralische Rohstoffe und Metalle"
+    },
+    "Resources supporting global industry and technology.": {
+      "ar": "موارد تدعم الصناعة والتكنولوجيا عالميًا.",
+      "hu": "A globális ipart és technológiát támogató erőforrások.",
+      "uk": "Ресурси для світової промисловості та технологій.",
+      "fr": "Des ressources au service de l’industrie et de la technologie mondiales.",
+      "de": "Ressourcen für weltweite Industrie und Technologie."
+    },
+    "Africa holds significant reserves of minerals and metals used across manufacturing, infrastructure, energy and technology industries.\n\nCopper and cobalt from the Democratic Republic of Congo and Zambia, alongside gold and platinum from South Africa and other producing regions, form part of the continent's important mineral trade.\n\nMineral-bearing material, concentrates and refined metals should not be treated as interchangeable products. Their composition and processing stage affect their industrial use. Clear product identification and independently verified analysis are important when interpreting a category description; this overview does not establish a grade or a particular source.": {
+      "ar": "تمتلك أفريقيا احتياطيات كبيرة من المعادن والفلزات المستخدمة في التصنيع والبنية التحتية والطاقة والتكنولوجيا.\n\nيشكل النحاس والكوبالت من جمهورية الكونغو الديمقراطية وزامبيا، إلى جانب الذهب والبلاتين من جنوب أفريقيا ومناطق منتجة أخرى، جزءًا من تجارة المعادن المهمة للقارة.\n\nلا ينبغي اعتبار المواد الحاملة للمعادن والمركزات والفلزات المكررة منتجات متبادلة. فتركيبها ومرحلة معالجتها يؤثران في استخدامها الصناعي. ويُعد تحديد المنتج بوضوح والتحليل المتحقق منه بصورة مستقلة أمرين مهمين لفهم وصف الفئة؛ ولا يحدد هذا العرض درجة أو مصدرًا بعينه.",
+      "hu": "Afrika jelentős ásvány- és fémkészletekkel rendelkezik, amelyeket a gyártásban, az infrastruktúrában, az energetikában és a technológiai iparágakban használnak.\n\nA Kongói Demokratikus Köztársaságból és Zambiából származó réz és kobalt, valamint a dél-afrikai és más termelő térségekből származó arany és platina a kontinens fontos ásványkereskedelmének része.\n\nAz ásványtartalmú anyagok, koncentrátumok és finomított fémek nem felcserélhető termékek. Összetételük és feldolgozottságuk befolyásolja ipari felhasználásukat. A kategória értelmezéséhez pontos termékazonosítás és függetlenül ellenőrzött elemzés szükséges; az áttekintés nem határoz meg minőségi osztályt vagy konkrét forrást.",
+      "uk": "Африка має значні запаси мінералів і металів для виробництва, інфраструктури, енергетики та технологічних галузей.\n\nМідь і кобальт із Демократичної Республіки Конго та Замбії, а також золото й платина з Південної Африки та інших видобувних регіонів становлять частину важливої для континенту торгівлі мінералами.\n\nМінераловмісні матеріали, концентрати й очищені метали не є взаємозамінними. Їхній склад і стадія переробки впливають на промислове застосування. Для розуміння опису важливі точна ідентифікація та незалежно перевірений аналіз; цей огляд не встановлює сорт або конкретне джерело.",
+      "fr": "L’Afrique possède d’importantes réserves de minéraux et de métaux utilisés dans la production, les infrastructures, l’énergie et les technologies.\n\nLe cuivre et le cobalt de la République démocratique du Congo et de la Zambie, ainsi que l’or et le platine d’Afrique du Sud et d’autres régions productrices, font partie de cet important commerce minier.\n\nLes matières minérales, les concentrés et les métaux raffinés ne sont pas interchangeables. Leur composition et leur stade de transformation déterminent leurs usages industriels. Une identification précise et une analyse vérifiée indépendamment sont importantes ; cet aperçu ne définit ni une qualité ni une provenance particulière.",
+      "de": "Afrika verfügt über bedeutende Mineral- und Metallvorkommen für Fertigung, Infrastruktur, Energie und Technologie.\n\nKupfer und Kobalt aus der Demokratischen Republik Kongo und Sambia sowie Gold und Platin aus Südafrika und weiteren Förderregionen sind Teil des wichtigen Mineralienhandels des Kontinents.\n\nMineralhaltige Materialien, Konzentrate und raffinierte Metalle sind nicht austauschbar. Zusammensetzung und Verarbeitungsstufe beeinflussen die industrielle Nutzung. Eine eindeutige Produktidentifikation und unabhängig geprüfte Analysen sind für die Einordnung wichtig; dieser Überblick legt weder eine Güteklasse noch eine konkrete Herkunft fest."
+    },
+    "Explore Minerals & Metals": {
+      "ar": "استكشف المعادن والفلزات",
+      "hu": "Ásványok és fémek felfedezése",
+      "uk": "Дослідіть мінерали та метали",
+      "fr": "Explorer les minéraux et métaux",
+      "de": "Mineralien und Metalle entdecken"
+    },
+    "Textiles & Apparel": {
+      "ar": "المنسوجات والملابس",
+      "hu": "Textíliák és ruházat",
+      "uk": "Текстиль та одяг",
+      "fr": "Textiles et habillement",
+      "de": "Textilien und Bekleidung"
+    },
+    "African manufacturing reaching international consumers.": {
+      "ar": "صناعات أفريقية تصل إلى المستهلكين الدوليين.",
+      "hu": "Afrikai gyártás a nemzetközi fogyasztók számára.",
+      "uk": "Африканське виробництво для міжнародних споживачів.",
+      "fr": "Une production africaine qui rejoint les consommateurs internationaux.",
+      "de": "Afrikanische Fertigung für internationale Verbraucher."
+    },
+    "Africa's textile, clothing and footwear industries contribute to trade with European markets, supported in some cases by preferential trade arrangements such as Economic Partnership Agreements.\n\nThe sector represents an important intersection between local manufacturing, employment, international supply chains and access to overseas markets.\n\nFabrics, finished garments and footwear serve different users and applications. Fibre composition, construction, sizing and care requirements provide a practical basis for comparing items. Product-specific discussions should distinguish materials and intended use without assuming a particular brand, certification or manufacturing capacity.": {
+      "ar": "تسهم صناعات المنسوجات والملابس والأحذية الأفريقية في التجارة مع الأسواق الأوروبية، وتدعمها في بعض الحالات ترتيبات تجارية تفضيلية مثل اتفاقيات الشراكة الاقتصادية.\n\nيجمع هذا القطاع بين التصنيع المحلي والتوظيف وسلاسل التوريد الدولية والوصول إلى الأسواق الخارجية.\n\nتخدم الأقمشة والملابس الجاهزة والأحذية مستخدمين واستخدامات مختلفة. ويتيح تركيب الألياف وطريقة الصنع والمقاسات ومتطلبات العناية أساسًا عمليًا للمقارنة. وينبغي التمييز بين المواد والاستخدام المقصود دون افتراض علامة تجارية أو شهادة أو قدرة تصنيعية معينة.",
+      "hu": "Afrika textil-, ruházati és cipőipara hozzájárul az európai piacokkal folytatott kereskedelemhez, egyes esetekben olyan kedvezményes kereskedelmi megállapodások támogatásával, mint a gazdasági partnerségi megállapodások.\n\nAz ágazat összekapcsolja a helyi gyártást, a foglalkoztatást, a nemzetközi ellátási láncokat és a külföldi piacokhoz való hozzáférést.\n\nA szövetek, készruhák és lábbelik eltérő felhasználókat és célokat szolgálnak. A szálösszetétel, kialakítás, méretezés és ápolás gyakorlati összehasonlítási alapot ad. A termékről folytatott egyeztetés különítse el az anyagokat és a felhasználást, konkrét márka, tanúsítás vagy gyártási kapacitás feltételezése nélkül.",
+      "uk": "Текстильна, швейна та взуттєва промисловість Африки сприяє торгівлі з європейськими ринками. У деяких випадках цьому допомагають преференційні торговельні домовленості, зокрема угоди про економічне партнерство.\n\nЦей сектор поєднує місцеве виробництво, зайнятість, міжнародні ланцюги постачання та доступ до закордонних ринків.\n\nТканини, готовий одяг і взуття мають різних користувачів та призначення. Склад волокон, конструкція, розміри й догляд дають практичну основу для порівняння. Обговорення має розрізняти матеріали та застосування без припущень щодо бренду, сертифікації чи виробничих потужностей.",
+      "fr": "Les industries africaines du textile, de l’habillement et de la chaussure contribuent aux échanges avec les marchés européens, parfois soutenues par des accords préférentiels comme les accords de partenariat économique.\n\nCe secteur associe production locale, emploi, chaînes d’approvisionnement internationales et accès aux marchés extérieurs.\n\nTissus, vêtements finis et chaussures répondent à des usages distincts. La composition des fibres, la fabrication, les tailles et l’entretien permettent de comparer les articles. Les échanges doivent préciser matériaux et usages sans présumer d’une marque, d’une certification ou d’une capacité de production.",
+      "de": "Afrikas Textil-, Bekleidungs- und Schuhindustrie trägt zum Handel mit europäischen Märkten bei. Teilweise wird dieser durch Präferenzregelungen wie Wirtschaftspartnerschaftsabkommen unterstützt.\n\nDie Branche verbindet lokale Fertigung, Beschäftigung, internationale Lieferketten und den Zugang zu Auslandsmärkten.\n\nStoffe, fertige Kleidung und Schuhe dienen unterschiedlichen Nutzern und Anwendungen. Faserzusammensetzung, Verarbeitung, Größen und Pflegeanforderungen ermöglichen sinnvolle Vergleiche. Produktgespräche sollten Material und Verwendungszweck unterscheiden, ohne bestimmte Marken, Zertifizierungen oder Fertigungskapazitäten vorauszusetzen."
+    },
+    "Explore Textiles & Apparel": {
+      "ar": "استكشف المنسوجات والملابس",
+      "hu": "Textíliák és ruházat felfedezése",
+      "uk": "Дослідіть текстиль та одяг",
+      "fr": "Explorer les textiles et l’habillement",
+      "de": "Textilien und Bekleidung entdecken"
+    },
+    "Machinery & Appliances": {
+      "ar": "الآلات والأجهزة",
+      "hu": "Gépek és berendezések",
+      "uk": "Машини та обладнання",
+      "fr": "Machines et appareils",
+      "de": "Maschinen und Geräte"
+    },
+    "Over €41 billion in machinery and appliances supporting industry, production and infrastructure.": {
+      "ar": "آلات وأجهزة بقيمة تتجاوز 41 مليار يورو تدعم الصناعة والإنتاج والبنية التحتية.",
+      "hu": "Több mint 41 milliárd euró értékű gép és berendezés az ipar, a termelés és az infrastruktúra támogatására.",
+      "uk": "Понад 41 мільярд євро машин та обладнання для промисловості, виробництва й інфраструктури.",
+      "fr": "Plus de 41 milliards d’euros de machines et d’appareils au service de l’industrie, de la production et des infrastructures.",
+      "de": "Maschinen und Geräte im Wert von über 41 Milliarden Euro für Industrie, Produktion und Infrastruktur."
+    },
+    "Valued at more than €41 billion, machinery and appliances represent the largest export category from Europe to Africa. The sector includes industrial factory equipment, power generators and specialised machinery supporting manufacturing, infrastructure development and productive industries across African markets.\n\nEquipment should be considered in the context of the process it is intended to support. Operating conditions, power compatibility, maintenance access and integration with existing equipment can matter as much as the machine type. A detailed enquiry should describe the application and the information needed to assess suitability, rather than assume a standard configuration.": {
+      "ar": "تُعد الآلات والأجهزة، بقيمة تزيد على 41 مليار يورو، أكبر فئة صادرات من أوروبا إلى أفريقيا. ويشمل القطاع معدات المصانع ومولدات الطاقة والآلات المتخصصة التي تدعم التصنيع وتطوير البنية التحتية والقطاعات الإنتاجية في الأسواق الأفريقية.\n\nينبغي النظر إلى المعدات في سياق العملية التي ستدعمها. فقد تكون ظروف التشغيل وتوافق الطاقة وإمكانية الصيانة والتكامل مع المعدات القائمة بأهمية نوع الآلة نفسه. يصف الاستفسار المفصل التطبيق والمعلومات اللازمة لتقييم الملاءمة بدلًا من افتراض إعداد قياسي.",
+      "hu": "Több mint 41 milliárd eurós értékükkel a gépek és berendezések alkotják az Európából Afrikába irányuló export legnagyobb kategóriáját. Ide tartoznak a gyári berendezések, áramfejlesztők és speciális gépek, amelyek a gyártást, az infrastruktúra fejlesztését és a termelő ágazatokat támogatják az afrikai piacokon.\n\nA berendezést a támogatni kívánt folyamat összefüggésében kell vizsgálni. Az üzemi körülmények, az energiaellátás kompatibilitása, a karbantarthatóság és a meglévő gépekkel való integráció a géptípussal azonos jelentőségű lehet. A részletes érdeklődés írja le az alkalmazást és az alkalmasság megítéléséhez szükséges információkat, ne feltételezzen szabványos konfigurációt.",
+      "uk": "Машини та обладнання вартістю понад 41 мільярд євро становлять найбільшу категорію експорту з Європи до Африки. Сектор охоплює заводське обладнання, генератори та спеціалізовані машини для виробництва, розвитку інфраструктури й продуктивних галузей на африканських ринках.\n\nОбладнання слід розглядати в контексті процесу, для якого воно призначене. Умови роботи, сумісність живлення, доступ для обслуговування та інтеграція з наявними машинами можуть бути не менш важливими за тип. Детальний запит має описувати застосування й інформацію для оцінки придатності, не припускаючи стандартної конфігурації.",
+      "fr": "Avec une valeur supérieure à 41 milliards d’euros, les machines et appareils constituent la première catégorie d’exportations de l’Europe vers l’Afrique. Le secteur comprend des équipements d’usine, des groupes électrogènes et des machines spécialisées qui soutiennent la production, les infrastructures et les activités industrielles des marchés africains.\n\nL’équipement doit être étudié dans le contexte du procédé visé. Conditions d’exploitation, compatibilité électrique, accès pour la maintenance et intégration à l’existant peuvent compter autant que le type de machine. Une demande détaillée décrit l’application et les informations nécessaires pour évaluer l’adéquation, sans supposer une configuration standard.",
+      "de": "Mit einem Wert von über 41 Milliarden Euro bilden Maschinen und Geräte die größte Exportkategorie von Europa nach Afrika. Dazu gehören Fabrikausrüstung, Stromgeneratoren und Spezialmaschinen, die Fertigung, Infrastrukturentwicklung und produktive Branchen auf afrikanischen Märkten unterstützen.\n\nAusrüstung sollte im Zusammenhang mit dem vorgesehenen Prozess betrachtet werden. Betriebsbedingungen, Stromversorgung, Wartungszugang und die Einbindung in vorhandene Anlagen können ebenso wichtig sein wie der Maschinentyp. Eine ausführliche Anfrage beschreibt Anwendung und benötigte Eignungsinformationen, statt eine Standardkonfiguration vorauszusetzen."
+    },
+    "Explore Machinery & Appliances": {
+      "ar": "استكشف الآلات والأجهزة",
+      "hu": "Gépek és berendezések felfedezése",
+      "uk": "Дослідіть машини та обладнання",
+      "fr": "Explorer les machines et appareils",
+      "de": "Maschinen und Geräte entdecken"
+    },
+    "Industrial machinery with pipes and valves": {
+      "ar": "آلات صناعية بأنابيب وصمامات",
+      "hu": "Ipari gépek csövekkel és szelepekkel",
+      "uk": "Промислове обладнання з трубами й клапанами",
+      "fr": "Machines industrielles avec tuyaux et vannes",
+      "de": "Industriemaschinen mit Rohren und Ventilen"
+    },
+    "Illustrative photograph by Dave Meckler / Unsplash.": {
+      "ar": "صورة توضيحية بعدسة Dave Meckler / Unsplash.",
+      "hu": "Illusztratív fotó: Dave Meckler / Unsplash.",
+      "uk": "Ілюстративне фото: Dave Meckler / Unsplash.",
+      "fr": "Photographie illustrative de Dave Meckler / Unsplash.",
+      "de": "Illustratives Foto von Dave Meckler / Unsplash."
+    },
+    "Transport Equipment": {
+      "ar": "معدات النقل",
+      "hu": "Közlekedési eszközök",
+      "uk": "Транспортне обладнання",
+      "fr": "Équipements de transport",
+      "de": "Transportausrüstung"
+    },
+    "Connecting people, businesses and economies.": {
+      "ar": "نربط الأفراد والشركات والاقتصادات.",
+      "hu": "Emberek, vállalkozások és gazdaságok összekapcsolása.",
+      "uk": "Поєднуємо людей, підприємства й економіки.",
+      "fr": "Relier les personnes, les entreprises et les économies.",
+      "de": "Menschen, Unternehmen und Wirtschaftsräume verbinden."
+    },
+    "European transport exports to African markets include passenger vehicles, heavy-duty trucks, commercial aircraft, railway equipment and related transportation technologies.\n\nThese products support passenger mobility, logistics, construction, public transportation and commercial supply chains across the continent.\n\nComplete vehicles, replacement components and specialist transport systems need different kinds of identification. Intended duty, compatibility and supporting documentation help clarify what is being discussed. For parts or equipment, a precise reference and operating context are more useful than a broad category name; availability and service arrangements require separate confirmation.": {
+      "ar": "تشمل صادرات النقل الأوروبية إلى الأسواق الأفريقية سيارات الركاب والشاحنات الثقيلة والطائرات التجارية ومعدات السكك الحديدية وتقنيات النقل ذات الصلة.\n\nتدعم هذه المنتجات تنقل الركاب والخدمات اللوجستية والبناء والنقل العام وسلاسل التوريد التجارية في أنحاء القارة.\n\nتحتاج المركبات الكاملة وقطع الغيار وأنظمة النقل المتخصصة إلى أشكال مختلفة من التعريف. ويساعد الغرض التشغيلي والتوافق والوثائق الداعمة على توضيح الموضوع. وبالنسبة للقطع أو المعدات، يكون المرجع الدقيق وسياق التشغيل أكثر فائدة من اسم الفئة العام؛ ويحتاج التوفر وترتيبات الخدمة إلى تأكيد منفصل.",
+      "hu": "Az afrikai piacokra irányuló európai közlekedési export személygépkocsikat, nehéz teherautókat, kereskedelmi repülőgépeket, vasúti berendezéseket és kapcsolódó technológiákat tartalmaz.\n\nEzek támogatják a személyszállítást, a logisztikát, az építőipart, a közösségi közlekedést és a kereskedelmi ellátási láncokat az egész kontinensen.\n\nA teljes járművek, pótalkatrészek és speciális közlekedési rendszerek eltérő azonosítást igényelnek. A tervezett feladat, kompatibilitás és dokumentáció pontosítja a témát. Alkatrészeknél és berendezéseknél a pontos hivatkozás és üzemi környezet hasznosabb a tág kategórianévnél; az elérhetőséget és szervizfeltételeket külön kell megerősíteni.",
+      "uk": "Європейський транспортний експорт до Африки охоплює легкові автомобілі, великовантажні машини, комерційні літаки, залізничне обладнання та відповідні технології.\n\nЦя продукція підтримує пасажирські перевезення, логістику, будівництво, громадський транспорт і комерційні ланцюги постачання на континенті.\n\nТранспортні засоби, запасні компоненти та спеціалізовані системи потребують різної ідентифікації. Призначення, сумісність і документація допомагають уточнити предмет обговорення. Для деталей або обладнання точний артикул і умови роботи корисніші за загальну назву; наявність і сервіс слід підтверджувати окремо.",
+      "fr": "Les exportations européennes de transport vers l’Afrique comprennent des voitures particulières, des poids lourds, des avions commerciaux, des équipements ferroviaires et les technologies associées.\n\nCes produits soutiennent la mobilité des passagers, la logistique, la construction, les transports publics et les chaînes d’approvisionnement commerciales du continent.\n\nVéhicules complets, pièces de rechange et systèmes spécialisés nécessitent des identifications différentes. Usage prévu, compatibilité et documentation précisent la demande. Pour les pièces et équipements, une référence exacte et le contexte d’utilisation sont plus utiles qu’une catégorie générale ; disponibilité et services doivent être confirmés séparément.",
+      "de": "Europäische Transportexporte nach Afrika umfassen Pkw, schwere Lastwagen, Verkehrsflugzeuge, Eisenbahnausrüstung und zugehörige Technologien.\n\nDiese Produkte unterstützen Personenverkehr, Logistik, Bauwesen, öffentliche Verkehrsmittel und gewerbliche Lieferketten auf dem gesamten Kontinent.\n\nKomplette Fahrzeuge, Ersatzteile und spezielle Verkehrssysteme erfordern unterschiedliche Identifikationsangaben. Einsatzzweck, Kompatibilität und Unterlagen helfen bei der Klärung. Bei Teilen und Ausrüstung sind genaue Referenzen und Betriebsbedingungen hilfreicher als allgemeine Kategorienamen; Verfügbarkeit und Service sind separat zu bestätigen."
+    },
+    "Explore Transport Equipment": {
+      "ar": "استكشف معدات النقل",
+      "hu": "Közlekedési eszközök felfedezése",
+      "uk": "Дослідіть транспортне обладнання",
+      "fr": "Explorer les équipements de transport",
+      "de": "Transportausrüstung entdecken"
+    },
+    "Vehicle lights organized in storage bins": {
+      "ar": "مصابيح مركبات مرتبة في صناديق تخزين",
+      "hu": "Járműlámpák tárolódobozokba rendezve",
+      "uk": "Автомобільні ліхтарі в контейнерах для зберігання",
+      "fr": "Feux de véhicules rangés dans des bacs",
+      "de": "Fahrzeugleuchten in Lagerbehältern"
+    },
+    "Illustrative photograph by Diego Romeo / Unsplash.": {
+      "ar": "صورة توضيحية بعدسة Diego Romeo / Unsplash.",
+      "hu": "Illusztratív fotó: Diego Romeo / Unsplash.",
+      "uk": "Ілюстративне фото: Diego Romeo / Unsplash.",
+      "fr": "Photographie illustrative de Diego Romeo / Unsplash.",
+      "de": "Illustratives Foto von Diego Romeo / Unsplash."
+    },
+    "Chemicals & Pharmaceuticals": {
+      "ar": "المواد الكيميائية والأدوية",
+      "hu": "Vegyi anyagok és gyógyszerek",
+      "uk": "Хімічні та фармацевтичні товари",
+      "fr": "Produits chimiques et pharmaceutiques",
+      "de": "Chemikalien und Arzneimittel"
+    },
+    "Supporting healthcare, agriculture and industry.": {
+      "ar": "ندعم الرعاية الصحية والزراعة والصناعة.",
+      "hu": "Az egészségügy, a mezőgazdaság és az ipar támogatása.",
+      "uk": "Підтримка охорони здоров’я, сільського господарства та промисловості.",
+      "fr": "Soutenir la santé, l’agriculture et l’industrie.",
+      "de": "Gesundheitswesen, Landwirtschaft und Industrie unterstützen."
+    },
+    "European chemical and pharmaceutical exports serve a wide range of African sectors.\n\nProducts include pharmaceuticals and medical supplies as well as industrial chemicals and synthetic fertilisers used by healthcare providers, agricultural operations and industrial businesses.\n\nMedicinal products, industrial substances and agricultural inputs must be distinguished by their intended use. Names alone do not establish composition, safe handling or suitability for a market. Product documentation and the applicable professional review are essential to a specific assessment; this page provides category information, not medical or application advice.": {
+      "ar": "تخدم صادرات المواد الكيميائية والأدوية الأوروبية مجموعة واسعة من القطاعات الأفريقية.\n\nتشمل المنتجات الأدوية والمستلزمات الطبية والمواد الكيميائية الصناعية والأسمدة الاصطناعية المستخدمة لدى مقدمي الرعاية الصحية والمنشآت الزراعية والشركات الصناعية.\n\nيجب التمييز بين المنتجات الدوائية والمواد الصناعية والمدخلات الزراعية وفقًا لاستخدامها المقصود. ولا تثبت الأسماء وحدها التركيب أو المناولة الآمنة أو الملاءمة لسوق ما. وتُعد وثائق المنتج والمراجعة المهنية المناسبة ضرورية للتقييم المحدد؛ وتقدم هذه الصفحة معلومات عن الفئة لا نصائح طبية أو إرشادات استخدام.",
+      "hu": "Az európai vegyipari és gyógyszeripari export számos afrikai ágazatot szolgál ki.\n\nA termékek közé gyógyszerek és orvosi kellékek, valamint az egészségügyi szolgáltatók, mezőgazdasági üzemek és ipari vállalkozások által használt ipari vegyszerek és műtrágyák tartoznak.\n\nA gyógyszereket, ipari anyagokat és mezőgazdasági inputokat rendeltetésük szerint kell megkülönböztetni. A név önmagában nem igazolja az összetételt, a biztonságos kezelést vagy a piaci alkalmasságot. A konkrét értékeléshez termékdokumentáció és megfelelő szakmai felülvizsgálat kell; az oldal kategóriainformációt ad, nem orvosi vagy alkalmazási tanácsot.",
+      "uk": "Європейський експорт хімічної та фармацевтичної продукції обслуговує багато африканських галузей.\n\nДо нього належать ліки, медичні матеріали, промислові хімікати та синтетичні добрива для медичних закладів, сільськогосподарських господарств і промислових підприємств.\n\nЛікарські засоби, промислові речовини й аграрні матеріали слід розрізняти за призначенням. Назва не підтверджує склад, безпечне поводження чи придатність для ринку. Для конкретної оцінки потрібні документація та належна фахова перевірка; сторінка містить відомості про категорію, а не медичні поради чи інструкції із застосування.",
+      "fr": "Les exportations européennes de produits chimiques et pharmaceutiques servent de nombreux secteurs africains.\n\nElles comprennent des médicaments et fournitures médicales, ainsi que des produits chimiques industriels et des engrais de synthèse utilisés par les prestataires de santé, les exploitations agricoles et les entreprises industrielles.\n\nMédicaments, substances industrielles et intrants agricoles se distinguent par leur usage. Leur nom ne suffit pas à établir leur composition, leur manipulation sûre ou leur adéquation à un marché. La documentation et l’examen professionnel approprié sont indispensables ; cette page informe sur une catégorie, sans conseil médical ou d’application.",
+      "de": "Europäische Chemie- und Pharmaexporte dienen zahlreichen afrikanischen Branchen.\n\nDazu zählen Arzneimittel und medizinische Bedarfsartikel sowie Industriechemikalien und synthetische Düngemittel für Gesundheitseinrichtungen, landwirtschaftliche Betriebe und Industrieunternehmen.\n\nArzneimittel, Industriechemikalien und landwirtschaftliche Betriebsmittel sind nach ihrem Verwendungszweck zu unterscheiden. Namen allein belegen weder Zusammensetzung noch sichere Handhabung oder Markteignung. Produktunterlagen und eine geeignete fachliche Prüfung sind erforderlich; diese Seite liefert Kategorieinformationen, keine medizinischen oder Anwendungsempfehlungen."
+    },
+    "Explore Chemicals & Pharmaceuticals": {
+      "ar": "استكشف المواد الكيميائية والأدوية",
+      "hu": "Vegyi anyagok és gyógyszerek felfedezése",
+      "uk": "Дослідіть хімічні та фармацевтичні товари",
+      "fr": "Explorer les produits chimiques et pharmaceutiques",
+      "de": "Chemikalien und Arzneimittel entdecken"
+    },
+    "Tablets in blister packaging": {
+      "ar": "أقراص دوائية في عبوات شريطية",
+      "hu": "Tabletták buborékcsomagolásban",
+      "uk": "Таблетки в блістерній упаковці",
+      "fr": "Comprimés sous blister",
+      "de": "Tabletten in Blisterverpackungen"
+    },
+    "Illustrative photograph by Volodymyr Hryshchenko / Unsplash.": {
+      "ar": "صورة توضيحية بعدسة Volodymyr Hryshchenko / Unsplash.",
+      "hu": "Illusztratív fotó: Volodymyr Hryshchenko / Unsplash.",
+      "uk": "Ілюстративне фото: Volodymyr Hryshchenko / Unsplash.",
+      "fr": "Photographie illustrative de Volodymyr Hryshchenko / Unsplash.",
+      "de": "Illustratives Foto von Volodymyr Hryshchenko / Unsplash."
+    },
+    "Refined Mineral Products & Fuels": {
+      "ar": "المنتجات المعدنية المكررة والوقود",
+      "hu": "Finomított ásványi termékek és üzemanyagok",
+      "uk": "Продукти переробки мінеральної сировини та паливо",
+      "fr": "Produits minéraux raffinés et combustibles",
+      "de": "Raffinierte Mineralprodukte und Brennstoffe"
+    },
+    "Energy products serving markets with diverse refining capacities.": {
+      "ar": "منتجات طاقة لأسواق ذات قدرات تكرير متنوعة.",
+      "hu": "Energiatermékek eltérő finomítási kapacitású piacok számára.",
+      "uk": "Енергетичні товари для ринків із різними можливостями переробки.",
+      "fr": "Des produits énergétiques pour des marchés aux capacités de raffinage variées.",
+      "de": "Energieprodukte für Märkte mit unterschiedlichen Raffineriekapazitäten."
+    },
+    "Refined petroleum products and fuels form another component of Europe-to-Africa trade, particularly in markets where domestic refining capacity does not fully meet demand.\n\nThese products support transportation, industry, commercial activity and broader energy requirements.\n\nFinished fuels, lubricating products and other refined materials differ in composition and application. A category name should not be read as a specification. Identifying the material and intended use provides a starting point for reviewing relevant documentation, handling requirements and compatibility without assuming that products are interchangeable.": {
+      "ar": "تشكل المنتجات النفطية المكررة والوقود عنصرًا آخر من التجارة من أوروبا إلى أفريقيا، لا سيما في الأسواق التي لا تلبي فيها قدرات التكرير المحلية الطلب بالكامل.\n\nتدعم هذه المنتجات النقل والصناعة والنشاط التجاري واحتياجات الطاقة الأوسع.\n\nتختلف أنواع الوقود النهائية ومواد التشحيم والمواد المكررة الأخرى في تركيبها وتطبيقاتها. ولا يُعد اسم الفئة مواصفة فنية. يتيح تحديد المادة واستخدامها المقصود نقطة انطلاق لمراجعة الوثائق ومتطلبات المناولة والتوافق، دون افتراض قابلية المنتجات للتبادل.",
+      "hu": "A finomított kőolajtermékek és üzemanyagok az Európából Afrikába irányuló kereskedelem további részét képezik, különösen ott, ahol a belföldi finomítási kapacitás nem fedezi teljesen a keresletet.\n\nE termékek támogatják a közlekedést, az ipart, a kereskedelmi tevékenységet és a tágabb energiaigényeket.\n\nA kész üzemanyagok, kenőanyagok és más finomított anyagok összetételükben és alkalmazásukban különböznek. A kategórianév nem műszaki specifikáció. Az anyag és a felhasználás meghatározása kiindulópont a dokumentáció, kezelési követelmények és kompatibilitás áttekintéséhez, a termékek felcserélhetőségének feltételezése nélkül.",
+      "uk": "Нафтопродукти та паливо є ще однією складовою торгівлі з Європи до Африки, особливо на ринках, де місцеві переробні потужності не повністю задовольняють попит.\n\nЦі товари забезпечують транспорт, промисловість, комерційну діяльність та інші енергетичні потреби.\n\nГотові види палива, мастильні та інші перероблені матеріали різняться складом і застосуванням. Назва категорії не є технічною специфікацією. Визначення матеріалу й призначення допомагає розпочати перевірку документації, вимог поводження та сумісності без припущення про взаємозамінність.",
+      "fr": "Les produits pétroliers raffinés et les combustibles constituent une autre composante du commerce de l’Europe vers l’Afrique, notamment là où les capacités de raffinage nationales ne couvrent pas toute la demande.\n\nCes produits répondent aux besoins du transport, de l’industrie, des activités commerciales et de l’énergie au sens large.\n\nLes carburants finis, lubrifiants et autres matières raffinées diffèrent par leur composition et leur application. Un nom de catégorie n’est pas une spécification. Identifier la matière et l’usage prévu permet d’examiner documentation, manipulation et compatibilité sans supposer que les produits sont interchangeables.",
+      "de": "Raffinierte Erdölprodukte und Brennstoffe sind ein weiterer Bestandteil des Handels von Europa nach Afrika, insbesondere in Märkten, deren eigene Raffineriekapazitäten die Nachfrage nicht vollständig decken.\n\nDiese Produkte unterstützen Verkehr, Industrie, gewerbliche Tätigkeiten und den allgemeinen Energiebedarf.\n\nFertige Kraftstoffe, Schmierprodukte und andere raffinierte Materialien unterscheiden sich in Zusammensetzung und Anwendung. Ein Kategoriename ist keine Spezifikation. Die Identifikation von Material und Einsatz bildet die Grundlage für die Prüfung von Unterlagen, Handhabung und Kompatibilität, ohne Austauschbarkeit vorauszusetzen."
+    },
+    "Explore Refined Products & Fuels": {
+      "ar": "استكشف المنتجات المكررة والوقود",
+      "hu": "Finomított termékek és üzemanyagok felfedezése",
+      "uk": "Дослідіть продукти переробки та паливо",
+      "fr": "Explorer les produits raffinés et combustibles",
+      "de": "Raffinierte Produkte und Brennstoffe entdecken"
+    },
+    "Distillation structures at a refinery at dusk": {
+      "ar": "منشآت تقطير في مصفاة عند الغسق",
+      "hu": "Lepárlóberendezések egy finomítóban alkonyatkor",
+      "uk": "Дистиляційні установки на нафтопереробному заводі в сутінках",
+      "fr": "Installations de distillation d’une raffinerie au crépuscule",
+      "de": "Destillationsanlagen einer Raffinerie in der Dämmerung"
+    },
+    "Illustrative photograph by Anthony Maw / Unsplash.": {
+      "ar": "صورة توضيحية بعدسة Anthony Maw / Unsplash.",
+      "hu": "Illusztratív fotó: Anthony Maw / Unsplash.",
+      "uk": "Ілюстративне фото: Anthony Maw / Unsplash.",
+      "fr": "Photographie illustrative de Anthony Maw / Unsplash.",
+      "de": "Illustratives Foto von Anthony Maw / Unsplash."
+    },
+    "Agri-food & Foodstuffs": {
+      "ar": "المنتجات الزراعية والغذائية",
+      "hu": "Agrár- és élelmiszeripari termékek",
+      "uk": "Аграрні та харчові товари",
+      "fr": "Produits agroalimentaires et denrées",
+      "de": "Agrarprodukte und Lebensmittel"
+    },
+    "Food products connecting European producers with African consumers.": {
+      "ar": "منتجات غذائية تربط المنتجين الأوروبيين بالمستهلكين الأفارقة.",
+      "hu": "Élelmiszerek, amelyek összekötik az európai termelőket és az afrikai fogyasztókat.",
+      "uk": "Харчові товари, що поєднують європейських виробників з африканськими споживачами.",
+      "fr": "Des produits alimentaires reliant les producteurs européens aux consommateurs africains.",
+      "de": "Lebensmittel, die europäische Erzeuger mit afrikanischen Verbrauchern verbinden."
+    },
+    "European agricultural and food exports include wheat, dairy products and a broad range of processed consumer foods.\n\nThese goods form part of established food supply chains serving retail, hospitality, food processing and consumer markets across Africa.\n\nBulk ingredients and packaged foods have different presentation, storage and labelling needs. Ingredient composition, allergens and the intended retail or processing use help define an enquiry. The relevant product information should be checked individually; this overview does not establish shelf life, dietary certification or the availability of any particular brand.": {
+      "ar": "تشمل الصادرات الزراعية والغذائية الأوروبية القمح ومنتجات الألبان ومجموعة واسعة من الأغذية الاستهلاكية المصنّعة.\n\nتشكل هذه السلع جزءًا من سلاسل إمداد غذائية راسخة تخدم التجزئة والضيافة وتصنيع الأغذية والأسواق الاستهلاكية في أفريقيا.\n\nتختلف المكونات السائبة والأغذية المعبأة في احتياجات العرض والتخزين ووضع الملصقات. ويساعد تركيب المكونات ومسببات الحساسية والاستخدام في التجزئة أو التصنيع على تحديد الاستفسار. ينبغي التحقق من معلومات كل منتج على حدة؛ ولا يثبت هذا العرض مدة الصلاحية أو شهادة غذائية أو توفر علامة بعينها.",
+      "hu": "Az európai mezőgazdasági és élelmiszerexport búzát, tejtermékeket és feldolgozott fogyasztói élelmiszerek széles körét foglalja magában.\n\nEzek a kialakult élelmiszer-ellátási láncok részei, amelyek a kiskereskedelmet, a vendéglátást, az élelmiszer-feldolgozást és a fogyasztói piacokat szolgálják Afrikában.\n\nAz ömlesztett alapanyagok és csomagolt élelmiszerek kiszerelési, tárolási és címkézési igényei eltérnek. Az összetevők, allergének és a kiskereskedelmi vagy feldolgozási cél pontosítják az érdeklődést. A termékadatokat egyedileg kell ellenőrizni; az áttekintés nem igazol eltarthatóságot, étrendi tanúsítást vagy márkaelérhetőséget.",
+      "uk": "Європейський експорт аграрної та харчової продукції включає пшеницю, молочні продукти й широкий асортимент перероблених споживчих харчових товарів.\n\nВони є частиною усталених продовольчих ланцюгів постачання для роздрібної торгівлі, гостинності, харчової переробки та споживчих ринків Африки.\n\nСипучі інгредієнти й упаковані харчові товари мають різні потреби в представленні, зберіганні та маркуванні. Склад, алергени й роздрібне або переробне призначення уточнюють запит. Відомості слід перевіряти для кожного продукту; огляд не встановлює термін придатності, дієтичну сертифікацію або наявність бренду.",
+      "fr": "Les exportations agricoles et alimentaires européennes comprennent du blé, des produits laitiers et une large gamme d’aliments transformés destinés aux consommateurs.\n\nCes biens s’inscrivent dans des chaînes d’approvisionnement établies qui servent la distribution, l’hôtellerie-restauration, la transformation alimentaire et les marchés de consommation en Afrique.\n\nIngrédients en vrac et aliments emballés ont des besoins distincts de présentation, stockage et étiquetage. Composition, allergènes et usage en distribution ou transformation précisent la demande. Les informations doivent être vérifiées produit par produit ; cet aperçu n’établit ni durée de conservation, ni certification alimentaire, ni disponibilité d’une marque.",
+      "de": "Europäische Agrar- und Lebensmittelexporte umfassen Weizen, Milchprodukte und ein breites Sortiment verarbeiteter Lebensmittel.\n\nSie sind Teil etablierter Versorgungsketten für Einzelhandel, Gastgewerbe, Lebensmittelverarbeitung und Verbrauchermärkte in Afrika.\n\nLose Zutaten und verpackte Lebensmittel haben unterschiedliche Anforderungen an Aufmachung, Lagerung und Kennzeichnung. Zusammensetzung, Allergene und der Einsatz im Handel oder in der Verarbeitung präzisieren eine Anfrage. Produktangaben sind einzeln zu prüfen; dieser Überblick bestätigt weder Haltbarkeit noch Ernährungssiegel oder Markenverfügbarkeit."
+    },
+    "Explore Agri-food & Foodstuffs": {
+      "ar": "استكشف المنتجات الزراعية والغذائية",
+      "hu": "Agrár- és élelmiszeripari termékek felfedezése",
+      "uk": "Дослідіть аграрні та харчові товари",
+      "fr": "Explorer les produits agroalimentaires",
+      "de": "Agrarprodukte und Lebensmittel entdecken"
+    },
+    "Wheat heads in evening light": {
+      "ar": "سنابل قمح في ضوء المساء",
+      "hu": "Búzakalászok esti fényben",
+      "uk": "Пшеничні колоски у вечірньому світлі",
+      "fr": "Épis de blé dans la lumière du soir",
+      "de": "Weizenähren im Abendlicht"
+    },
+    "Illustrative photograph by Ann Savchenko / Unsplash.": {
+      "ar": "صورة توضيحية بعدسة Ann Savchenko / Unsplash.",
+      "hu": "Illusztratív fotó: Ann Savchenko / Unsplash.",
+      "uk": "Ілюстративне фото: Ann Savchenko / Unsplash.",
+      "fr": "Photographie illustrative de Ann Savchenko / Unsplash.",
+      "de": "Illustratives Foto von Ann Savchenko / Unsplash."
+    },
+    "Tobacco Products": {
+      "ar": "منتجات التبغ",
+      "hu": "Dohánytermékek",
+      "uk": "Тютюнові вироби",
+      "fr": "Produits du tabac",
+      "de": "Tabakerzeugnisse"
+    },
+    "A regulated category within international trade.": {
+      "ar": "فئة خاضعة للتنظيم في التجارة الدولية.",
+      "hu": "Szabályozott kategória a nemzetközi kereskedelemben.",
+      "uk": "Регульована категорія міжнародної торгівлі.",
+      "fr": "Une catégorie réglementée du commerce international.",
+      "de": "Eine regulierte Kategorie im internationalen Handel."
+    },
+    "Tobacco products are also traded from European producers into certain African markets. As a regulated product category, their importation, distribution and sale are subject to the applicable laws, duties and public-health requirements of individual markets.\n\nCategory-level trade information should be read separately from product-specific claims. Packaging descriptions and catalogue entries do not establish market approval, availability or authorization. This page offers a neutral overview of the category; requirements and public-health information must be checked with the relevant authorities for the market concerned.": {
+      "ar": "تُتداول منتجات التبغ أيضًا من منتجين أوروبيين إلى بعض الأسواق الأفريقية. وباعتبارها فئة خاضعة للتنظيم، يخضع استيرادها وتوزيعها وبيعها للقوانين والرسوم ومتطلبات الصحة العامة المعمول بها في كل سوق.\n\nينبغي فصل معلومات التجارة على مستوى الفئة عن الادعاءات الخاصة بالمنتجات. فلا تثبت أوصاف العبوات أو بيانات الكتالوج الموافقة السوقية أو التوفر أو الترخيص. تقدم هذه الصفحة عرضًا محايدًا للفئة؛ ويجب التحقق من المتطلبات ومعلومات الصحة العامة لدى الجهات المختصة بالسوق المعني.",
+      "hu": "Dohánytermékeket is forgalmaznak európai termelőktől egyes afrikai piacokra. Szabályozott termékkategóriaként behozatalukra, forgalmazásukra és értékesítésükre az egyes piacok hatályos törvényei, vámjai és közegészségügyi követelményei vonatkoznak.\n\nA kategóriaszintű kereskedelmi információt el kell különíteni a termékspecifikus állításoktól. A csomagolás leírása és a katalógusbejegyzések nem igazolnak piaci jóváhagyást, elérhetőséget vagy engedélyt. Ez az oldal semleges áttekintést ad; a követelményeket és közegészségügyi információkat az érintett piac illetékes hatóságainál kell ellenőrizni.",
+      "uk": "Тютюнові вироби також постачаються від європейських виробників на окремі африканські ринки. Як регульована категорія, їх імпорт, розповсюдження та продаж підпорядковуються чинним законам, митам і вимогам громадського здоров’я відповідних ринків.\n\nТорговельну інформацію про категорію слід відокремлювати від тверджень щодо окремих продуктів. Описи пакування й записи каталогу не підтверджують схвалення ринку, наявність або дозвіл. Сторінка дає нейтральний огляд; вимоги та інформацію з громадського здоров’я слід перевіряти у відповідних органах конкретного ринку.",
+      "fr": "Des produits du tabac sont également échangés entre des producteurs européens et certains marchés africains. Cette catégorie étant réglementée, son importation, sa distribution et sa vente sont soumises aux lois, droits et exigences de santé publique applicables à chaque marché.\n\nLes informations commerciales générales se distinguent des affirmations propres aux produits. Descriptions d’emballages et mentions au catalogue ne prouvent ni autorisation de marché ni disponibilité. Cette page propose un aperçu neutre ; les exigences et informations de santé publique doivent être vérifiées auprès des autorités du marché concerné.",
+      "de": "Tabakerzeugnisse werden auch von europäischen Herstellern in bestimmte afrikanische Märkte gehandelt. Als regulierte Produktkategorie unterliegen Einfuhr, Vertrieb und Verkauf den geltenden Gesetzen, Abgaben und Anforderungen des öffentlichen Gesundheitsschutzes der jeweiligen Märkte.\n\nHandelsinformationen auf Kategorieebene sind von produktspezifischen Aussagen zu trennen. Verpackungsbeschreibungen und Katalogeinträge belegen weder Marktzulassung noch Verfügbarkeit oder Genehmigung. Diese Seite bietet einen neutralen Überblick; Anforderungen und Gesundheitsinformationen sind bei den zuständigen Behörden des jeweiligen Marktes zu prüfen."
+    },
+    "Explore Trade Information": {
+      "ar": "استكشف معلومات التجارة",
+      "hu": "Kereskedelmi információk felfedezése",
+      "uk": "Дослідіть торговельну інформацію",
+      "fr": "Explorer les informations commerciales",
+      "de": "Handelsinformationen entdecken"
+    },
+    "About EuroAfrica": {
+      "ar": "عن EuroAfrica",
+      "hu": "A EuroAfricáról",
+      "uk": "Про EuroAfrica",
+      "fr": "À propos de EuroAfrica",
+      "de": "Über EuroAfrica"
+    },
+    "EuroAfrica is an informational platform focused on trade between African and European markets.": {
+      "ar": "EuroAfrica منصة معلومات تركز على التجارة بين الأسواق الأفريقية والأوروبية.",
+      "hu": "A EuroAfrica az afrikai és európai piacok közötti kereskedelemre összpontosító tájékoztató platform.",
+      "uk": "EuroAfrica — інформаційна платформа про торгівлю між африканськими та європейськими ринками.",
+      "fr": "EuroAfrica est une plateforme d’information consacrée au commerce entre les marchés africains et européens.",
+      "de": "EuroAfrica ist eine Informationsplattform zum Handel zwischen afrikanischen und europäischen Märkten."
+    },
+    "Our purpose is to make key trade categories and market connections easier to discover and understand. We present information across sectors including agriculture, horticulture, minerals, textiles, machinery, transportation, pharmaceuticals, energy products and food.\n\nBy bringing these categories together in a structured and accessible format, EuroAfrica provides a starting point for businesses, professionals, researchers and other stakeholders interested in understanding the commercial links between Africa and Europe.": {
+      "ar": "هدفنا تسهيل اكتشاف وفهم فئات التجارة الرئيسية وروابط الأسواق. نقدم معلومات عن قطاعات تشمل الزراعة والبستنة والمعادن والمنسوجات والآلات والنقل والأدوية ومنتجات الطاقة والغذاء.\n\nمن خلال جمع هذه الفئات في صيغة منظمة وسهلة الاستخدام، توفر EuroAfrica نقطة انطلاق للشركات والمهنيين والباحثين وغيرهم من المهتمين بفهم الروابط التجارية بين أفريقيا وأوروبا.",
+      "hu": "Célunk, hogy könnyebbé tegyük a főbb kereskedelmi kategóriák és piaci kapcsolatok felfedezését és megértését. Információkat nyújtunk többek között a mezőgazdaságról, kertészetről, ásványokról, textíliákról, gépekről, közlekedésről, gyógyszerekről, energiatermékekről és élelmiszerekről.\n\nA kategóriák rendezett, hozzáférhető bemutatásával a EuroAfrica kiindulópontot kínál az Afrika és Európa közötti kereskedelmi kapcsolatokat megérteni kívánó vállalkozásoknak, szakembereknek, kutatóknak és más érdeklődőknek.",
+      "uk": "Наша мета — полегшити пошук і розуміння ключових торговельних категорій та ринкових зв’язків. Ми надаємо інформацію про сільське господарство, плодоовочівництво, мінерали, текстиль, машини, транспорт, фармацевтику, енергетичні та харчові товари.\n\nОб’єднуючи категорії у впорядкованому й доступному форматі, EuroAfrica пропонує відправну точку для компаній, фахівців, дослідників та інших зацікавлених у торговельних зв’язках між Африкою та Європою.",
+      "fr": "Notre objectif est de faciliter la découverte et la compréhension des principales catégories commerciales et des liens entre les marchés. Nous présentons des informations sur l’agriculture, l’horticulture, les minéraux, les textiles, les machines, le transport, les produits pharmaceutiques, l’énergie et l’alimentation.\n\nEn réunissant ces catégories dans un format structuré et accessible, EuroAfrica offre un point de départ aux entreprises, professionnels, chercheurs et autres acteurs souhaitant comprendre les liens commerciaux entre l’Afrique et l’Europe.",
+      "de": "Unser Ziel ist es, wichtige Handelskategorien und Marktverbindungen leichter verständlich und auffindbar zu machen. Wir informieren über Landwirtschaft, Gartenbau, Mineralien, Textilien, Maschinen, Verkehr, Arzneimittel, Energieprodukte und Lebensmittel.\n\nDurch eine strukturierte und zugängliche Darstellung bietet EuroAfrica Unternehmen, Fachleuten, Forschenden und weiteren Interessierten einen Ausgangspunkt zum Verständnis der Handelsbeziehungen zwischen Afrika und Europa."
+    },
+    "Start Your Enquiry": {
+      "ar": "ابدأ استفسارك",
+      "hu": "Küldje el érdeklődését",
+      "uk": "Створіть свій запит",
+      "fr": "Commencez votre demande",
+      "de": "Starten Sie Ihre Anfrage"
+    },
+    "Have a question about a trade category, product or market featured on EuroAfrica?\n\nComplete the enquiry form with as much relevant information as possible. This helps us understand your request and provide a more useful response.": {
+      "ar": "هل لديك سؤال عن فئة تجارية أو منتج أو سوق معروض على EuroAfrica؟\n\nاملأ نموذج الاستفسار بأكبر قدر ممكن من المعلومات ذات الصلة. يساعدنا ذلك على فهم طلبك وتقديم رد أكثر فائدة.",
+      "hu": "Kérdése van a EuroAfricán bemutatott kereskedelmi kategóriával, termékkel vagy piaccal kapcsolatban?\n\nTöltse ki az érdeklődési űrlapot minél több releváns információval. Ez segít megérteni kérését és hasznosabb választ adni.",
+      "uk": "Маєте запитання про торговельну категорію, товар або ринок на EuroAfrica?\n\nЗаповніть форму запиту, додавши якомога більше доречної інформації. Це допоможе нам зрозуміти ваше звернення й надати кориснішу відповідь.",
+      "fr": "Vous avez une question sur une catégorie commerciale, un produit ou un marché présenté sur EuroAfrica ?\n\nRemplissez le formulaire avec autant d’informations utiles que possible. Cela nous aide à comprendre votre demande et à vous apporter une réponse plus pertinente.",
+      "de": "Haben Sie eine Frage zu einer Handelskategorie, einem Produkt oder einem Markt auf EuroAfrica?\n\nFüllen Sie das Anfrageformular mit möglichst vielen relevanten Angaben aus. So können wir Ihr Anliegen besser verstehen und hilfreicher beantworten."
+    },
+    "Thank you. Your enquiry has been saved for the EuroAfrica team.": {
+      "ar": "شكرًا لك. تم حفظ استفسارك لفريق EuroAfrica.",
+      "hu": "Köszönjük. Érdeklődését elmentettük a EuroAfrica csapata számára.",
+      "uk": "Дякуємо. Ваш запит збережено для команди EuroAfrica.",
+      "fr": "Merci. Votre demande a été enregistrée pour l’équipe EuroAfrica.",
+      "de": "Vielen Dank. Ihre Anfrage wurde für das EuroAfrica-Team gespeichert."
+    },
+    "Home": {
+      "ar": "الرئيسية",
+      "hu": "Kezdőlap",
+      "uk": "Головна",
+      "fr": "Accueil",
+      "de": "Startseite"
+    },
+    "Contact": {
+      "ar": "التواصل",
+      "hu": "Kapcsolat",
+      "uk": "Контакти",
+      "fr": "Contact",
+      "de": "Kontakt"
+    },
+    "Privacy notice": {
+      "ar": "إشعار الخصوصية",
+      "hu": "Adatvédelmi tájékoztató",
+      "uk": "Повідомлення про конфіденційність",
+      "fr": "Politique de confidentialité",
+      "de": "Datenschutzhinweise"
+    },
+    "Explore Key Trade Categories": {
+      "ar": "استكشف فئات التجارة الرئيسية",
+      "hu": "Fedezze fel a főbb kereskedelmi kategóriákat",
+      "uk": "Дослідіть ключові торговельні категорії",
+      "fr": "Explorer les principales catégories commerciales",
+      "de": "Wichtige Handelskategorien entdecken"
+    },
+    "Discover important products moving between African and European markets across agriculture, industry, healthcare, transportation and natural resources.": {
+      "ar": "اكتشف المنتجات المهمة المتداولة بين الأسواق الأفريقية والأوروبية في الزراعة والصناعة والرعاية الصحية والنقل والموارد الطبيعية.",
+      "hu": "Fedezze fel az afrikai és európai piacok között mozgó fontos termékeket a mezőgazdaság, az ipar, az egészségügy, a közlekedés és a természeti erőforrások területén.",
+      "uk": "Відкрийте важливі товари, що переміщуються між африканськими та європейськими ринками в аграрному, промисловому, медичному, транспортному й сировинному секторах.",
+      "fr": "Découvrez les produits importants échangés entre les marchés africains et européens dans l’agriculture, l’industrie, la santé, le transport et les ressources naturelles.",
+      "de": "Entdecken Sie wichtige Handelsprodukte zwischen afrikanischen und europäischen Märkten in Landwirtschaft, Industrie, Gesundheitswesen, Verkehr und natürlichen Ressourcen."
+    },
+    "Understand Product Origins": {
+      "ar": "افهم أصول المنتجات",
+      "hu": "Ismerje meg a termékek eredetét",
+      "uk": "Зрозумійте походження товарів",
+      "fr": "Comprendre l’origine des produits",
+      "de": "Die Herkunft von Produkten verstehen"
+    },
+    "Learn about the countries and regions associated with major export categories and the role they play within international supply chains.": {
+      "ar": "تعرّف على الدول والمناطق المرتبطة بفئات التصدير الرئيسية ودورها في سلاسل التوريد الدولية.",
+      "hu": "Ismerje meg a főbb exportkategóriákhoz kapcsolódó országokat és térségeket, valamint szerepüket a nemzetközi ellátási láncokban.",
+      "uk": "Дізнайтеся про країни й регіони, пов’язані з основними експортними категоріями, та їхню роль у міжнародних ланцюгах постачання.",
+      "fr": "Découvrez les pays et régions associés aux principales catégories d’exportation et leur rôle dans les chaînes d’approvisionnement internationales.",
+      "de": "Erfahren Sie mehr über Länder und Regionen wichtiger Exportkategorien und ihre Rolle in internationalen Lieferketten."
+    },
+    "Discover Market Connections": {
+      "ar": "اكتشف روابط الأسواق",
+      "hu": "Fedezze fel a piaci kapcsolatokat",
+      "uk": "Відкрийте ринкові зв’язки",
+      "fr": "Découvrir les liens entre les marchés",
+      "de": "Marktverbindungen entdecken"
+    },
+    "See how resources, agricultural products, manufactured goods and industrial technologies connect businesses and economies across both continents.": {
+      "ar": "شاهد كيف تربط الموارد والمنتجات الزراعية والسلع المصنّعة والتقنيات الصناعية الشركات والاقتصادات عبر القارتين.",
+      "hu": "Ismerje meg, hogyan kapcsolják össze az erőforrások, mezőgazdasági termékek, iparcikkek és ipari technológiák a két kontinens vállalkozásait és gazdaságait.",
+      "uk": "Дізнайтеся, як ресурси, аграрна продукція, промислові товари й технології поєднують підприємства та економіки обох континентів.",
+      "fr": "Découvrez comment les ressources, les produits agricoles, les biens manufacturés et les technologies industrielles relient les entreprises et les économies des deux continents.",
+      "de": "Entdecken Sie, wie Ressourcen, Agrarprodukte, Industrieerzeugnisse und Technologien Unternehmen und Wirtschaftsräume beider Kontinente verbinden."
+    },
+    "Access Clear Information": {
+      "ar": "احصل على معلومات واضحة",
+      "hu": "Jusson világos információkhoz",
+      "uk": "Отримайте зрозумілу інформацію",
+      "fr": "Accéder à une information claire",
+      "de": "Klare Informationen finden"
+    },
+    "Navigate trade information without unnecessary complexity, whether you are researching a sector, exploring commercial possibilities or simply seeking a better understanding of Africa-Europe trade.": {
+      "ar": "تصفّح معلومات التجارة دون تعقيد غير ضروري، سواء كنت تبحث في قطاع أو تستكشف فرصًا تجارية أو تسعى لفهم أفضل للتجارة بين أفريقيا وأوروبا.",
+      "hu": "Tájékozódjon a kereskedelemről felesleges bonyolultság nélkül, akár egy ágazatot kutat, üzleti lehetőségeket keres, vagy egyszerűen jobban meg szeretné érteni az Afrika és Európa közötti kereskedelmet.",
+      "uk": "Орієнтуйтеся в торговельній інформації без зайвих складнощів: досліджуйте галузь, вивчайте комерційні можливості або просто краще розумійте торгівлю між Африкою та Європою.",
+      "fr": "Consultez les informations commerciales sans complexité inutile, que vous étudiiez un secteur, exploriez des possibilités commerciales ou cherchiez simplement à mieux comprendre les échanges entre l’Afrique et l’Europe.",
+      "de": "Finden Sie Handelsinformationen ohne unnötige Komplexität — ob Sie eine Branche recherchieren, wirtschaftliche Möglichkeiten erkunden oder den Handel zwischen Afrika und Europa besser verstehen möchten."
+    },
+    "Our Focus": {
+      "ar": "محور اهتمامنا",
+      "hu": "Amire összpontosítunk",
+      "uk": "Наш фокус",
+      "fr": "Notre priorité",
+      "de": "Unser Schwerpunkt"
+    },
+    "We focus on presenting trade information clearly, professionally and responsibly.\n\nRather than overwhelming visitors with unnecessary complexity, EuroAfrica highlights the products, sectors and markets that contribute to trade between the two regions.": {
+      "ar": "نركز على تقديم معلومات التجارة بوضوح ومهنية ومسؤولية.\n\nوبدلًا من إثقال الزائرين بتعقيد غير ضروري، تسلط EuroAfrica الضوء على المنتجات والقطاعات والأسواق التي تسهم في التجارة بين المنطقتين.",
+      "hu": "A kereskedelmi információk világos, szakszerű és felelősségteljes bemutatására összpontosítunk.\n\nA EuroAfrica felesleges bonyolultság helyett a két régió kereskedelméhez hozzájáruló termékeket, ágazatokat és piacokat emeli ki.",
+      "uk": "Ми зосереджуємося на чіткому, професійному й відповідальному представленні торговельної інформації.\n\nЗамість зайвих складнощів EuroAfrica висвітлює товари, галузі та ринки, які сприяють торгівлі між двома регіонами.",
+      "fr": "Nous privilégions une présentation claire, professionnelle et responsable des informations commerciales.\n\nPlutôt que de submerger les visiteurs de complexité inutile, EuroAfrica met en lumière les produits, les secteurs et les marchés qui contribuent aux échanges entre les deux régions.",
+      "de": "Wir legen Wert auf eine klare, professionelle und verantwortungsvolle Darstellung von Handelsinformationen.\n\nEuroAfrica vermeidet unnötige Komplexität und stellt Produkte, Branchen und Märkte in den Mittelpunkt, die zum Handel zwischen beiden Regionen beitragen."
+    },
+    "Our Vision": {
+      "ar": "رؤيتنا",
+      "hu": "Jövőképünk",
+      "uk": "Наше бачення",
+      "fr": "Notre vision",
+      "de": "Unsere Vision"
+    },
+    "To become a trusted and accessible source of information for understanding the products, industries and opportunities connecting African and European markets.": {
+      "ar": "أن نصبح مصدر معلومات موثوقًا وسهل الاستخدام لفهم المنتجات والصناعات والفرص التي تربط الأسواق الأفريقية والأوروبية.",
+      "hu": "Megbízható és hozzáférhető információforrássá válni az afrikai és európai piacokat összekötő termékek, iparágak és lehetőségek megértéséhez.",
+      "uk": "Стати надійним і доступним джерелом інформації для розуміння товарів, галузей та можливостей, що поєднують африканські й європейські ринки.",
+      "fr": "Devenir une source d’information fiable et accessible pour comprendre les produits, les industries et les opportunités qui relient les marchés africains et européens.",
+      "de": "Eine verlässliche und zugängliche Informationsquelle zum Verständnis der Produkte, Branchen und Chancen zwischen afrikanischen und europäischen Märkten werden."
+    }
+  },
+  "fields": {
+    "sitesettings": [
+      "tagline",
+      "footer_copy",
+      "legal_copy",
+      "logo_alt",
+      "address",
+      "africa_address",
+      "seo_title",
+      "meta_description",
+      "social_image_alt"
+    ],
+    "homepage": [
+      "hero_heading",
+      "hero_text",
+      "hero_detail",
+      "hero_alt",
+      "hero_caption",
+      "primary_label",
+      "secondary_label",
+      "direction_heading",
+      "direction_text",
+      "about_heading",
+      "about_text",
+      "diversity_heading",
+      "diversity_text",
+      "diversity_alt",
+      "diversity_caption",
+      "contact_heading",
+      "contact_text",
+      "final_heading",
+      "final_text",
+      "seo_title",
+      "meta_description",
+      "social_image_alt"
+    ],
+    "tradedirection": [
+      "title",
+      "heading",
+      "summary",
+      "introduction",
+      "image_alt",
+      "image_caption",
+      "seo_title",
+      "meta_description",
+      "social_image_alt"
+    ],
+    "tradecategory": [
+      "title",
+      "summary",
+      "overview",
+      "link_label",
+      "image_alt",
+      "image_caption",
+      "hero_alt",
+      "hero_caption",
+      "seo_title",
+      "meta_description",
+      "social_image_alt"
+    ],
+    "contentpage": [
+      "title",
+      "summary",
+      "body",
+      "image_alt",
+      "image_caption",
+      "seo_title",
+      "meta_description",
+      "social_image_alt"
+    ],
+    "contactpage": [
+      "title",
+      "introduction",
+      "confirmation",
+      "seo_title",
+      "meta_description",
+      "social_image_alt"
+    ],
+    "categoryproduct": [
+      "name",
+      "description",
+      "image_alt",
+      "image_caption"
+    ],
+    "categorysection": [
+      "heading",
+      "text"
+    ],
+    "categoryimage": [
+      "image_alt",
+      "caption"
+    ],
+    "footerlink": [
+      "label"
+    ],
+    "homefeature": [
+      "heading",
+      "text"
+    ],
+    "contentsection": [
+      "heading",
+      "text"
+    ]
+  }
+}

@@ -1,0 +1,361 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: EuroAfrica\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "A CLOSER LOOK"
+msgstr "A CLOSER LOOK"
+
+#, python-format
+msgid "A closer look at %(title)s"
+msgstr "A closer look at %(title)s"
+
+msgid "ABOUT EUROAFRICA"
+msgstr "ABOUT EUROAFRICA"
+
+msgid "AFRICA"
+msgstr "AFRICA"
+
+msgid "AFRICA ↔ EUROPE"
+msgstr "AFRICA ↔ EUROPE"
+
+msgid "About"
+msgstr "About"
+
+msgid "About EuroAfrica"
+msgstr "About EuroAfrica"
+
+msgid "Africa & Europe"
+msgstr "Africa & Europe"
+
+msgid "Africa office"
+msgstr "Africa office"
+
+msgid "Africa to Europe"
+msgstr "Africa to Europe"
+
+msgid "Africa → Europe"
+msgstr "Africa → Europe"
+
+msgid "Africa → Europe Trade"
+msgstr "Africa → Europe Trade"
+
+msgid "Alternatively,"
+msgstr "Alternatively,"
+
+msgid "Apply"
+msgstr "Apply"
+
+msgid "Breadcrumb"
+msgstr "Breadcrumb"
+
+msgid "Business email"
+msgstr "Business email"
+
+msgid "CATEGORY OVERVIEW"
+msgstr "CATEGORY OVERVIEW"
+
+msgid "CONTACT EUROAFRICA"
+msgstr "CONTACT EUROAFRICA"
+
+msgid "Category information will be published here when available."
+msgstr "Category information will be published here when available."
+
+msgid ""
+"Choose a category in the selected trade direction, or select General "
+"Enquiry."
+msgstr ""
+"Choose a category in the selected trade direction, or select General "
+"Enquiry."
+
+msgid "Choose a product or category"
+msgstr "Choose a product or category"
+
+msgid "Choose an available enquiry type."
+msgstr "Choose an available enquiry type."
+
+msgid "Company / organisation"
+msgstr "Company / organisation"
+
+msgid "Contact"
+msgstr "Contact"
+
+msgid "Contact EuroAfrica ↗"
+msgstr "Contact EuroAfrica ↗"
+
+msgid "Contact Us"
+msgstr "Contact Us"
+
+msgid "Continue the conversation"
+msgstr "Continue the conversation"
+
+msgid "Country / market of interest"
+msgstr "Country / market of interest"
+
+msgid "DIVERSITY IN EVERY DIRECTION"
+msgstr "DIVERSITY IN EVERY DIRECTION"
+
+msgid ""
+"Describe the product or topic and what you would like to know. Maximum 5,000"
+" characters."
+msgstr ""
+"Describe the product or topic and what you would like to know. Maximum 5,000"
+" characters."
+
+msgid "Discover EuroAfrica ↗"
+msgstr "Discover EuroAfrica ↗"
+
+msgid "Discover the products behind the connection."
+msgstr "Discover the products behind the connection."
+
+msgid "Download Brochure"
+msgstr "Download Brochure"
+
+msgid "EUROPE"
+msgstr "EUROPE"
+
+msgid "EXPLORE THE CONNECTION"
+msgstr "EXPLORE THE CONNECTION"
+
+msgid "Enable JavaScript for the security check before submitting."
+msgstr "Enable JavaScript for the security check before submitting."
+
+msgid "Enquire About This Category"
+msgstr "Enquire About This Category"
+
+#, python-format
+msgid "Enquire about %(title)s"
+msgstr "Enquire about %(title)s"
+
+msgid "Enquiry received"
+msgstr "Enquiry received"
+
+msgid "Enter this value on one line."
+msgstr "Enter this value on one line."
+
+msgid "EuroAfrica home"
+msgstr "EuroAfrica home"
+
+msgid "Europe to Africa"
+msgstr "Europe to Africa"
+
+msgid "Europe → Africa"
+msgstr "Europe → Africa"
+
+msgid "Europe → Africa Trade"
+msgstr "Europe → Africa Trade"
+
+msgid "Explore"
+msgstr "Explore"
+
+#, python-format
+msgid "Explore %(direction_title)s"
+msgstr "Explore %(direction_title)s"
+
+#, python-format
+msgid "Explore %(title)s"
+msgstr "Explore %(title)s"
+
+msgid "Explore EuroAfrica"
+msgstr "Explore EuroAfrica"
+
+msgid "Explore Trade Categories"
+msgstr "Explore Trade Categories"
+
+msgid "Explore the categories"
+msgstr "Explore the categories"
+
+msgid "Featured product categories"
+msgstr "Featured product categories"
+
+msgid "Fields marked * are required."
+msgstr "Fields marked * are required."
+
+msgid "Full name"
+msgstr "Full name"
+
+msgid "General / not yet sure"
+msgstr "General / not yet sure"
+
+msgid "General Enquiry"
+msgstr "General Enquiry"
+
+msgid "Get in touch"
+msgstr "Get in touch"
+
+msgid "Headquarters"
+msgstr "Headquarters"
+
+msgid "Home"
+msgstr "Home"
+
+msgid "I agree to my details being used to respond to this enquiry."
+msgstr "I agree to my details being used to respond to this enquiry."
+
+msgid "Illustration"
+msgstr "Illustration"
+
+msgid "I’m interested in"
+msgstr "I’m interested in"
+
+msgid "KEEP EXPLORING"
+msgstr "KEEP EXPLORING"
+
+msgid "LET’S CONNECT"
+msgstr "LET’S CONNECT"
+
+msgid "Language"
+msgstr "Language"
+
+msgid "Leave this field empty"
+msgstr "Leave this field empty"
+
+msgid "Main navigation"
+msgstr "Main navigation"
+
+msgid "Make an Enquiry"
+msgstr "Make an Enquiry"
+
+msgid "Markets in connection"
+msgstr "Markets in connection"
+
+msgid "Menu"
+msgstr "Menu"
+
+msgid "Mobile navigation"
+msgstr "Mobile navigation"
+
+#, python-format
+msgid "More from %(direction_title)s"
+msgstr "More from %(direction_title)s"
+
+msgid "Online enquiries are temporarily unavailable. Please try again later."
+msgstr "Online enquiries are temporarily unavailable. Please try again later."
+
+msgid "Phone number"
+msgstr "Phone number"
+
+msgid "Please review your enquiry and try again."
+msgstr "Please review your enquiry and try again."
+
+msgid "Please try again later"
+msgstr "Please try again later"
+
+msgid "Please try again shortly."
+msgstr "Please try again shortly."
+
+msgid "Please wait for the security check to complete, then try again."
+msgstr "Please wait for the security check to complete, then try again."
+
+msgid "Privacy"
+msgstr "Privacy"
+
+msgid "Private editorial preview — unpublished content"
+msgstr "Private editorial preview — unpublished content"
+
+msgid "Product / category"
+msgstr "Product / category"
+
+msgid "Product diversity"
+msgstr "Product diversity"
+
+msgid "Products included"
+msgstr "Products included"
+
+msgid "Read our"
+msgstr "Read our"
+
+msgid "Return home"
+msgstr "Return home"
+
+msgid "Send an Enquiry"
+msgstr "Send an Enquiry"
+
+msgid "Send an enquiry"
+msgstr "Send an enquiry"
+
+msgid "Sending your enquiry…"
+msgstr "Sending your enquiry…"
+
+msgid "Skip to content"
+msgstr "Skip to content"
+
+msgid "Submit Enquiry"
+msgstr "Submit Enquiry"
+
+msgid "TRADE DIRECTION"
+msgstr "TRADE DIRECTION"
+
+msgid "TWO CONTINENTS. ONE SHARED HORIZON."
+msgstr "TWO CONTINENTS. ONE SHARED HORIZON."
+
+msgid "Temporarily unavailable"
+msgstr "Temporarily unavailable"
+
+msgid "Temporarily unavailable | EuroAfrica"
+msgstr "Temporarily unavailable | EuroAfrica"
+
+msgid "The address may have changed or the page is not published."
+msgstr "The address may have changed or the page is not published."
+
+msgid ""
+"The hourly enquiry limit has been reached. Please wait an hour before trying"
+" again."
+msgstr ""
+"The hourly enquiry limit has been reached. Please wait an hour before trying"
+" again."
+
+msgid ""
+"The security check could not load. Please reload this page and try again."
+msgstr ""
+"The security check could not load. Please reload this page and try again."
+
+msgid "This page could not be found"
+msgstr "This page could not be found"
+
+msgid "Too many attempts. Please try again later."
+msgstr "Too many attempts. Please try again later."
+
+msgid "Too many attempts. Please wait ten minutes before trying again."
+msgstr "Too many attempts. Please wait ten minutes before trying again."
+
+msgid "Trade directions"
+msgstr "Trade directions"
+
+msgid "We could not verify your enquiry. Please wait a moment and try again."
+msgstr "We could not verify your enquiry. Please wait a moment and try again."
+
+msgid "You can"
+msgstr "You can"
+
+msgid ""
+"Your details are used to respond to this enquiry. Please avoid sending "
+"sensitive personal information."
+msgstr ""
+"Your details are used to respond to this enquiry. Please avoid sending "
+"sensitive personal information."
+
+msgid "Your enquiry"
+msgstr "Your enquiry"
+
+msgid "email our team"
+msgstr "email our team"
+
+msgid "for information about your enquiry data."
+msgstr "for information about your enquiry data."
+
+msgid "privacy notice"
+msgstr "privacy notice"
+
+#, python-format
+msgid "%(heading)s Trade Categories | %(brand)s"
+msgstr "%(heading)s Trade Categories | %(brand)s"
+
+#, python-format
+msgid "Contact %(brand)s | Africa–Europe Trade Enquiries"
+msgstr "Contact %(brand)s | Africa–Europe Trade Enquiries"

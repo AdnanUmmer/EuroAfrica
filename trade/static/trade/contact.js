@@ -16,21 +16,21 @@
     const script = document.createElement('script');
     script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=renderEnquiryChallenge';
     script.async = true;
-    script.onerror = () => { status.textContent = 'The security check could not load. Please reload this page and try again.'; };
+    script.onerror = () => { status.textContent = form.dataset.checkError; };
     document.head.appendChild(script);
   }
   let pending = false;
   form.addEventListener('submit', event => {
     if (verification && !form.querySelector('[name="cf-turnstile-response"]')?.value) {
       event.preventDefault();
-      status.textContent = 'Please wait for the security check to complete, then try again.';
+      status.textContent = form.dataset.checkPending;
       return;
     }
     if (pending) { event.preventDefault(); return; }
     pending = true;
     button.disabled = true;
     form.setAttribute('aria-busy', 'true');
-    status.textContent = 'Sending your enquiry…';
+    status.textContent = form.dataset.sending;
   });
   window.addEventListener('pageshow', () => {
     if (pending) {

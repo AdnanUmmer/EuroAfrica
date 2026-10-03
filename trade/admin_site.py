@@ -19,6 +19,7 @@ class EuroAfricaAdminSite(AdminSite):
             ('Trade directions', 'tradedirection', None),
             ('Categories', 'tradecategory', None),
             ('Products', 'categoryproduct', None),
+            ('Translations', 'contenttranslation', None),
             ('Images', 'tradecategory', reverse('admin:studio_images')),
             ('Enquiries', 'enquiry', None),
             ('Contact page', 'contactpage', ContactPage),

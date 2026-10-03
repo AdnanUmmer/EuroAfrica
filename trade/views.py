@@ -1,3 +1,4 @@
+from django.utils.translation import gettext as _
 import json
 import logging
 from xml.etree.ElementTree import Element, SubElement, tostring
@@ -14,12 +15,12 @@ def visible_categories(): return TradeCategory.objects.filter(published=True, di
 def render_page(request, template, obj, **context):
     from .context import site as site_context
     site = site_context(request)['site']
-    title = getattr(obj, 'title', getattr(obj, 'hero_heading', 'EuroAfrica'))
+    title = obj.translated.get('title', obj.translated.get('hero_heading', 'EuroAfrica'))
     from .seo import metadata
     meta = metadata(obj, site)
     canonical = settings.SITE_URL + context.pop('canonical_path', request.path)
-    crumbs = [('Home', '/')]
-    if isinstance(obj, TradeCategory): crumbs.append((obj.direction.title, obj.direction.get_absolute_url()))
+    crumbs = [(_('Home'), '/')]
+    if isinstance(obj, TradeCategory): crumbs.append((obj.direction.translated['title'], obj.direction.get_absolute_url()))
     if request.path != '/': crumbs.append((title, getattr(obj, 'get_absolute_url', lambda: request.path)()))
     graph = [{'@type': 'Organization', '@id': settings.SITE_URL + '/#organization', 'name': site.site_name, 'url': settings.SITE_URL + '/'}, {'@type': 'WebSite', '@id': settings.SITE_URL + '/#website', 'name': site.site_name, 'url': settings.SITE_URL + '/'}]
     graph[1]['publisher'] = {'@id': settings.SITE_URL + '/#organization'}
@@ -69,16 +70,18 @@ def contact(request):
     obj = get_object_or_404(ContactPage, pk=1)
     form = EnquiryForm(request.POST if request.method == 'POST' else None, initial={'category': request.GET.get('category', 'general'), 'interest': request.GET.get('interest', 'general')})
     status = 200
+    retry_after = 3600
     configured = not antispam.turnstile_required() or antispam.turnstile_configured()
     if request.method == 'POST':
         # Cheap rate checks also bound malformed requests before remote verification.
         if not antispam.rate_allowed(antispam.client_address(request), 'ip', settings.CONTACT_IP_LIMIT, 600):
-            form.add_error(None, 'Too many attempts. Please wait ten minutes before trying again.')
+            form.add_error(None, _('Too many attempts. Please wait ten minutes before trying again.'))
+            retry_after = 600
             status = 429
         elif form.is_valid():
             keys = antispam.receipt_keys(form.cleaned_data)
             if not antispam.rate_allowed(form.cleaned_data['email'].casefold(), 'email', settings.CONTACT_EMAIL_LIMIT, 3600):
-                form.add_error(None, 'Too many attempts. Please try again later.')
+                form.add_error(None, _('Too many attempts. Please try again later.'))
                 status = 429
             elif antispam.already_received(keys):
                 return redirect('thanks')
@@ -108,7 +111,7 @@ def contact(request):
                            turnstile_key=settings.TURNSTILE_SITE_KEY if configured else '',
                            verification_unavailable=not configured, status=status)
     if status == 429:
-        response['Retry-After'] = '600' if 'ten minutes' in str(form.non_field_errors()) else '3600'
+        response['Retry-After'] = str(retry_after)
     return response
 
 def thanks(request): return render_page(request, 'trade/contact.html', get_object_or_404(ContactPage, pk=1), thanks=True, canonical_path='/contact/')

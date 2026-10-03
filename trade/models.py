@@ -4,12 +4,29 @@ from django.utils import timezone
 from django.core.exceptions import ValidationError
 from .validators import validate_image, validate_pdf, validate_destination
 
+from django.conf import settings
+from django.contrib.contenttypes.fields import GenericForeignKey, GenericRelation
+from django.contrib.contenttypes.models import ContentType
+
+
+class LocalizedContent(models.Model):
+    translations = GenericRelation('ContentTranslation')
+
+    class Meta:
+        abstract = True
+
+    @property
+    def translated(self):
+        from .localization import translated_values
+        return translated_values(self)
+
+
 IMAGE_POSITIONS = [('center', 'Centre'), ('top', 'Top'), ('bottom', 'Bottom'), ('left', 'Left'), ('right', 'Right')]
 
 def image_field():
     return models.ImageField(upload_to='content/%Y/%m/', blank=True, validators=[validate_image], help_text='JPEG, PNG or WebP; maximum 6 MB. Use a landscape image. Uploaded images are resized for the web.')
 
-class SEO(models.Model):
+class SEO(LocalizedContent):
     seo_title = models.CharField(max_length=180, blank=True, help_text='Optional override; otherwise the page title and EuroAfrica are used.')
     meta_description = models.CharField(max_length=300, blank=True)
     social_image = image_field()
@@ -18,7 +35,7 @@ class SEO(models.Model):
     class Meta:
         abstract = True
 
-class Singleton(models.Model):
+class Singleton(LocalizedContent):
     class Meta:
         abstract = True
     def save(self, *args, **kwargs):
@@ -128,7 +145,7 @@ class TradeCategory(Published):
             if history and (history.kind != 'TradeCategory' or history.object_id != self.pk):
                 raise ValidationError({'slug': 'This URL belongs to a previous category. Choose a new slug.'})
 
-class CategoryProduct(models.Model):
+class CategoryProduct(LocalizedContent):
     category = models.ForeignKey(TradeCategory, on_delete=models.CASCADE, related_name='products')
     name = models.CharField(max_length=200)
     description = models.TextField(blank=True)
@@ -140,14 +157,14 @@ class CategoryProduct(models.Model):
     class Meta: ordering = ['order', 'pk']
     def __str__(self): return self.name
 
-class CategorySection(models.Model):
+class CategorySection(LocalizedContent):
     category = models.ForeignKey(TradeCategory, on_delete=models.CASCADE, related_name='sections')
     heading = models.CharField(max_length=180)
     text = models.TextField()
     order = models.PositiveIntegerField(default=0)
     class Meta: ordering = ['order', 'pk']
 
-class CategoryImage(models.Model):
+class CategoryImage(LocalizedContent):
     category = models.ForeignKey(TradeCategory, on_delete=models.CASCADE, related_name='gallery')
     image = image_field()
     image_alt = models.CharField(max_length=240)
@@ -157,7 +174,7 @@ class CategoryImage(models.Model):
     class Meta: ordering = ['order', 'pk']
     def __str__(self): return f'{self.category.title} — {self.image_alt}'
 
-class FooterLink(models.Model):
+class FooterLink(LocalizedContent):
     label = models.CharField(max_length=80)
     destination = models.CharField(max_length=250, validators=[validate_destination], help_text='A local website path, for example /contact/. Unpublished page links are hidden automatically.')
     group = models.CharField(max_length=20, choices=[('explore', 'Explore'), ('trade', 'Trade directions'), ('legal', 'Legal')], default='explore')
@@ -219,7 +236,7 @@ class SubmissionReceipt(models.Model):
     expires_at = models.DateTimeField(db_index=True)
 
 
-class HomeFeature(models.Model):
+class HomeFeature(LocalizedContent):
     homepage = models.ForeignKey(HomePage, on_delete=models.CASCADE, related_name='features')
     heading = models.CharField(max_length=180)
     text = models.TextField()
@@ -228,10 +245,37 @@ class HomeFeature(models.Model):
         ordering = ['order', 'pk']
 
 
-class ContentSection(models.Model):
+class ContentSection(LocalizedContent):
     page = models.ForeignKey(ContentPage, on_delete=models.CASCADE, related_name='sections')
     heading = models.CharField(max_length=180)
     text = models.TextField()
     order = models.PositiveIntegerField(default=0)
     class Meta:
         ordering = ['order', 'pk']
+
+
+class ContentTranslation(models.Model):
+    content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE, limit_choices_to={'app_label': 'trade'})
+    object_id = models.PositiveBigIntegerField()
+    content_object = GenericForeignKey()
+    language = models.CharField(max_length=2, choices=[item for item in settings.LANGUAGES if item[0] != 'en'])
+    field = models.CharField(max_length=60)
+    text = models.TextField()
+    source_text = models.TextField(editable=False)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = ['content_type', 'object_id', 'language', 'field']
+        constraints = [models.UniqueConstraint(fields=['content_type', 'object_id', 'language', 'field'], name='unique_editorial_translation')]
+
+    def clean(self):
+        from .content_fields import CONTENT_FIELDS
+        obj = self.content_object
+        if not obj or self.field not in CONTENT_FIELDS.get(obj._meta.model_name, ()):
+            raise ValidationError('Choose a public editorial field on an existing content record.')
+        if not self.text.strip():
+            raise ValidationError({'text': 'Enter a translation.'})
+        self.source_text = getattr(obj, self.field)
+
+    def __str__(self):
+        return f'{self.content_type.name} #{self.object_id} · {self.language} · {self.field}'

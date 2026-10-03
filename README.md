@@ -68,3 +68,31 @@ The second script uses an isolated SQLite database; actual PostgreSQL and Linux/
 ## SEO and enquiry protection
 
 See [SEO_AND_ENQUIRY_READINESS.md](SEO_AND_ENQUIRY_READINESS.md) for the anti-spam flow, Turnstile setup, migration safety, measured checks and launch checklist. Run `python manage.py audit_seo --simulate-indexing` to check rendered SEO without enabling public indexing. Production enquiries require real Turnstile keys.
+
+### Interface and editorial languages
+
+English remains the source language. Django gettext catalogs translate the UI;
+`ContentTranslation` records translate public database fields on the server.
+The existing source records, URLs, images and enquiry data remain unchanged,
+apart from the requested expansion of unchanged starter category descriptions.
+
+Run `python manage.py migrate`, then `python manage.py seed_translations` to
+install the reviewed translations. The build script does both. The seed command
+is idempotent and preserves custom English copy and existing translations.
+
+In the admin, use **Edit translations** or **Add a translation** on a content
+record. Choose its language and field and enter plain text. English source edits
+mark the corresponding translations as stale; the public page safely falls back
+to English until those translations are reviewed. Newly added content also needs
+translations. Run `python manage.py audit_translations` before publication.
+
+The immutable multilingual release lives beside migration 0015. Future editorial
+changes belong in the admin or a new data migration, not that release file.
+
+The header language form uses Django `set_language` and a one-year cookie.
+Existing URLs and canonicals remain unchanged, with no hreflang alternates for
+cookie-selected variants. Arabic uses RTL; brands, identifiers and URLs retain
+their original spelling. Both `.po` and `.mo` catalogs in `locale/` are deployed.
+To update UI catalogs, run `python manage.py makemessages -l en -l ar -l hu -l uk
+-l fr -l de` followed by `python manage.py compilemessages` with GNU gettext
+installed on the editing machine. Production uses the compiled catalogs.

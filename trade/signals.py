@@ -60,4 +60,4 @@ def add_footer_permissions(sender, **kwargs):
     from django.contrib.auth.models import Group, Permission
     group = Group.objects.filter(name='Editor').first()
     if group:
-        group.permissions.add(*Permission.objects.filter(content_type__app_label='trade', content_type__model='footerlink'))
+        group.permissions.add(*Permission.objects.filter(content_type__app_label='trade', content_type__model__in=['footerlink', 'contenttranslation']))
