@@ -22,7 +22,7 @@ msgid "AFRICA"
 msgstr "أفريقيا"
 
 msgid "AFRICA ↔ EUROPE"
-msgstr "أفريقيا ↔ أوروبا"
+msgstr "أفريقيا و أوروبا"
 
 msgid "About"
 msgstr "من نحن"
@@ -84,7 +84,7 @@ msgid "Contact"
 msgstr "التواصل"
 
 msgid "Contact EuroAfrica ↗"
-msgstr "تواصل مع EuroAfrica ↗"
+msgstr "تواصل مع EuroAfrica"
 
 msgid "Contact Us"
 msgstr "تواصل معنا"
@@ -104,7 +104,7 @@ msgid ""
 msgstr "صف المنتج أو الموضوع وما تود معرفته. الحد الأقصى 5000 حرف."
 
 msgid "Discover EuroAfrica ↗"
-msgstr "تعرّف على EuroAfrica ↗"
+msgstr "تعرّف على EuroAfrica"
 
 msgid "Discover the products behind the connection."
 msgstr "اكتشف المنتجات التي تربط الأسواق."
@@ -354,3 +354,12 @@ msgstr "فئات التجارة: %(heading)s | %(brand)s"
 #, python-format
 msgid "Contact %(brand)s | Africa–Europe Trade Enquiries"
 msgstr "تواصل مع %(brand)s | استفسارات التجارة بين أفريقيا وأوروبا"
+
+msgid "AFRICA & EUROPE"
+msgstr "أفريقيا و أوروبا"
+
+msgid "Contact EuroAfrica"
+msgstr "تواصل مع EuroAfrica"
+
+msgid "Discover EuroAfrica"
+msgstr "تعرّف على EuroAfrica"

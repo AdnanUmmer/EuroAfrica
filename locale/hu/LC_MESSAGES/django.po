@@ -22,7 +22,7 @@ msgid "AFRICA"
 msgstr "AFRIKA"
 
 msgid "AFRICA ↔ EUROPE"
-msgstr "AFRIKA ↔ EURÓPA"
+msgstr "AFRIKA és EURÓPA"
 
 msgid "About"
 msgstr "Rólunk"
@@ -37,13 +37,13 @@ msgid "Africa office"
 msgstr "Afrikai iroda"
 
 msgid "Africa to Europe"
-msgstr "Afrika → Európa"
+msgstr "Afrika felé Európa"
 
 msgid "Africa → Europe"
-msgstr "Afrika → Európa"
+msgstr "Afrikából Európába"
 
 msgid "Africa → Europe Trade"
-msgstr "Afrika → Európa kereskedelem"
+msgstr "Afrikából Európába irányuló kereskedelem"
 
 msgid "Alternatively,"
 msgstr "Másik lehetőségként:"
@@ -86,7 +86,7 @@ msgid "Contact"
 msgstr "Kapcsolat"
 
 msgid "Contact EuroAfrica ↗"
-msgstr "Kapcsolat a EuroAfricával ↗"
+msgstr "Kapcsolat a EuroAfricával"
 
 msgid "Contact Us"
 msgstr "Kapcsolat"
@@ -108,7 +108,7 @@ msgstr ""
 "5000 karakter."
 
 msgid "Discover EuroAfrica ↗"
-msgstr "Ismerje meg a EuroAfricát ↗"
+msgstr "Ismerje meg a EuroAfricát"
 
 msgid "Discover the products behind the connection."
 msgstr "Fedezze fel a kapcsolatot teremtő termékeket."
@@ -142,13 +142,13 @@ msgid "EuroAfrica home"
 msgstr "EuroAfrica kezdőlap"
 
 msgid "Europe to Africa"
-msgstr "Európa → Afrika"
+msgstr "Európa felé Afrika"
 
 msgid "Europe → Africa"
-msgstr "Európa → Afrika"
+msgstr "Európából Afrikába"
 
 msgid "Europe → Africa Trade"
-msgstr "Európa → Afrika kereskedelem"
+msgstr "Európából Afrikába irányuló kereskedelem"
 
 msgid "Explore"
 msgstr "Felfedezés"
@@ -364,3 +364,12 @@ msgstr "%(heading)s kereskedelmi kategóriák | %(brand)s"
 #, python-format
 msgid "Contact %(brand)s | Africa–Europe Trade Enquiries"
 msgstr "Kapcsolat: %(brand)s | Afrika–Európa kereskedelmi érdeklődés"
+
+msgid "AFRICA & EUROPE"
+msgstr "AFRIKA és EURÓPA"
+
+msgid "Contact EuroAfrica"
+msgstr "Kapcsolat a EuroAfricával"
+
+msgid "Discover EuroAfrica"
+msgstr "Ismerje meg a EuroAfricát"

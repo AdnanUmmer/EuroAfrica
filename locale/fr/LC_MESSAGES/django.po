@@ -22,7 +22,7 @@ msgid "AFRICA"
 msgstr "AFRIQUE"
 
 msgid "AFRICA ↔ EUROPE"
-msgstr "AFRIQUE ↔ EUROPE"
+msgstr "AFRIQUE et EUROPE"
 
 msgid "About"
 msgstr "À propos"
@@ -37,13 +37,13 @@ msgid "Africa office"
 msgstr "Bureau en Afrique"
 
 msgid "Africa to Europe"
-msgstr "Afrique → Europe"
+msgstr "Afrique vers Europe"
 
 msgid "Africa → Europe"
-msgstr "Afrique → Europe"
+msgstr "De l’Afrique vers l’Europe"
 
 msgid "Africa → Europe Trade"
-msgstr "Commerce Afrique → Europe"
+msgstr "Commerce de l’Afrique vers l’Europe"
 
 msgid "Alternatively,"
 msgstr "Vous pouvez aussi"
@@ -88,7 +88,7 @@ msgid "Contact"
 msgstr "Contact"
 
 msgid "Contact EuroAfrica ↗"
-msgstr "Contacter EuroAfrica ↗"
+msgstr "Contacter EuroAfrica"
 
 msgid "Contact Us"
 msgstr "Contactez-nous"
@@ -110,7 +110,7 @@ msgstr ""
 "000 caractères."
 
 msgid "Discover EuroAfrica ↗"
-msgstr "Découvrez EuroAfrica ↗"
+msgstr "Découvrez EuroAfrica"
 
 msgid "Discover the products behind the connection."
 msgstr "Découvrez les produits qui relient les marchés."
@@ -144,13 +144,13 @@ msgid "EuroAfrica home"
 msgstr "Accueil EuroAfrica"
 
 msgid "Europe to Africa"
-msgstr "Europe → Afrique"
+msgstr "Europe vers Afrique"
 
 msgid "Europe → Africa"
-msgstr "Europe → Afrique"
+msgstr "De l’Europe vers l’Afrique"
 
 msgid "Europe → Africa Trade"
-msgstr "Commerce Europe → Afrique"
+msgstr "Commerce de l’Europe vers l’Afrique"
 
 msgid "Explore"
 msgstr "Explorer"
@@ -369,3 +369,12 @@ msgstr "Catégories commerciales : %(heading)s | %(brand)s"
 #, python-format
 msgid "Contact %(brand)s | Africa–Europe Trade Enquiries"
 msgstr "Contacter %(brand)s | Demandes commerciales Afrique–Europe"
+
+msgid "AFRICA & EUROPE"
+msgstr "AFRIQUE et EUROPE"
+
+msgid "Contact EuroAfrica"
+msgstr "Contacter EuroAfrica"
+
+msgid "Discover EuroAfrica"
+msgstr "Découvrez EuroAfrica"

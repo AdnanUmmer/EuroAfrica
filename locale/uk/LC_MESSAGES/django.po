@@ -22,7 +22,7 @@ msgid "AFRICA"
 msgstr "АФРИКА"
 
 msgid "AFRICA ↔ EUROPE"
-msgstr "АФРИКА ↔ ЄВРОПА"
+msgstr "АФРИКА та ЄВРОПА"
 
 msgid "About"
 msgstr "Про нас"
@@ -37,13 +37,13 @@ msgid "Africa office"
 msgstr "Офіс в Африці"
 
 msgid "Africa to Europe"
-msgstr "Африка → Європа"
+msgstr "Африка до Європа"
 
 msgid "Africa → Europe"
-msgstr "Африка → Європа"
+msgstr "З Африки до Європи"
 
 msgid "Africa → Europe Trade"
-msgstr "Торгівля: Африка → Європа"
+msgstr "Торгівля з Африки до Європи"
 
 msgid "Alternatively,"
 msgstr "Або"
@@ -87,7 +87,7 @@ msgid "Contact"
 msgstr "Контакти"
 
 msgid "Contact EuroAfrica ↗"
-msgstr "Зв’язатися з EuroAfrica ↗"
+msgstr "Зв’язатися з EuroAfrica"
 
 msgid "Contact Us"
 msgstr "Зв’язатися з нами"
@@ -109,7 +109,7 @@ msgstr ""
 "символів."
 
 msgid "Discover EuroAfrica ↗"
-msgstr "Дізнайтеся про EuroAfrica ↗"
+msgstr "Дізнайтеся про EuroAfrica"
 
 msgid "Discover the products behind the connection."
 msgstr "Відкрийте товари, що поєднують ринки."
@@ -143,13 +143,13 @@ msgid "EuroAfrica home"
 msgstr "Головна сторінка EuroAfrica"
 
 msgid "Europe to Africa"
-msgstr "Європа → Африка"
+msgstr "Європа до Африка"
 
 msgid "Europe → Africa"
-msgstr "Європа → Африка"
+msgstr "З Європи до Африки"
 
 msgid "Europe → Africa Trade"
-msgstr "Торгівля: Європа → Африка"
+msgstr "Торгівля з Європи до Африки"
 
 msgid "Explore"
 msgstr "Огляд"
@@ -361,3 +361,12 @@ msgstr "Торговельні категорії: %(heading)s | %(brand)s"
 #, python-format
 msgid "Contact %(brand)s | Africa–Europe Trade Enquiries"
 msgstr "Зв’язок із %(brand)s | Запити про торгівлю Африки та Європи"
+
+msgid "AFRICA & EUROPE"
+msgstr "АФРИКА та ЄВРОПА"
+
+msgid "Contact EuroAfrica"
+msgstr "Зв’язатися з EuroAfrica"
+
+msgid "Discover EuroAfrica"
+msgstr "Дізнайтеся про EuroAfrica"

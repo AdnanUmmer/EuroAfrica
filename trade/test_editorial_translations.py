@@ -32,7 +32,11 @@ class EditorialTranslationTests(TestCase):
                             source=getattr(obj,field)
                             if source and source!='EuroAfrica':
                                 row=obj.translations.get(language=lang,field=field)
-                                self.assertEqual(localized[field],row.text)
+                                expected = row.text
+                                if (name, field) in (('tradedirection', 'title'), ('footerlink', 'label')):
+                                    from .localization import ARROW_FREE_LABELS
+                                    expected = ARROW_FREE_LABELS.get(expected, expected)
+                                self.assertEqual(localized[field],expected)
                                 self.assertEqual(row.source_text,source)
 
     def test_category_and_form_choices_are_translated(self):
@@ -107,3 +111,15 @@ class EditorialTranslationTests(TestCase):
             self.assertEqual(response.status_code,302)
             self.assertEqual(response['Location'],'/contact/thanks/')
         self.assertEqual(Enquiry.objects.count(),6)
+
+
+    def test_legacy_direction_arrow_is_removed_without_editing_record(self):
+        from .models import TradeDirection
+        obj = TradeDirection.objects.first()
+        row = obj.translations.get(language='hu', field='title')
+        row.text = 'Afrika → Európa'
+        row.save()
+        with override('hu'):
+            self.assertEqual(obj.translated['title'], 'Afrikából Európába')
+        row.refresh_from_db()
+        self.assertEqual(row.text, 'Afrika → Európa')

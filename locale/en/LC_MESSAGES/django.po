@@ -22,7 +22,7 @@ msgid "AFRICA"
 msgstr "AFRICA"
 
 msgid "AFRICA ↔ EUROPE"
-msgstr "AFRICA ↔ EUROPE"
+msgstr "AFRICA & EUROPE"
 
 msgid "About"
 msgstr "About"
@@ -40,10 +40,10 @@ msgid "Africa to Europe"
 msgstr "Africa to Europe"
 
 msgid "Africa → Europe"
-msgstr "Africa → Europe"
+msgstr "Africa to Europe"
 
 msgid "Africa → Europe Trade"
-msgstr "Africa → Europe Trade"
+msgstr "Africa to Europe Trade"
 
 msgid "Alternatively,"
 msgstr "Alternatively,"
@@ -86,7 +86,7 @@ msgid "Contact"
 msgstr "Contact"
 
 msgid "Contact EuroAfrica ↗"
-msgstr "Contact EuroAfrica ↗"
+msgstr "Contact EuroAfrica"
 
 msgid "Contact Us"
 msgstr "Contact Us"
@@ -108,7 +108,7 @@ msgstr ""
 " characters."
 
 msgid "Discover EuroAfrica ↗"
-msgstr "Discover EuroAfrica ↗"
+msgstr "Discover EuroAfrica"
 
 msgid "Discover the products behind the connection."
 msgstr "Discover the products behind the connection."
@@ -145,10 +145,10 @@ msgid "Europe to Africa"
 msgstr "Europe to Africa"
 
 msgid "Europe → Africa"
-msgstr "Europe → Africa"
+msgstr "Europe to Africa"
 
 msgid "Europe → Africa Trade"
-msgstr "Europe → Africa Trade"
+msgstr "Europe to Africa Trade"
 
 msgid "Explore"
 msgstr "Explore"
@@ -359,3 +359,12 @@ msgstr "%(heading)s Trade Categories | %(brand)s"
 #, python-format
 msgid "Contact %(brand)s | Africa–Europe Trade Enquiries"
 msgstr "Contact %(brand)s | Africa–Europe Trade Enquiries"
+
+msgid "AFRICA & EUROPE"
+msgstr "AFRICA & EUROPE"
+
+msgid "Contact EuroAfrica"
+msgstr "Contact EuroAfrica"
+
+msgid "Discover EuroAfrica"
+msgstr "Discover EuroAfrica"
