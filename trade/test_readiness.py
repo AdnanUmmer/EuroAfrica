@@ -139,7 +139,7 @@ class MediaReadinessTests(TestCase):
             for obj in [home]+list(TradeCategory.objects.all()):
                 file=obj.hero_image if isinstance(obj,HomePage) or obj.seed_key == 'tobacco-products' else obj.image
                 if not file:
-                    self.assertContains(self.client.get(obj.get_absolute_url()), 'illustration.svg')
+                    self.assertContains(self.client.get(obj.get_absolute_url()), 'trade-fallback.webp')
                     continue
                 response=self.client.get(file.url);self.assertEqual(response.status_code,200);response.close()
                 for variant in image_srcset(file).split(', '):
@@ -165,4 +165,4 @@ class MediaReadinessTests(TestCase):
             self.assertIn('1400w',image_srcset(home.hero_image))
             home.hero_image='gone.webp';home.save()
             self.assertEqual(image_srcset(home.hero_image),'')
-            self.assertContains(self.client.get('/'),'illustration.svg')
+            self.assertContains(self.client.get('/'),'trade-fallback.webp')
