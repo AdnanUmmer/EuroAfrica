@@ -1,0 +1,67 @@
+{% extends 'trade/base.html' %}{% load i18n %}
+{% block content %}
+<div class="category-masthead">{% include 'trade/breadcrumbs.html' %}
+<div class="wrap category-title"><p class="eyebrow">{% translate obj.direction.translated.title %}</p><h1 dir="auto">{{ obj.translated.title }}</h1></div></div>
+<section class="category-hero wrap split">
+  <div>
+    <a class="eyebrow" href="{{ obj.direction.get_absolute_url }}">{% translate obj.direction.translated.title %}</a>
+    <h2 class="category-subheading">{% translate 'CATEGORY OVERVIEW' %}</h2>
+    <p class="lead" dir="auto">{{ obj.translated.summary }}</p>
+    <div class="category-actions"><a class="button" href="/contact/?category={{ obj.pk }}">{% translate 'Enquire About This Category' %}</a>
+    {% if obj.slug == 'tobacco-products' and obj.brochure %}
+      <a class="button brochure-button" href="{{ obj.brochure.url }}" download>{% if obj.hero_image %}<img src="{{ obj.hero_image.url }}" alt="" width="40" height="40" decoding="async">{% endif %}{% translate 'Download Brochure' %}</a>
+    {% endif %}</div>
+  </div>
+  <figure class="media-figure">
+    <div class="visual category-art">
+      {% if obj.hero_image %}
+        {% include 'trade/image.html' with image=obj.hero_image alt=obj.translated.hero_alt position=obj.hero_position priority=True %}
+      {% else %}
+        {% include 'trade/image.html' with image=obj.image alt=obj.translated.image_alt position=obj.image_position priority=True label=obj.translated.title %}
+      {% endif %}
+    </div>
+    {% if obj.hero_image and obj.translated.hero_caption %}
+      
+    {% elif not obj.hero_image and obj.translated.image_caption %}
+      
+    {% endif %}
+  </figure>
+</section>
+<section class="section wrap editorial">
+  <div><p class="eyebrow">{% translate 'A CLOSER LOOK' %}</p><h2>{% blocktranslate with title=obj.translated.title %}A closer look at {{ title }}{% endblocktranslate %}</h2></div>
+  <div class="prose">
+    {{ obj.translated.overview|linebreaks }}
+    {% if obj.products.all %}
+      <h2>{% translate 'Products included' %}</h2>
+      <ul class="product-list">
+        {% for product in obj.products.all %}
+          <li>
+            <h3 dir="auto">{{ product.translated.name }}</h3>
+            {% if product.translated.description %}<p dir="auto">{{ product.translated.description }}</p>{% endif %}
+            {% if product.image %}
+              <div class="product-image visual">{% include 'trade/image.html' with image=product.image alt=product.translated.image_alt position=product.image_position %}</div>
+              
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+    {% for section in obj.sections.all %}<h2 dir="auto">{{ section.translated.heading }}</h2>{{ section.translated.text|linebreaks }}{% endfor %}
+  </div>
+</section>
+{% if obj.gallery.all %}
+  <section class="wrap gallery">
+    {% for item in obj.gallery.all %}
+      <figure>
+        <div class="visual">{% include 'trade/image.html' with image=item.image alt=item.translated.image_alt position=item.image_position %}</div>
+        
+      </figure>
+    {% endfor %}
+  </section>
+{% endif %}
+{% if related %}
+  <section class="section neutral">
+    <div class="wrap"><p class="eyebrow">{% translate 'KEEP EXPLORING' %}</p><h2>{% translate obj.direction.translated.title as direction_title %}{% blocktranslate %}More from {{ direction_title }}{% endblocktranslate %}</h2>{% include 'trade/cards.html' with categories=related %}</div>
+  </section>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,6 @@
+{% load i18n %}{% if site.translated.address or site.phone %}
+<div class="office-details"><h3>{% translate 'Headquarters' %}</h3>{% if site.translated.address %}<p dir="auto">{{ site.translated.address|linebreaksbr }}</p>{% endif %}{% if site.phone %}<a dir="ltr" href="tel:{{ site.phone|cut:' ' }}">{{ site.phone }}</a>{% endif %}</div>
+{% endif %}
+{% if site.translated.africa_address or site.africa_phone %}
+<div class="office-details"><h3>{% translate 'Africa office' %}</h3>{% if site.translated.africa_address %}<p dir="auto">{{ site.translated.africa_address|linebreaksbr }}</p>{% endif %}{% if site.africa_phone %}<a dir="ltr" href="tel:{{ site.africa_phone|cut:' ' }}">{{ site.africa_phone }}</a>{% endif %}</div>
+{% endif %}

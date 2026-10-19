@@ -1,0 +1,6 @@
+{% extends 'trade/base.html' %}{% load static i18n %}{% block content %}
+<section class="page-masthead"><div class="masthead-shade"></div><div class="wrap"><p class="eyebrow">{{ site.site_name }}</p><h1>{{ obj.translated.title }}</h1><p class="lead">{{ obj.translated.summary }}</p></div></section>{% include 'trade/breadcrumbs.html' %}
+<section class="section wrap story-opening"><div><p class="eyebrow">{% translate 'A CLOSER LOOK' %}</p><div class="prose">{{ obj.translated.body|linebreaks }}</div><a class="button" href="/contact/">{% translate 'Contact EuroAfrica' %}</a></div>{% if obj.image %}<figure class="story-photo visual">{% include 'trade/image.html' with image=obj.image alt=obj.translated.image_alt position=obj.image_position %}</figure>{% endif %}</section>
+{% if obj.sections.all %}<section class="story-chapters section"><div class="wrap">{% for section in obj.sections.all %}<article><span class="index">0{{ forloop.counter }}</span><h2>{{ section.translated.heading }}</h2><div class="prose">{{ section.translated.text|linebreaks }}</div></article>{% endfor %}</div></section>{% endif %}
+
+{% endblock %}

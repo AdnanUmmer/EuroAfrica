@@ -1,0 +1,4 @@
+{% extends 'trade/base.html' %}{% load i18n %}{% block content %}
+<div class="contact-masthead">{% include 'trade/breadcrumbs.html' %}<div class="wrap"><p class="eyebrow">{% translate 'AFRICA & EUROPE' %}</p><h1>{% translate 'All categories' %}</h1><p class="lead">{% translate 'Explore products and sectors across both trade directions.' %}</p></div></div>
+<section class="section wrap category-directory"><nav class="category-directions" aria-label="{% translate 'Trade directions' %}">{% for direction in nav_directions %}<a class="text-link" href="{{ direction.get_absolute_url }}">{% translate direction.translated.title %}</a>{% endfor %}</nav>{% include 'trade/cards.html' %}</section>
+{% endblock %}

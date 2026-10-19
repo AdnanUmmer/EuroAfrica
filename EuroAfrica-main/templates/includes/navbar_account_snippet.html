@@ -1,0 +1,20 @@
+{% if request.user.is_authenticated %}
+<div class="luxury-user-menu" data-dropdown>
+    <button class="luxury-user-trigger" type="button" data-dropdown-trigger>
+        Hello, {{ nav_display_name }}
+        <span class="luxury-chevron"></span>
+    </button>
+    <div class="luxury-dropdown" data-dropdown-menu>
+        <a href="{% url 'accounts:account' %}">My Account</a>
+        <a href="/orders/">Orders</a>
+        <a href="/wishlist/">Wishlist</a>
+        <form method="post" action="{% url 'accounts:logout' %}">
+            {% csrf_token %}
+            <button type="submit" class="luxury-dropdown-button">Logout</button>
+        </form>
+    </div>
+</div>
+{% else %}
+<a href="{% url 'accounts:login' %}" class="luxury-login-link">Login</a>
+{% endif %}
+

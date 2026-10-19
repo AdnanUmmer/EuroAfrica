@@ -1,0 +1,8 @@
+<button class="sticky toggle-nav-sidebar" id="toggle-nav-sidebar" aria-label="Toggle navigation"></button>
+<nav class="sticky studio-sidebar" id="nav-sidebar" aria-label="Studio navigation">
+  <input id="nav-filter" type="hidden" aria-hidden="true">
+  <p class="studio-nav-label">YOUR WORKSPACE</p>
+  {% for task in studio_tasks %}<a class="studio-nav-item{% if task.active %} active{% endif %}" href="{{ task.url }}"{% if task.active %} aria-current="page"{% endif %}>{{ task.label }}</a>{% endfor %}
+  {% if perms.auth.view_user or perms.auth.view_group %}<p class="studio-nav-label">ADMINISTRATION</p>{% if perms.auth.view_user %}<a class="studio-nav-item" href="{% url 'admin:auth_user_changelist' %}">Staff accounts</a>{% endif %}{% if perms.auth.view_group %}<a class="studio-nav-item" href="{% url 'admin:auth_group_changelist' %}">Permission groups</a>{% endif %}{% endif %}
+  <div class="studio-nav-note">Changes go live when you save published content. Use a draft and private preview when preparing a new page.</div>
+</nav>
